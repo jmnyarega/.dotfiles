@@ -23,7 +23,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export FZF_DEFAULT_OPTS='--height 100% --layout reverse --info inline --border --preview "bat --style=numbers --color=always --line-range :500 {}"'
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-# export LC_ALL=en_US.UTF-8
+# export LC_ALL=en_US.UTF-8  
 # export LANG=en_US.UTF-8
 # Basic auto/tab complete:
 autoload -U compinit
@@ -43,15 +43,17 @@ plugins=(
 
 ZSH_THEME="agnoster"
 
+# Load aliases and shortcuts if existent.
+ [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
+ [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+ [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
+
 export ZSH=$HOME/.config/zsh/.oh-my-zsh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
 export PATH=$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 export COLORTERM='24bit'
-export TEXLIVE=$HOME/texlive
 export SHELL_ENV=$HOME/.zshenv
-export TEXLIVE_INSTALL_PREFIX=~/texlive
-export PATH=$TEXLIVE/2020/bin/x86_64-linux:$PATH
 
 # vi mode
 bindkey -v
@@ -90,6 +92,9 @@ bindkey -s '^z' 'fg\n'
 bindkey -s '^x' 'clear\n'
 bindkey -s '^f' 'fzf\n'
 bindkey '^[[P' delete-char
+
+eval "$(starship init zsh)"
+eval "$(thefuck --alias)"
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

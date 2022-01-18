@@ -7,3 +7,6 @@
 [submodule "tree-sitter/.config/tree-sitter/tree-sitter-lua"]
 	path = tree-sitter/.config/tree-sitter/tree-sitter-lua
 	url = git@github.com:Azganoth/tree-sitter-lua.git
+[submodule "zsh/.config/zsh/ohmyzsh"]
+	path = zsh/.config/zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
