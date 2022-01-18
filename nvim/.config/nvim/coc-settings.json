@@ -1,0 +1,35 @@
+{
+  "suggest.enablePreview": true,
+  "codeLens.enable": true,
+  "git.addedSign.text": "┃",
+  "git.removedSign.text": "┃",
+  "git.changedSign.text": "┃",
+  "git.changeRemovedSign.text": "┃",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.errorSign": "✖",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "●",
+  "diagnostic.hintSign": "○",
+  "git.addGBlameToBufferVar": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescript",
+    "c++",
+    "javascript",
+    "typescript.tsx",
+    "javascript.jsx",
+    "typescriptreact",
+    "svg",
+    "html",
+    "css",
+    "json"
+  ],
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "coc.preferences.extensionUpdateCheck": "daily"
+}

@@ -1,4 +1,4 @@
-set guicursor=
+set guicursor=n-v-c:block
 set relativenumber
 set nohlsearch
 set hidden
