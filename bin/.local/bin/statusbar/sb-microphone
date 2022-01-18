@@ -1,0 +1,18 @@
+#!/bin/bash
+
+off=$(amixer | awk '/on/ {print $6}')
+on=$(amixer | awk '/off/ {print $6}')
+
+case $BLOCK_BUTTON in
+	1) amixer set Capture toggle;;
+esac
+
+micon="🎤"
+micoff="🔇"
+
+# if is on
+if [ -z "$on" ]; then
+    echo "MIC:$micon"
+else
+    echo "MIC:$micoff"
+fi

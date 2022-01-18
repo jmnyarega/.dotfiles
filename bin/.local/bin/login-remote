@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ip=$(nmap -sP 192.168.100.255/24 | awk ' /10/  {print $5}' | dmenu -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf \
+'#F8F8F2' -p "Login to a remote computer:")
+sudo sshfs josiah@${ip}:/mnt/hdd1 /mnt/josiah -o allow_other,default_permissions -o identityfile=/home/josiah/.ssh/id_rsa

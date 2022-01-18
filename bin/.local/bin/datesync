@@ -1,0 +1,5 @@
+#!/bin/bash
+
+datetime=$(curl -s "http://worldtimeapi.org/api/timezone/Africa/Nairobi" | jq -r '.datetime')
+echo "System date will be set to ⏲️  ${datetime}"
+sudo date +%T -s "${datetime}"

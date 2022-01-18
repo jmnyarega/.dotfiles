@@ -1,0 +1,3 @@
+#!/bin/bash
+
+tmux && tmux source-file ~/.config/tmux/tmux-config && tmux attach -d -t $1

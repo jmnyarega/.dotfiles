@@ -37,6 +37,14 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'Pocco81/DAPInstall.nvim'
 Plug 'szw/vim-maximizer'
 
+" JavaScript {{{
+    Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
+    Plug 'moll/vim-node', { 'for': 'javascript' }
+    Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+    Plug 'MaxMEllon/vim-jsx-pretty'
+    let g:vim_jsx_pretty_highlight_close_tag = 1
+" }}}
+
 " Snippets
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
