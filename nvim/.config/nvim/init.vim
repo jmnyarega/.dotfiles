@@ -1,18 +1,3 @@
-" hello front end masters
-set path+=**
-
-" Nice menu when typing `:find *.py`
-set wildmode=longest,list,full
-set wildmenu
-" Ignore files
-set wildignore+=*.pyc
-set wildignore+=*_build/*
-set wildignore+=**/coverage/*
-set wildignore+=**/node_modules/*
-set wildignore+=**/android/*
-set wildignore+=**/ios/*
-set wildignore+=**/.git/*
-
 call plug#begin('~/.vim/plugged')
 
 " Plebvim lsp Plugins
@@ -207,6 +192,8 @@ let g:coc_global_extensions = [
             \'coc-git',
             \'coc-highlight',
             \]
+
+inoremap <silent><expr> <c-space> coc#refresh()
 
 xmap <leader>gf  <Plug>(coc-format-selected)
 map  <leader>gd  <Plug>(coc-definition)
