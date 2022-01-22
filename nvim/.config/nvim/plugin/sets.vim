@@ -8,6 +8,8 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set nu
+set splitbelow
+set splitright
 set nowrap
 set noswapfile
 set nobackup

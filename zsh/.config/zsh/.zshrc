@@ -23,7 +23,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export FZF_DEFAULT_OPTS='--height 100% --layout reverse --info inline --border --preview "bat --style=numbers --color=always --line-range :500 {}"'
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-# export LC_ALL=en_US.UTF-8  
+# export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
 # Basic auto/tab complete:
 autoload -U compinit
