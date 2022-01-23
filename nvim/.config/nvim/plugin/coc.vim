@@ -17,7 +17,8 @@ let g:coc_global_extensions = [
             \]
 
 inoremap <silent><expr> <c-space> coc#refresh()
-xmap <leader>gf  <Plug>(coc-format-selected)
-map  <leader>gd  <Plug>(coc-definition)
-map  <leader>gr  <Plug>(coc-references)
-map  <leader>go  :CocOutline<CR>
+xnoremap <leader>gf  <Plug>(coc-format-selected)
+nnoremap  <leader>gd  <Plug>(coc-definition)
+nnoremap  <leader>gr  <Plug>(coc-references)
+nnoremap  <leader>go  :CocOutline<CR>
+nnoremap  <leader>ge  :CocAction<CR>
