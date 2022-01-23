@@ -23,9 +23,33 @@ fun! DELETEFOLDER()
     execute ':!rm -rf '.foldername
 endfun
 
+
+fun! MOVEFOLDER()
+    let from = input("From: ", getcwd())
+    let to = input("To: ", getcwd())
+
+    execute "\n:!mv ".from to
+endfun
+
+fun! MOVEFILE()
+    let current_file = @%
+
+    echo "From: ".current_file
+    let filename = input("Move to: ", current_file)
+
+    execute "\n:!mv ".current_file filename
+    execute ":edit " . filename
+
+    execute ":bd " . current_file
+endfun
+
 nnoremap <leader>nf :call CREATEFILE() <CR>
 nnoremap <leader>nd :call CREATEDIR() <CR>
+
 nnoremap <leader>df :call DELETEFILE() <CR>
 nnoremap <leader>dd :call DELETEFOLDER() <CR>
+
+nnoremap <leader>mf :call MOVEFILE() <CR>
+nnoremap <leader>md :call MOVEFOLDER() <CR>
 
 nnoremap <leader>n <bar> :Lex <bar> :vertical resize  30<CR>
