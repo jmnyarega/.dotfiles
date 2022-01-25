@@ -8,15 +8,11 @@ let g:coc_global_extensions = [
             \'coc-tsserver',
             \'coc-lists',
             \'coc-snippets',
-            \'coc-clangd',
             \'coc-prettier',
-            \'coc-tabnine',
-            \'coc-syntax',
             \'coc-git',
-            \'coc-highlight',
             \]
 
-inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <c-t> coc#refresh()
 xnoremap <leader>gf  <Plug>(coc-format-selected)
 nnoremap  <leader>gd  <Plug>(coc-definition)
 nnoremap  <leader>gr  <Plug>(coc-references)

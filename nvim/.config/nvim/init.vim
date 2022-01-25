@@ -94,7 +94,7 @@ nnoremap <right> :vertical resize -10 <CR>
 nnoremap <left> :vertical resize +10 <CR>
 nnoremap <silent> + :resize +1 <CR>
 nnoremap <silent> - :resize -1 <CR>
-nnoremap <silent> " :vsplit % <CR>
+nnoremap <silent> \| :vsplit % <CR>
 nnoremap <silent> - :split % <CR>
 
 noremap <c-_>  :Commentary<CR>
@@ -109,7 +109,6 @@ vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
 nnoremap <leader>d "_d
-vnoremap <leader>d "_d
 inoremap <C-c> <esc>
 
 au BufWritePost *.ts,*.js,*.jsx silent! !ctags -R --exclude=node_modules &
