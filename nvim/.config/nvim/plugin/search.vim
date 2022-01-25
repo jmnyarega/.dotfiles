@@ -4,7 +4,7 @@ fun! SEARCH()
     let word = input("Enter search word: ", "")
     let path = input("Enter path: ", "%")
 
-    execute ':grep -r --exclude-dir='.s:exclude_folders.' ' .word .' '.path
+    execute ':grep -rE --exclude-dir='.s:exclude_folders.' ' .word .' '.path
 endfun
 
 nnoremap <leader>s :call SEARCH()<CR>

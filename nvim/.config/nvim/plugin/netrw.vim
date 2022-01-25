@@ -14,7 +14,8 @@ fun! CREATEDIR()
 endfun
 
 fun! DELETEFILE()
-    let filename = input("Delete file: ", getcwd())
+    let current_file = @%
+    let filename = input("Delete file: ", current_file)
     execute ':!rm '.filename
 endfun
 
@@ -52,4 +53,4 @@ nnoremap <leader>dd :call DELETEFOLDER() <CR>
 nnoremap <leader>mf :call MOVEFILE() <CR>
 nnoremap <leader>md :call MOVEFOLDER() <CR>
 
-nnoremap <leader>n <bar> :Lex <bar> :vertical resize  30<CR>
+nnoremap <leader>n :Lex <CR>
