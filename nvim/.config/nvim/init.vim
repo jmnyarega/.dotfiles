@@ -1,15 +1,16 @@
 call plug#begin('~/.vim/plugged')
 " Plebvim lsp Plugins
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/nvim-cmp'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/nvim-cmp'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'onsails/lspkind-nvim'
-Plug 'nvim-lua/lsp_extensions.nvim'
+" Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+" Plug 'onsails/lspkind-nvim'
+" Plug 'nvim-lua/lsp_extensions.nvim'
 
-Plug 'glepnir/lspsaga.nvim'
-Plug 'simrat39/symbols-outline.nvim'
+" Plug 'glepnir/lspsaga.nvim'
+" Plug 'simrat39/symbols-outline.nvim'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'git@github.com:tpope/vim-surround.git'
 
@@ -34,7 +35,6 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'https://github.com/vimwiki/vimwiki.git'
 
-Plug 'rust-lang/rust.vim'
 Plug 'darrikonn/vim-gofmt'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -73,10 +73,8 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
 
-nnoremap <C-x> dd
 nnoremap <C-e> :bdelete <CR>
 nnoremap <F5> :source ~/.config/nvim/init.vim <CR>
-nnoremap <leader>r :e $HOME/.config/nvim/init.vim <CR>
 nnoremap Q :q<CR>
 nnoremap s :w<CR>
 
