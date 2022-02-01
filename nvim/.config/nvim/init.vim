@@ -51,6 +51,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'ThePrimeagen/git-worktree.nvim'
 
 " Plug 'vim-conf-live/vimconflive2021-colorscheme'
 " Plug 'flazz/vim-colorschemes'

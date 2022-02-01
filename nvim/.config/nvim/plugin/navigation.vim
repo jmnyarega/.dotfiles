@@ -6,6 +6,9 @@ nnoremap <leader>lj :lprev<CR>zz
 nnoremap <C-q> :call ToggleQFList(1)<CR>
 nnoremap <leader>q :call ToggleQFList(0)<CR>
 
+nnoremap <F10> :bnext <CR>
+nnoremap <F9> :bprev <CR>
+
 noremap <leader>h :wincmd h <CR>
 noremap <leader>j :wincmd j <CR>
 noremap <leader>k :wincmd k <CR>

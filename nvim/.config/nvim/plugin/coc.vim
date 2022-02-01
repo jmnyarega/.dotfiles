@@ -32,7 +32,7 @@ nmap <silent>gy  <Plug>(coc-type-definition)
 nmap <silent>gr  <Plug>(coc-references)
 
 " Symbol renaming.
-nmap <leader>nr <Plug>(coc-rename)
+nmap grn <Plug>(coc-rename)
 
 " useful bindings
 nmap  <silent>go  :CocOutline<CR>
@@ -48,6 +48,25 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 augroup mygroup
   autocmd!

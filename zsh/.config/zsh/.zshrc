@@ -1,5 +1,3 @@
-# Luke's config for the Zoomer Shell
-
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -23,8 +21,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export FZF_DEFAULT_OPTS='--height 100% --layout reverse --info inline --border --preview "bat --style=numbers --color=always --line-range :500 {}"'
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-# export LC_ALL=en_US.UTF-8
-# export LANG=en_US.UTF-8
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -34,14 +30,13 @@ _comp_options+=(globdots)		# Include hidden files.
 
 plugins=(
   git
-  bundler
   dotenv
-  zsh-autosuggestions
   z
   node
+  zsh-autosuggestions
+  zsh-autocomplete
+  zsh-syntax-highlighting
 )
-
-ZSH_THEME="agnoster"
 
 # Load aliases and shortcuts if existent.
  [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
@@ -93,7 +88,7 @@ bindkey -s '^x' 'clear\n'
 bindkey -s '^f' 'fzf\n'
 bindkey '^[[P' delete-char
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(thefuck --alias)"
 
 # Edit line in vim with ctrl-e:
@@ -101,8 +96,5 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 git config --global core.editor "nvim"
 
-. /usr/share/z/z.sh
-
-# Load syntax highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8

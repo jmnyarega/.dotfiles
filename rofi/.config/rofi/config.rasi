@@ -1,0 +1,13 @@
+configuration {
+	modi: "window,run,ssh";
+	font: "Hack 10";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@theme "gruvbox-dark-hard"
