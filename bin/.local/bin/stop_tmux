@@ -1,6 +1,6 @@
 #!/bin/bash
 
-session=$(tmux list-sessions  | awk ' {print $1}' | sed 's/://g' | dmenu -i -p "$1" -nb darkgreen -sb blue -sf white -nf gray) 
+session=$(tmux list-sessions  | awk ' {print $1}' | sed 's/://g' | rofi -dmenu -p "Kill Session" "$1") 
 
 [ -z "$session" ] && exit
 

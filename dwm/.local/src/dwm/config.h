@@ -202,7 +202,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_d,		spawn,          SHCMD("rofi -show drun") },
+	{ MODKEY,			XK_d,		spawn,          SHCMD("rofi -show drun -p 'Applications' ") },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("passmenu") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },

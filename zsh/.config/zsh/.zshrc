@@ -96,5 +96,5 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 git config --global core.editor "nvim"
 
-export LC_ALL=en_IN.UTF-8
-export LANG=en_IN.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
