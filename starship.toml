@@ -1,0 +1,58 @@
+[battery]
+full_symbol = "⚡️"
+charging_symbol = "🔌 "
+unknown_symbol = "♻: "
+empty_symbol = "❗"
+discharging_symbol = "🔋 "
+
+[[battery.display]]
+threshold = 100
+style = "bold white"
+
+[cmd_duration]
+min_time = 500
+format = "underwent [$duration](bold yellow)"
+
+[character]
+# success_symbol = "[ ✅ ](bold green) "
+# error_symbol = "[ 🚫 ](bold red) "
+# vicmd_symbol = "[V](bold green) "
+# format = "[ ♥️ ](bold red) "
+format = ""
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+up_to_date = '[ ✔✓ ](bold green)'
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+[jobs]
+symbol = "+ "
+number_threshold = 1
+symbol_threshold = 0
+format = "[$symbol$number]($style) "
+
+[username]
+style_user = "red yellow"
+format = "[$user]($style):"
+disabled = false
+show_always = true
+
+[directory]
+truncation_length = 1
+truncation_symbol = ""
+read_only_style = "red"
+home_symbol = "🏠 "
+style = "green bold"
+
+[shell]
+zsh_indicator = "_"
+style = "red bold dimmed"
+disabled = false
