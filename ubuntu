@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="rofi"
+    STOW_FOLDERS="st"
 fi
 
 if [[ -z $DOTFILES ]]; then
