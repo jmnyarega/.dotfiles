@@ -12,7 +12,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'glepnir/lspsaga.nvim'
 " Plug 'simrat39/symbols-outline.nvim'
 Plug 'https://tpope.io/vim/commentary.git'
-Plug 'git@github.com:tpope/vim-surround.git'
+Plug 'https://tpope.io/vim/surround.git'
 
 " Neovim Tree shitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -109,5 +109,8 @@ nnoremap <leader>Y gg"+yG
 
 nnoremap <leader>d "_d
 inoremap <C-c> <esc>
+
+nnoremap <leader>i :set mouse=a<CR>
+nnoremap <leader>I :set mouse=<CR>
 
 au BufWritePost *.ts,*.js,*.jsx silent! !ctags -R --exclude=node_modules &

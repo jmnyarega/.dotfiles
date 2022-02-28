@@ -31,11 +31,8 @@ _comp_options+=(globdots)		# Include hidden files.
 plugins=(
   git
   dotenv
-  z
   node
   zsh-autosuggestions
-  zsh-autocomplete
-  zsh-syntax-highlighting
 )
 
 # Load aliases and shortcuts if existent.
@@ -73,6 +70,12 @@ function zle-keymap-select {
     echo -ne '\e[5 q'
   fi
 }
+
+fh () {
+    print -z $(history | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
+
+
 zle -N zle-keymap-select
 zle-line-init() {
     zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
@@ -86,10 +89,14 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 bindkey -s '^z' 'fg\n'
 bindkey -s '^x' 'clear\n'
 bindkey -s '^f' 'fzf\n'
+bindkey -s '^r' 'fh\n'
 bindkey '^[[P' delete-char
 
 # eval "$(starship init zsh)"
 eval "$(thefuck --alias)"
+
+# jump
+eval "$(jump shell)"
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
@@ -98,3 +105,6 @@ git config --global core.editor "nvim"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#44475A,bg=#50FA7B,bold,underline"
+bindkey '^ ' autosuggest-accept
