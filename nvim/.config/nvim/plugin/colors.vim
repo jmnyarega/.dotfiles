@@ -26,4 +26,8 @@ fun! ColorMyPencils()
     hi TelescopeBorder guifg=#5eacd
 endfun
 
-nnoremap <leader>c :call ColorMyPencils()<CR>
+nnoremap <leader>c0 :call ColorMyPencils()<CR>
+nnoremap <leader>c1 :colorscheme jellybeans <CR>
+nnoremap <leader>c2 :colorscheme srcery <CR>
+nnoremap <leader>c3 :colorscheme onedark <CR>
+nnoremap <leader>c4 :colorscheme ayu <CR>

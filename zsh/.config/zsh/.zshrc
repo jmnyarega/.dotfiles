@@ -32,6 +32,16 @@ plugins=(
   git
   dotenv
   node
+  aliases
+  archlinux
+  git
+  fzf
+  pass
+  history
+  yarn
+  z
+  vi-mode
+  themes
   zsh-autosuggestions
 )
 

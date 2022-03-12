@@ -56,6 +56,10 @@ Plug 'ThePrimeagen/git-worktree.nvim'
 " Plug 'vim-conf-live/vimconflive2021-colorscheme'
 " Plug 'flazz/vim-colorschemes'
 " Plug 'chriskempson/base16-vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'srcery-colors/srcery-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
@@ -112,5 +116,8 @@ inoremap <C-c> <esc>
 
 nnoremap <leader>i :set mouse=a<CR>
 nnoremap <leader>I :set mouse=<CR>
+
+hi CursorLine term=underline cterm=underline guibg=230 ctermbg=230 ctermfg=red
+nnoremap <Leader>1 :set cursorline!<CR>
 
 au BufWritePost *.ts,*.js,*.jsx silent! !ctags -R --exclude=node_modules &
