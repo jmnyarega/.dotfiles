@@ -9,7 +9,7 @@ case $BLOCK_BUTTON in
 	3) notify-send -u low "🌐 Internet module" "\- Click to connect
 ❌: wifi disabled
 📡: no wifi connection
-📶: wifi connection with quality
+🛰️: wifi connection with quality
 ❎: no ethernet
 🌐: ethernet working
 🔒: vpn is active
@@ -18,7 +18,7 @@ case $BLOCK_BUTTON in
 esac
 
 if grep -xq 'up' /sys/class/net/w*/operstate 2>/dev/null ; then
-	wifiicon="$(awk '/^\s*w/ { print "📶", int($3 * 100 / 70) "% " }' /proc/net/wireless)"
+	wifiicon="$(awk '/^\s*w/ { print "🛰️", int($3 * 100 / 70) "% " }' /proc/net/wireless)"
 elif grep -xq 'down' /sys/class/net/w*/operstate 2>/dev/null ; then
 	grep -xq '0x1003' /sys/class/net/w*/flags && wifiicon="📡 " || wifiicon="❌ "
 fi

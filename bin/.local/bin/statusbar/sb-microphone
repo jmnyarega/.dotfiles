@@ -7,12 +7,12 @@ case $BLOCK_BUTTON in
 	1) amixer set Capture toggle;;
 esac
 
-micon="🎤"
+micon=" 🎤"
 micoff="🔇"
 
 # if is on
 if [ -z "$on" ]; then
-    echo "MIC:$micon"
+    echo "MIC$micon"
 else
-    echo "MIC:$micoff"
+    echo "MIC$micoff"
 fi
