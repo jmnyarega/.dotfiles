@@ -8,7 +8,7 @@ case $BLOCK_BUTTON in
 esac
 
 micon=" 🎤"
-micoff="🔇"
+micoff=" 🔇"
 
 # if is on
 if [ -z "$on" ]; then

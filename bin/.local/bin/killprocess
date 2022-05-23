@@ -1,0 +1,3 @@
+#!/bin/bash
+
+lsof -ti tcp:$0 | xargs kill

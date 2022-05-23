@@ -34,7 +34,6 @@ plugins=(
   node
   aliases
   archlinux
-  git
   fzf
   pass
   history
@@ -52,7 +51,6 @@ plugins=(
 
 export ZSH=$HOME/.config/zsh/.oh-my-zsh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
-export PATH=$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 export COLORTERM='24bit'
 export SHELL_ENV=$HOME/.zshenv
@@ -102,9 +100,6 @@ bindkey -s '^f' 'fzf\n'
 bindkey -s '^r' 'fh\n'
 bindkey '^[[P' delete-char
 
-# eval "$(starship init zsh)"
-eval "$(thefuck --alias)"
-
 # jump
 eval "$(jump shell)"
 
@@ -112,9 +107,6 @@ eval "$(jump shell)"
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 git config --global core.editor "nvim"
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#44475A,bg=#50FA7B,bold,underline"
 bindkey '^ ' autosuggest-accept

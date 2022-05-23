@@ -45,6 +45,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-projectionist'
 Plug 'tomlion/vim-solidity'
+Plug 'https://github.com/jlcrochet/vim-razor'
 
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'
@@ -53,13 +54,38 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'ThePrimeagen/git-worktree.nvim'
 
-" Plug 'vim-conf-live/vimconflive2021-colorscheme'
-" Plug 'flazz/vim-colorschemes'
-" Plug 'chriskempson/base16-vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'srcery-colors/srcery-vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim.git'
+Plug 'dracula/dracula-theme'
+Plug 'sjl/badwolf'
+Plug 'jacoborus/tender'
 Plug 'joshdick/onedark.vim'
-Plug 'ayu-theme/ayu-vim'
+Plug 'jnurmine/Zenburn'
+Plug 'connorholyday/vim-snazzy'
+Plug 'tomasr/molokai'
+Plug 'lifepillar/vim-solarized8'
+
+" sass
+Plug 'AtsushiM/search-parent.vim'
+Plug 'AtsushiM/sass-compile.vim'
+
+" c#
+Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
+Plug 'scrooloose/syntastic'
+
+Plug 'https://github.com/jceb/vim-orgmode.git'
+
+""{{{
+  let g:sass_compile_auto = 1
+  let g:sass_compile_cdloop = 5
+  let g:sass_compile_cssdir = ['css', 'stylesheet', './']
+  let g:sass_compile_file = ['scss', 'sass']
+  let g:sass_compile_beforecmd = ''
+  let g:sass_compile_aftercmd = ''
+
+  autocmd FileType less,sass  setlocal sw=2 sts=2 ts=2 et
+  au! BufWritePost *.scss SassCompile
+"}}}
 
 call plug#end()
 
@@ -100,6 +126,10 @@ nnoremap <silent> - :resize -1 <CR>
 nnoremap <silent> \| :vsplit % <CR>
 nnoremap <silent> - :split % <CR>
 
+autocmd FileType cs noremap b<F5> :!mcs % <CR>
+autocmd FileType cs noremap r<F5> :%:r.exe <CR>
+autocmd FileType cs noremap d<F5> :!rm %:r.exe <CR>
+
 noremap <c-_>  :Commentary<CR>
 vnoremap <C-_> :Commentary<CR>
 
@@ -117,7 +147,7 @@ inoremap <C-c> <esc>
 nnoremap <leader>i :set mouse=a<CR>
 nnoremap <leader>I :set mouse=<CR>
 
+nnoremap gt : <space>
+
 hi CursorLine term=underline cterm=underline guibg=230 ctermbg=230 ctermfg=red
 nnoremap <Leader>1 :set cursorline!<CR>
-
-au BufWritePost *.ts,*.js,*.jsx silent! !ctags -R --exclude=node_modules &

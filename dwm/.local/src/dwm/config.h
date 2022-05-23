@@ -17,13 +17,13 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh      = 30;       /*  0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height  */
 static const char *fonts[]    = {
-									"Hack Nerd Font Mono:size=9:antialias=true:autohint=true",
+									"Operator Mono:size=9:antialias=true:autohint=true",
 									"JoyPixels:size=10:antialias=true:autohint=true",
 									"FontAwesome:size=10:antialias=true:autohint=true",
 								};
+static float brightnesz = 0.5;
 
 #include "/home/josiah/.local/src/dwm/themes/dracular.h"
-
 
 static char *colors[][4] = {
 	/*                       fg                bg                border                float */
@@ -39,6 +39,11 @@ static char *colors[][4] = {
 };
 
 typedef struct {
+    const float inc;
+    const float dec;
+} Brightness;
+
+typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
@@ -52,6 +57,11 @@ static Sp scratchpads[] = {
 	{"spcalc",      spcmd2},
 	{"sysact",    logout},
 };
+
+/* static Brightness values[] = { */
+/*     {"inc", brightnesz += 0.1 }, */
+/*     {"dec", brightnesz -= 0.1 }, */
+/* }; */
 
 /* tagging */
 static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "XI" };
@@ -201,7 +211,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_d,		spawn,          SHCMD("rofi -show drun -p 'Applications' ") },
+	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run -p 'Applications' ") },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("passmenu") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
@@ -210,6 +220,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
+	{ MODKEY|ShiftMask,	XK_Tab,		    shiftview,		{ .i = -1 } },
 	{ MODKEY,			XK_Tab,		    shiftview,		{ .i = 1 } },
 	{ MODKEY,			XK_semicolon,	shiftview,   	{ .i = 1 } },
 	{ MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
@@ -295,8 +306,8 @@ static Key keys[] = {
 	{ 0, XF86XK_TouchpadToggle,	spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,	spawn,		SHCMD("synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOn,		spawn,		SHCMD("synclient TouchpadOff=0") },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("xbacklight -inc 15") },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -dec 15") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("export BRIGHTNESS=1.0 && brightness") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("export BRIGHTNESS=0.1 && brightness") },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */

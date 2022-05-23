@@ -1,5 +1,6 @@
 set guicursor=n-v-c:block
 set relativenumber
+set maxmempattern=100000
 set nohlsearch
 set hidden
 set noerrorbells
@@ -18,6 +19,7 @@ set undofile
 set incsearch
 set termguicolors
 set scrolloff=8
+set laststatus=3 " global status line
 " set noshowmode
 set signcolumn=yes
 set isfname+=@-@
