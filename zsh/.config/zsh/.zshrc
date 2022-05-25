@@ -41,12 +41,9 @@ plugins=(
   aliases
   archlinux
   fzf
-  pass
   history
   yarn
-  z
   vi-mode
-  themes
   zsh-autosuggestions
 )
 
@@ -105,9 +102,6 @@ bindkey -s '^x' 'clear\n'
 bindkey -s '^f' 'fzf\n'
 bindkey -s '^r' 'fh\n'
 bindkey '^[[P' delete-char
-
-# jump
-eval "$(jump shell)"
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

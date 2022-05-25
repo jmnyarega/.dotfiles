@@ -6,7 +6,7 @@ allposs=$(xrandr -q | grep "connected" | awk '/ connected/ {print $1}')
 # Get all connected screens.
 echo "$allposs" | xargs -I "{}" xrandr --output "{}" --brightness $(bc -l <<< $1/10.5)
 
-nume=$(bc -l <<< $1/10)
-bright=$(bc -l <<< $nume*26666)
+nume=$(bc -l <<< $1/5)
+bright=$(bc -l <<< $nume*40000)
 
 brightnessctl s $bright

@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
+
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="dwmblocks"
+    STOW_FOLDERS="dwmblocks,dwm,nvim,dmenu,bin,Xresources,st,tmux,yay-bin,zsh,rofi"
 fi
 
 if [[ -z $DOTFILES ]]; then
