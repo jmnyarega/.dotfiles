@@ -1,0 +1,8 @@
+pane	0	0	:FIZZ	1	:*	0	:/mnt/ssd1/projects/store-front	0	zsh	:
+pane	0	0	:FIZZ	1	:*	1	:/mnt/ssd1/projects/frontend-test	0	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
+pane	0	0	:FIZZ	1	:*	2	:/mnt/ssd1/projects/frontend-test	1	zsh	:
+pane	0	1	:BUZZ	0	:-	0	:/mnt/ssd1/projects/simple-programs/Javacript	1	zsh	:
+pane	0	1	:BUZZ	0	:-	1	:/home/josiah	0	zsh	:
+window	0	0	1	:*	1118,273x51,0,0{132x51,0,0,0,140x51,133,0[140x35,133,0,1,140x15,133,36,2]}
+window	0	1	0	:-	d270,194x36,0,0{128x36,0,0,3,65x36,129,0,4}
+state	0	

@@ -1,0 +1,9 @@
+pane	0	0	:FIZZ	1	:*Z	0	:/mnt/ssd1/projects/TIL/interviews/developer-assessment	0	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
+pane	0	0	:FIZZ	1	:*Z	1	:/mnt/ssd1/projects/TIL/interviews/developer-assessment	1	zsh	:
+pane	0	0	:FIZZ	1	:*Z	2	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah/widget/src/__tests__	0	zsh	:
+pane	0	0	:FIZZ	1	:*Z	3	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah/widget	0	zsh	:
+pane	0	1	:BUZZ	0	:	0	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah	0	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
+pane	0	1	:BUZZ	0	:	1	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah	1	zsh	:
+window	0	0	1	:*Z	682e,319x61,0,0[319x51,0,0,0,319x9,0,52{105x9,0,52,1,105x9,106,52,2,107x9,212,52,3}]
+window	0	1	0	:	7faf,227x42,0,0{161x42,0,0,4,65x42,162,0,5}
+state	0	

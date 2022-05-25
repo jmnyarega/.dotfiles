@@ -1,0 +1,9 @@
+pane	0	0	:FIZZ	1	:*	0	:/mnt/ssd1/projects/services/random-quote-machine	1	zsh	:
+pane	0	0	:FIZZ	1	:*	1	:/mnt/ssd1/projects/services/random-quote-machine	0	zsh	:
+pane	0	0	:FIZZ	1	:*	2	:/mnt/ssd1/projects/services/random-quote-machine	0	zsh	:
+pane	0	1	:BUZZ	0	:Z	0	:/mnt/ssd1/projects/simple-programs	0	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
+pane	0	1	:BUZZ	0	:Z	1	:/mnt/ssd1/projects/simple-programs/Javacript/abstract-ds/LinkedList/Single	0	zsh	:
+pane	0	1	:BUZZ	0	:Z	2	:/home/josiah/Downloads	1	zsh	:
+window	0	0	1	:*	c7e0,227x42,0,0{145x42,0,0,0,81x42,146,0[81x20,146,0,1,81x21,146,21,2]}
+window	0	1	0	:Z	f7c3,194x48,0,0{131x48,0,0,3,62x48,132,0[62x19,132,0,4,62x28,132,20,5]}
+state	0	

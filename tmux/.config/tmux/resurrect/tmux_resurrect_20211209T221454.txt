@@ -1,0 +1,9 @@
+pane	0	0	:FIZZ	1	:*	0	:/mnt/ssd1/projects/TIL/interviews/developer-assessment	0	zsh	:
+pane	0	0	:FIZZ	1	:*	1	:/mnt/ssd1/projects/TIL/interviews/developer-assessment	1	zsh	:
+pane	0	0	:FIZZ	1	:*	2	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah/widget/src/__tests__	0	zsh	:
+pane	0	0	:FIZZ	1	:*	3	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah/widget	0	zsh	:
+pane	0	1	:BUZZ	0	:	0	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah	0	zsh	:
+pane	0	1	:BUZZ	0	:	1	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah	1	zsh	:
+window	0	0	1	:*	072c,227x42,0,0[227x25,0,0,0,227x16,0,26{74x16,0,26,1,74x16,75,26,2,77x16,150,26,3}]
+window	0	1	0	:	302b,319x61,0,0{207x61,0,0,4,111x61,208,0,5}
+state	0	

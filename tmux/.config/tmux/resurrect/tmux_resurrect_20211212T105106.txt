@@ -1,0 +1,9 @@
+pane	0	0	:FIZZ	1	:*Z	0	:/mnt/ssd1/projects/hello-world	0	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
+pane	0	0	:FIZZ	1	:*Z	1	:/mnt/ssd1/projects/recipe	1	nvim	:nvim -u /home/josiah/.config/nvim/init.vim data.json
+pane	0	0	:FIZZ	1	:*Z	2	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah/widget/src/__tests__	0	zsh	:
+pane	0	0	:FIZZ	1	:*Z	3	:/home/josiah	0	zsh	:
+pane	0	1	:BUZZ	0	:-	0	:/mnt/ssd1/projects	1	zsh	:
+pane	0	1	:BUZZ	0	:-	1	:/home/josiah	0	zsh	:
+window	0	0	1	:*Z	f5b8,319x61,0,0{142x61,0,0,0,176x61,143,0[176x19,143,0,1,176x19,143,20,2,176x21,143,40,3]}
+window	0	1	0	:-	f46a,227x42,0,0{113x42,0,0,4,113x42,114,0,5}
+state	0	

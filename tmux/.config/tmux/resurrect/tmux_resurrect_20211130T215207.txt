@@ -1,0 +1,9 @@
+pane	0	0	:FIZZ	1	:*	0	:/mnt/ssd1/projects/services	1	zsh	:
+pane	0	0	:FIZZ	1	:*	1	:/mnt/ssd1/projects/services/tic-tac-toe	0	zsh	:
+pane	0	0	:FIZZ	1	:*	2	:/mnt/ssd1/projects/services/tic-tac-toe	0	zsh	:
+pane	0	1	:BUZZ	0	:	0	:/mnt/ssd1/projects/simple-programs	0	zsh	:
+pane	0	1	:BUZZ	0	:	1	:/mnt/ssd1/projects/simple-programs/Javacript/abstract-ds/LinkedList/Single	0	zsh	:
+pane	0	1	:BUZZ	0	:	2	:/home/josiah/Downloads	1	zsh	:
+window	0	0	1	:*	0c18,227x42,0,0{131x42,0,0,0,95x42,132,0[95x19,132,0,1,95x22,132,20,2]}
+window	0	1	0	:	3887,227x42,0,0{148x42,0,0,3,78x42,149,0[78x16,149,0,4,78x25,149,17,5]}
+state	0	
