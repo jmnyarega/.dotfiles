@@ -5,7 +5,7 @@ SCRIPT_SOURCE=${PWD##*/}
 
 # SCRIPT_SOURCE=$(/bin/readlink -f ${0%/*})
 
-PS1="%B% $fg[green]%}% $SCRIPT_SOURCE %{$fg[red]%}%{$reset_color%}%B% 🌴🌴🌴 "
+PS1="%B% $fg[green]%}% $SCRIPT_SOURCE %{$fg[red]%}%{$reset_color%}%B% 🌴 "
 
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
@@ -56,6 +56,7 @@ plugins=(
  [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
 
 export ZSH=$HOME/.config/zsh/.oh-my-zsh
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
 source $ZSH/oh-my-zsh.sh
 export COLORTERM='24bit'
 export SHELL_ENV=$HOME/.zshenv
@@ -113,5 +114,5 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 git config --global core.editor "nvim"
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#d0d0d0,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#262626,bg=#f6f6f6,bold,underline"
 bindkey '^ ' autosuggest-accept
