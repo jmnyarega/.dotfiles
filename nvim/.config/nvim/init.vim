@@ -75,6 +75,11 @@ Plug 'scrooloose/syntastic'
 
 Plug 'https://github.com/jceb/vim-orgmode.git'
 
+Plug 'hashivim/vim-terraform'
+Plug 'Yggdroot/indentLine'
+
+let g:indentLine_leadingSpaceEnabled='1'
+
 ""{{{
   let g:sass_compile_auto = 1
   let g:sass_compile_cdloop = 5
