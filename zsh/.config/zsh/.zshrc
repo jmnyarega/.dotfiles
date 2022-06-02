@@ -1,12 +1,6 @@
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
-
-SCRIPT_SOURCE=${PWD##*/}
-
-# SCRIPT_SOURCE=$(/bin/readlink -f ${0%/*})
-
-PS1="%B% $fg[green]%}% $SCRIPT_SOURCE %{$fg[red]%}%{$reset_color%}%B% 🌴 "
-
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
@@ -41,9 +35,12 @@ plugins=(
   aliases
   archlinux
   fzf
+  pass
   history
   yarn
+  z
   vi-mode
+  themes
   zsh-autosuggestions
 )
 
@@ -103,10 +100,13 @@ bindkey -s '^f' 'fzf\n'
 bindkey -s '^r' 'fh\n'
 bindkey '^[[P' delete-char
 
+# jump
+eval "$(jump shell)"
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 git config --global core.editor "nvim"
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#262626,bg=#f6f6f6,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#44475A,bg=#50FA7B,bold,underline"
 bindkey '^ ' autosuggest-accept
