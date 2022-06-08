@@ -1,2 +1,4 @@
 bin/.local/bin/solang
-
+.oh-my-zsh/
+*.zcompdump
+*.zcompdump-josiah-5.9
