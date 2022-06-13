@@ -141,6 +141,9 @@ vnoremap <C-_> :Commentary<CR>
 " greatest remap ever
 xnoremap <leader>p "_dP
 
+" pause typing on current buffer/window for 5 mins
+nnoremap <C-space> :300sleep <CR>
+
 " next greatest remap ever : asbjornHaland
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
