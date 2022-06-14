@@ -1,16 +1,16 @@
 call plug#begin('~/.vim/plugged')
 " Plebvim lsp Plugins
 " Plug 'neovim/nvim-lspconfig'
-" Plug 'hrsh7th/cmp-nvim-lsp'
-" Plug 'hrsh7th/cmp-buffer'
-" Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-" Plug 'onsails/lspkind-nvim'
-" Plug 'nvim-lua/lsp_extensions.nvim'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-lua/lsp_extensions.nvim'
 
-" Plug 'glepnir/lspsaga.nvim'
-" Plug 'simrat39/symbols-outline.nvim'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'simrat39/symbols-outline.nvim'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://tpope.io/vim/surround.git'
 
