@@ -1,4 +1,4 @@
-#files: 814	version: 5.9
+#files: 818	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -672,6 +672,7 @@ _comps=(
 'ldd' '_ldd'
 'less' '_less'
 'let' '_math'
+'lf' '_lf'
 'lftp' '_ncftp'
 'lha' '_lha'
 'libinput' '_libinput'
@@ -759,6 +760,7 @@ _comps=(
 'mencal' '_mencal'
 'mere' '_mere'
 'merge' '_rcs'
+'meson' '_meson'
 'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
@@ -851,6 +853,7 @@ _comps=(
 'nginx' '_nginx'
 'ngrep' '_ngrep'
 'nice' '_nice'
+'ninja' '_ninja'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
@@ -1249,6 +1252,7 @@ _comps=(
 'tdr' '_devtodo'
 'tee' '_tee'
 'telnet' '_telnet'
+'terraform' '_terraform'
 'tex' '_tex'
 'texi2any' '_texinfo'
 'texi2dvi' '_texinfo'
@@ -1499,6 +1503,7 @@ _comps=(
 'yarn' '_yarn'
 'yash' '_sh'
 'yay' '_yay'
+'youtube-dl' '_youtube-dl'
 'ypbind' '_yp'
 'ypcat' '_yp'
 'ypmatch' '_yp'
@@ -1837,10 +1842,11 @@ autoload -Uz _yarn _pass _bat _bluetoothctl _bootctl \
             _zcalc_line _zcompile _zed _zftp _zle \
             _zmodload _zmv _zparseopts _zpty _zsh-mime-handler \
             _zsocket _zstyle _ztodo
+
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
-#omz revision: d41ca84af1271e8bfbe26f581cebe3b86521d0db
-#omz fpath: /home/josiah/.config/zsh/.oh-my-zsh/plugins/zsh-autosuggestions /home/josiah/.config/zsh/.oh-my-zsh/plugins/themes /home/josiah/.config/zsh/.oh-my-zsh/plugins/vi-mode /home/josiah/.config/zsh/.oh-my-zsh/plugins/z /home/josiah/.config/zsh/.oh-my-zsh/plugins/yarn /home/josiah/.config/zsh/.oh-my-zsh/plugins/history /home/josiah/.config/zsh/.oh-my-zsh/plugins/pass /home/josiah/.config/zsh/.oh-my-zsh/plugins/fzf /home/josiah/.config/zsh/.oh-my-zsh/plugins/archlinux /home/josiah/.config/zsh/.oh-my-zsh/plugins/aliases /home/josiah/.config/zsh/.oh-my-zsh/plugins/node /home/josiah/.config/zsh/.oh-my-zsh/plugins/dotenv /home/josiah/.config/zsh/.oh-my-zsh/plugins/git /home/josiah/.config/zsh/.oh-my-zsh/functions /home/josiah/.config/zsh/.oh-my-zsh/completions /home/josiah/.config/zsh/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle
+#omz revision: 50550c70eaa36e79fdf380bdc4ddad4a1ad581a0
+#omz fpath: /home/josiah/.config/zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/josiah/.config/zsh/.oh-my-zsh/plugins/themes /home/josiah/.config/zsh/.oh-my-zsh/plugins/vi-mode /home/josiah/.config/zsh/.oh-my-zsh/plugins/z /home/josiah/.config/zsh/.oh-my-zsh/plugins/yarn /home/josiah/.config/zsh/.oh-my-zsh/plugins/history /home/josiah/.config/zsh/.oh-my-zsh/plugins/pass /home/josiah/.config/zsh/.oh-my-zsh/plugins/fzf /home/josiah/.config/zsh/.oh-my-zsh/plugins/archlinux /home/josiah/.config/zsh/.oh-my-zsh/plugins/aliases /home/josiah/.config/zsh/.oh-my-zsh/plugins/node /home/josiah/.config/zsh/.oh-my-zsh/plugins/dotenv /home/josiah/.config/zsh/.oh-my-zsh/plugins/git /home/josiah/.config/zsh/.oh-my-zsh/functions /home/josiah/.config/zsh/.oh-my-zsh/completions /home/josiah/.config/zsh/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle
