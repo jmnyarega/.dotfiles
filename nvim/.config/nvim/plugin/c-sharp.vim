@@ -6,12 +6,12 @@ let g:syntastic_cs_checkers = ['code_checker']
 augroup omnisharp_commands
     autocmd!
     "Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)
-    " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+    autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
     " Synchronous build (blocks Vim)
     "autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
     " Builds can also run asynchronously with vim-dispatch installed
-    autocmd FileType cs nnoremap <leader>bb :wa!<cr>:OmniSharpBuildAsync<cr>
+    " autocmd FileType cs nnoremap <leader>bb :wa!<cr>:OmniSharpBuildAsync<cr>
     " automatic syntax check on events (TextChanged requires Vim 7.4)
     autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
@@ -24,13 +24,13 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <leader>gt :OmniSharpFindType<cr>
     autocmd FileType cs nnoremap <leader>gs :OmniSharpFindSymbol<cr>
     autocmd FileType cs nnoremap <leader>gu :OmniSharpFindUsages<cr>
+    autocmd FileType cs nnoremap <leader>rn :OmniSharpRename<cr>
 
     "finds members in the current buffer
-    autocmd FileType cs nnoremap <leader>gm :OmniSharpFindMembers<cr>
+    autocmd FileType cs nnoremap <leader>m :OmniSharpFindMembers<cr>
     " cursor can be anywhere on the line containing an issue
-    autocmd FileType cs nnoremap <leader>gx  :OmniSharpFixIssue<cr>
-    autocmd FileType cs nnoremap <leader>gxx :OmniSharpFixUsings<cr>
-    autocmd FileType cs nnoremap <leader>gtt :OmniSharpTypeLookup<cr>
-    autocmd FileType cs nnoremap <leader>gc :OmniSharpDocumentation<cr>
-
+    autocmd FileType cs nnoremap <leader>fx  :OmniSharpFixIssue<cr>
+    autocmd FileType cs nnoremap <leader>fu :OmniSharpFixUsings<cr>
+    autocmd FileType cs nnoremap <leader>t  :OmniSharpTypeLookup<cr>
+    autocmd FileType cs nnoremap <leader>K :OmniSharpDocumentation<cr>
 augroup END
