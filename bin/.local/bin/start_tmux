@@ -1,3 +1,6 @@
 #!/bin/bash
 
-tmux -u && tmux -u source-file ~/.config/tmux/tmux-config && tmux -u attach -d -t $1
+# tmux -u && tmux -u source-file ~/.config/tmux/tmux-config && tmux -u attach -d -t $1
+tmux new-session -A -s work && tmux detach -s work
+
+tmux set-option -ga terminal-overrides ",xterm-256color:Tc"

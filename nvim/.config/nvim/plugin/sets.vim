@@ -17,7 +17,6 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set termguicolors
 set scrolloff=8
 set laststatus=3 " global status line
 " set noshowmode
@@ -51,3 +50,7 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
+
+if has("termguicolors")
+    set termguicolors
+endif
