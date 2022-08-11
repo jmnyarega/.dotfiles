@@ -1,4 +1,8 @@
 call plug#begin('~/.vim/plugged')
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " Plebvim lsp Plugins
 " Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
