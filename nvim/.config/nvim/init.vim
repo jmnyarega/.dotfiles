@@ -78,6 +78,18 @@ Plug 'https://github.com/jceb/vim-orgmode.git'
 Plug 'hashivim/vim-terraform'
 Plug 'Yggdroot/indentLine'
 
+" circleci
+Plug 'yasuhiroki/circleci.vim'
+
+" ctags
+Plug 'https://github.com/xolox/vim-easytags.git'
+Plug 'https://github.com/xolox/vim-misc.git'
+let g:easytags_dynamic_files = 1
+let g:easytags_cmd = '/bin/ctags'
+let g:easytags_file = '~/.vim/tags'
+let g:easytags_events = ['BufWritePost']
+
+
 let g:indentLine_leadingSpaceEnabled='1'
 
 ""{{{

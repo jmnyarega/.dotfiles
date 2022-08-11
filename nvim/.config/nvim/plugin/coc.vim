@@ -36,7 +36,7 @@ augroup coc_commands
 
     autocmd FileType javascript,typescript nmap <silent>grn <Plug>(coc-rename)
     autocmd FileType javascript,typescript nmap <silent>go :CocOutline<CR>
-    autocmd FileType javascript,typescript nmap <silent>ge :CocAction<CR>
+    autocmd FileType javascript,typescript nmap <leader>a :CocAction<CR>
     autocmd FileType javascript,typescript xmap <leader>f  <Plug>(coc-format-selected)
     autocmd FileType javascript,typescript nmap <leader>f  <Plug>(coc-format-selected)
 
