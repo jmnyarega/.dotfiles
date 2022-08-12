@@ -1,3 +1,10 @@
 #!/bin/bash
 
-lsof -ti tcp:$0 | xargs kill
+
+process=$(lsof -n -i :$1)
+
+echo $process
+
+[ -z "$process" ] && exit;
+
+lsof -ti tcp:$1 | xargs kill

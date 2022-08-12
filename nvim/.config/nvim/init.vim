@@ -1,4 +1,8 @@
 call plug#begin('~/.vim/plugged')
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " Plebvim lsp Plugins
 " Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -80,6 +84,17 @@ Plug 'hashivim/vim-terraform'
 Plug 'Yggdroot/indentLine'
 
 Plug 'wakatime/vim-wakatime'
+" circleci
+Plug 'yasuhiroki/circleci.vim'
+
+" ctags
+Plug 'https://github.com/xolox/vim-easytags.git'
+Plug 'https://github.com/xolox/vim-misc.git'
+let g:easytags_dynamic_files = 1
+let g:easytags_cmd = '/bin/ctags'
+let g:easytags_file = '~/.vim/tags'
+let g:easytags_events = ['BufWritePost']
+
 
 let g:indentLine_leadingSpaceEnabled='1'
 

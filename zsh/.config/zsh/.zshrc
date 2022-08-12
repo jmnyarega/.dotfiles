@@ -52,7 +52,7 @@ plugins=(
 export ZSH=$HOME/.config/zsh/.oh-my-zsh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
 source $ZSH/oh-my-zsh.sh
-export COLORTERM='24bit'
+export TERM="xterm-256color"
 export SHELL_ENV=$HOME/.zshenv
 
 # vi mode
@@ -98,7 +98,7 @@ bindkey -s '^z' 'fg\n'
 bindkey -s '^x' 'clear\n'
 bindkey -s '^f' 'fzf\n'
 bindkey -s '^r' 'fh\n'
-bindkey '^[[P' delete-char
+bindkey '[P' delete-char
 
 # jump
 eval "$(jump shell)"

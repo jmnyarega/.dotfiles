@@ -23,15 +23,15 @@ format = ""
 [git_status]
 conflicted = "🏳"
 ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
+behind = " 😰 "
+diverged = " 😵 "
 up_to_date = '[ ✔✓ ](bold green)'
-untracked = "🤷‍"
-stashed = "📦"
-modified = "📝"
+untracked = " 🤷 "
+stashed = " 📦 "
+modified = " 📝 "
 staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
+renamed = " 👅 "
+deleted = " 🗑 "
 
 [jobs]
 symbol = "+ "
