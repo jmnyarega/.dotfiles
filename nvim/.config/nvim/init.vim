@@ -70,13 +70,16 @@ Plug 'AtsushiM/search-parent.vim'
 Plug 'AtsushiM/sass-compile.vim'
 
 " c#
-Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'nickspoons/vim-sharpenup'
 Plug 'scrooloose/syntastic'
 
 Plug 'https://github.com/jceb/vim-orgmode.git'
 
 Plug 'hashivim/vim-terraform'
 Plug 'Yggdroot/indentLine'
+
+Plug 'wakatime/vim-wakatime'
 
 let g:indentLine_leadingSpaceEnabled='1'
 
