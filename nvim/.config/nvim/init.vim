@@ -182,7 +182,7 @@ nnoremap J mzJ`z
 
 nnoremap <C-e> :bdelete <CR>
 nnoremap <F5> :source ~/.config/nvim/init.vim <CR>
-nnoremap Q :q<CR>
+" nnoremap Q :q<CR>
 nnoremap s :w<CR>
 
 ino <down> <Nop>
@@ -213,7 +213,7 @@ vnoremap <C-_> :Commentary<CR>
 xnoremap <leader>p "_dP
 
 " pause typing on current buffer/window for 5 mins
-nnoremap <C-space> :300sleep <CR>
+" nnoremap <C-space> :300sleep <CR>
 
 " next greatest remap ever : asbjornHaland
 nnoremap <leader>y "+y
