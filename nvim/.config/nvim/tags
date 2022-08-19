@@ -12,19 +12,21 @@
 +	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> + :resize +1 <CR>$/;"	m	language:Vim
 -	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> - :resize -1 <CR>$/;"	m	language:Vim
 -	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> - :split % <CR>$/;"	m	language:Vim
-0	coc-settings.json	/^    "cpp": ["c"],$/;"	s	array:snippets.extends.cpp
-0	coc-settings.json	/^    "javascriptreact": ["javascript"],$/;"	s	array:snippets.extends.javascriptreact
-0	coc-settings.json	/^    "typescript",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-0	coc-settings.json	/^    "typescript": ["javascript"]$/;"	s	array:snippets.extends.typescript
-1	coc-settings.json	/^    "c++",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-2	coc-settings.json	/^    "javascript",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-3	coc-settings.json	/^    "typescript.tsx",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-4	coc-settings.json	/^    "javascript.jsx",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-5	coc-settings.json	/^    "typescriptreact",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-6	coc-settings.json	/^    "svg",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-7	coc-settings.json	/^    "html",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-8	coc-settings.json	/^    "css",$/;"	s	array:coc.preferences.formatOnSaveFiletypes
-9	coc-settings.json	/^    "json"$/;"	s	array:coc.preferences.formatOnSaveFiletypes
+0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "cpp": ["c"],$/;"	s	language:JSON	array:snippets.extends.cpp
+0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascriptreact": ["javascript"],$/;"	s	language:JSON	array:snippets.extends.javascriptreact
+0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "typescript",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "typescript": ["javascript"]$/;"	s	language:JSON	array:snippets.extends.typescript
+0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    {$/;"	o	language:JSON	array:java.configuration.runtimes
+1	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "c++",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+10	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "java"$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+2	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascript",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+3	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "typescript.tsx",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+4	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascript.jsx",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+5	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "typescriptreact",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+6	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "svg",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+7	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "html",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+8	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "css",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
+9	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "json",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
 <C-_>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^vnoremap <C-_> :Commentary<CR>$/;"	m	language:Vim
 <C-b>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0)\\/;"	m	language:Vim
 <C-b>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\\<C-b/;"	m	language:Vim
@@ -131,6 +133,7 @@ MOVEFILE	plugin/netrw.vim	/^fun! MOVEFILE()$/;"	f
 MOVEFOLDER	plugin/netrw.vim	/^fun! MOVEFOLDER()$/;"	f
 N	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap N Nzzzv$/;"	m	language:Vim
 P	lua/theprimeagen/init.lua	/^P = function(v)$/;"	f
+PhpSyntaxOverride	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^function! PhpSyntaxOverride()$/;"	f	language:Vim
 Q	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap Q :q<CR>$/;"	m	language:Vim
 Q	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^  inoremap <silent><expr> Q coc#refresh()$/;"	m	language:Vim
 R	lua/theprimeagen/init.lua	/^  R = function(name)$/;"	f
@@ -141,24 +144,40 @@ Y	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap Y yg\$$/;"	m	lang
 \\|	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> \\| :vsplit % <CR>$/;"	m	language:Vim
 attach_mappings	lua/theprimeagen/telescope.lua	/^            attach_mappings = function(prompt_bufnr, map)$/;"	f
 attach_mappings	lua/theprimeagen/telescope.lua	/^        attach_mappings = function(_, map)$/;"	f
-coc.preferences.extensionUpdateCheck	coc-settings.json	/^  "coc.preferences.extensionUpdateCheck": "never"$/;"	s
-coc.preferences.formatOnSaveFiletypes	coc-settings.json	/^  "coc.preferences.formatOnSaveFiletypes": [$/;"	a
+blade	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "blade": "html"$/;"	s	language:JSON	object:emmet.includeLanguages
+clangd.path	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "clangd.path": "~\/.config\/coc\/extensions\/coc-clangd-data\/install\/13.0.0\/clangd_13.0.0\//;"	s	language:JSON
+coc.preferences.extensionUpdateCheck	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "coc.preferences.extensionUpdateCheck": "daily",$/;"	s	language:JSON
+coc.preferences.formatOnSaveFiletypes	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "coc.preferences.formatOnSaveFiletypes": [$/;"	a	language:JSON
 coc_commands	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^augroup coc_commands$/;"	a	language:Vim
-codeLens.enable	coc-settings.json	/^  "codeLens.enable": true,$/;"	b
+codeLens.enable	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "codeLens.enable": true,$/;"	b	language:JSON
 config	lua/theprimeagen/lsp.lua	/^local function config(_config)$/;"	f
-cpp	coc-settings.json	/^    "cpp": ["c"],$/;"	a	object:snippets.extends
-diagnostic.checkCurrentLine	coc-settings.json	/^  "diagnostic.checkCurrentLine": true,$/;"	b
-diagnostic.errorSign	coc-settings.json	/^  "diagnostic.errorSign": "✖",$/;"	s
-diagnostic.hintSign	coc-settings.json	/^  "diagnostic.hintSign": "○",$/;"	s
-diagnostic.infoSign	coc-settings.json	/^  "diagnostic.infoSign": "●",$/;"	s
-diagnostic.warningSign	coc-settings.json	/^  "diagnostic.warningSign": "⚠",$/;"	s
-emmet.includeLanguages	coc-settings.json	/^  "emmet.includeLanguages": {$/;"	o
+cpp	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "cpp": ["c"],$/;"	a	language:JSON	object:snippets.extends
+default	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^      "default": true$/;"	b	language:JSON	object:java.configuration.runtimes.0
+diagnostic.checkCurrentLine	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.checkCurrentLine": true,$/;"	b	language:JSON
+diagnostic.errorSign	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.errorSign": "✖",$/;"	s	language:JSON
+diagnostic.hintSign	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.hintSign": "○",$/;"	s	language:JSON
+diagnostic.infoSign	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.infoSign": "●",$/;"	s	language:JSON
+diagnostic.warningSign	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.warningSign": "⚠",$/;"	s	language:JSON
+emmet.includeLanguages	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "emmet.includeLanguages": {$/;"	o	language:JSON
 entry_maker	lua/theprimeagen/telescope.lua	/^            entry_maker = function(entry)$/;"	f
 expand	lua/theprimeagen/lsp.lua	/^		expand = function(args)$/;"	f
 f	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^xnoremap f :m-2<CR>gv=gv$/;"	m	language:Vim
 format	lua/theprimeagen/lsp.lua	/^        format = function(entry, vim_item)$/;"	f
 g:EditorConfig_exclude_patterns	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^let g:EditorConfig_exclude_patterns = ['fugitive:\/\/.*']$/;"	v	language:Vim
 g:EditorConfig_exclude_patterns	plugin/coc.vim	/^let g:EditorConfig_exclude_patterns = ['fugitive:\/\/.*']$/;"	v
+g:airline#extensions#ale#enabled	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:airline#extensions#ale#enabled = 1$/;"	v	language:Vim
+g:ale_completion_autoimport	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_completion_autoimport = 1$/;"	v	language:Vim
+g:ale_completion_enabled	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_completion_enabled = 1$/;"	v	language:Vim
+g:ale_fix_on_save	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_fix_on_save = 1$/;"	v	language:Vim
+g:ale_fixers	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_fixers = {$/;"	v	language:Vim
+g:ale_fixers	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_fixers = {'php': ['phpcbf'], 'javascript': ['eslint', 'tslint']}$/;"	v	language:Vim
+g:ale_php_php_cs_fixer_executable	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_php_php_cs_fixer_executable='phpcbf'$/;"	v	language:Vim
+g:ale_php_phpcs_executable	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_php_phpcs_executable='phpcs'$/;"	v	language:Vim
+g:ale_sign_column_always	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_sign_column_always = 1$/;"	v	language:Vim
+g:ale_sign_error	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_sign_error = '>>'$/;"	v	language:Vim
+g:ale_sign_warning	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_sign_warning = '--'$/;"	v	language:Vim
+g:blade_custom_directives	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:blade_custom_directives = ['datetime', 'javascript']$/;"	v	language:Vim
+g:blade_custom_directives_pairs	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:blade_custom_directives_pairs = {$/;"	v	language:Vim
 g:coc_global_extensions	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^let g:coc_global_extensions = [$/;"	v	language:Vim
 g:coc_global_extensions	plugin/coc.vim	/^let g:coc_global_extensions = [$/;"	v
 g:compe	plugin/lsp.vim	/^let g:compe = {}$/;"	v
@@ -184,10 +203,15 @@ g:compe	plugin/lsp.vim	/^let g:compe.source.vsnip = v:true$/;"	v
 g:compe	plugin/lsp.vim	/^let g:compe.source_timeout = 200$/;"	v
 g:compe	plugin/lsp.vim	/^let g:compe.throttle_time = 80$/;"	v
 g:completion_matching_strategy_list	plugin/lsp.vim	/^let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']$/;"	v
-g:easytags_cmd	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_cmd = '\/bin\/ctags'$/;"	v	language:Vim
+g:easytags_async	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_async = 1$/;"	v	language:Vim
+g:easytags_by_filetype	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_by_filetype = 1$/;"	v	language:Vim
+g:easytags_cmd	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_cmd = 'ctags'$/;"	v	language:Vim
 g:easytags_dynamic_files	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_dynamic_files = 1$/;"	v	language:Vim
 g:easytags_events	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_events = ['BufWritePost']$/;"	v	language:Vim
 g:easytags_file	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_file = '~\/.vim\/tags'$/;"	v	language:Vim
+g:easytags_include_members	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_include_members = 1$/;"	v	language:Vim
+g:easytags_resolve_links	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_resolve_links = 1$/;"	v	language:Vim
+g:easytags_syntax_keyword	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_syntax_keyword = 'always'$/;"	v	language:Vim
 g:f_g	plugin/navigation.vim	/^            let g:f_g = 0$/;"	v
 g:f_g	plugin/navigation.vim	/^            let g:f_g = 1$/;"	v
 g:f_g	plugin/navigation.vim	/^let g:f_g = 0$/;"	v
@@ -213,11 +237,11 @@ g:vim_jsx_pretty_highlight_close_tag	/home/josiah/.dotfiles/nvim/.config/nvim/in
 gd	plugin/coc.vim	/^nnoremap <silent>gd  <Plug>(coc-definition)$/;"	m
 ge	plugin/coc.vim	/^vnoremap  <silent>ge  :CocAction<CR>$/;"	m
 gi	plugin/coc.vim	/^nnoremap <silent>gi  <Plug>(coc-implementation)$/;"	m
-git.addGBlameToBufferVar	coc-settings.json	/^  "git.addGBlameToBufferVar": true,$/;"	b
-git.addedSign.text	coc-settings.json	/^  "git.addedSign.text": "┃",$/;"	s
-git.changeRemovedSign.text	coc-settings.json	/^  "git.changeRemovedSign.text": "┃",$/;"	s
-git.changedSign.text	coc-settings.json	/^  "git.changedSign.text": "┃",$/;"	s
-git.removedSign.text	coc-settings.json	/^  "git.removedSign.text": "┃",$/;"	s
+git.addGBlameToBufferVar	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.addGBlameToBufferVar": true,$/;"	b	language:JSON
+git.addedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.addedSign.text": "┃",$/;"	s	language:JSON
+git.changeRemovedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.changeRemovedSign.text": "┃",$/;"	s	language:JSON
+git.changedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.changedSign.text": "┃",$/;"	s	language:JSON
+git.removedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.removedSign.text": "┃",$/;"	s	language:JSON
 go	plugin/coc.vim	/^nnoremap  <silent>go  :CocOutline<CR>$/;"	m
 gr	plugin/coc.vim	/^nnoremap <silent>gr  <Plug>(coc-references)$/;"	m
 gt	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap gt : <space>$/;"	m	language:Vim
@@ -225,13 +249,32 @@ gy	plugin/coc.vim	/^nnoremap <silent>gy  <Plug>(coc-type-definition)$/;"	m
 image_selector	lua/theprimeagen/telescope.lua	/^local function image_selector(prompt, cwd)$/;"	f
 is_nrdp	lua/theprimeagen/git-worktree.lua	/^local function is_nrdp(path)$/;"	f
 is_tvui	lua/theprimeagen/git-worktree.lua	/^local function is_tvui(path)$/;"	f
-javascript	coc-settings.json	/^    "javascript": "javascriptreact"$/;"	s	object:emmet.includeLanguages
-javascriptreact	coc-settings.json	/^    "javascriptreact": ["javascript"],$/;"	a	object:snippets.extends
+java.autobuild.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.autobuild.enabled": true,$/;"	b	language:JSON
+java.codeGeneration.generateComments	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.codeGeneration.generateComments": true,$/;"	b	language:JSON
+java.completion.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.completion.enabled": true,$/;"	b	language:JSON
+java.completion.guessMethodArguments	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.completion.guessMethodArguments": true,$/;"	b	language:JSON
+java.completion.maxResults	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.completion.maxResults": 10,$/;"	n	language:JSON
+java.configuration.runtimes	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.configuration.runtimes": [$/;"	a	language:JSON
+java.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.enabled": true,$/;"	b	language:JSON
+java.format.comments.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.format.comments.enabled": true,$/;"	b	language:JSON
+java.format.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.format.enabled": true,$/;"	b	language:JSON
+java.format.onType.fixComment.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.format.onType.fixComment.enabled": true,$/;"	b	language:JSON
+java.home	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.home": "\/usr\/lib\/jvm\/java-17-jdk",$/;"	s	language:JSON
+java.implementationsCodeLens.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.implementationsCodeLens.enabled": true,$/;"	b	language:JSON
+java.import.gradle.wrapper.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.import.gradle.wrapper.enabled": true,$/;"	b	language:JSON
+java.import.maven.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.import.maven.enabled": true,$/;"	b	language:JSON
+java.progressReports.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.progressReports.enabled": true,$/;"	b	language:JSON
+java.referencesCodeLens.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.referencesCodeLens.enabled": true,$/;"	b	language:JSON
+javascript	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascript": "javascriptreact",$/;"	s	language:JSON	object:emmet.includeLanguages
+javascriptreact	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascriptreact": ["javascript"],$/;"	a	language:JSON	object:snippets.extends
 loaded_matchparen	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let loaded_matchparen = 1$/;"	v	language:Vim
 mapleader	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let mapleader = " "$/;"	v	language:Vim
 mygroup	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^augroup mygroup$/;"	a	language:Vim
 mygroup	plugin/coc.vim	/^augroup mygroup$/;"	a
 n	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap n nzzzv$/;"	m	language:Vim
+name	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^      "name": "JavaSE-17",$/;"	s	language:JSON	object:java.configuration.runtimes.0
+path	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^      "path": "\/usr\/lib\/jvm\/java-17-jdk",$/;"	s	language:JSON	object:java.configuration.runtimes.0
+phpSyntaxOverride	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^augroup phpSyntaxOverride$/;"	a	language:Vim
 refactor	lua/theprimeagen/telescope.lua	/^local function refactor(prompt_bufnr)$/;"	f
 root_dir	lua/theprimeagen/lsp.lua	/^    root_dir = function()$/;"	f
 s	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap s :w<CR>$/;"	m	language:Vim
@@ -242,8 +285,8 @@ s:show_documentation	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^f
 select_background	lua/theprimeagen/telescope.lua	/^local function select_background(prompt_bufnr, map)$/;"	f
 set_background	lua/theprimeagen/telescope.lua	/^local function set_background(content)$/;"	f
 set_the_background	lua/theprimeagen/telescope.lua	/^    local function set_the_background(close)$/;"	f
-snippets.extends	coc-settings.json	/^  "snippets.extends": {$/;"	o
+snippets.extends	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "snippets.extends": {$/;"	o	language:JSON
 snippets_paths	lua/theprimeagen/lsp.lua	/^local snippets_paths = function()$/;"	f
-suggest.enablePreview	coc-settings.json	/^  "suggest.enablePreview": true,$/;"	b
-typescript	coc-settings.json	/^    "typescript": ["javascript"]$/;"	a	object:snippets.extends
+suggest.enablePreview	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "suggest.enablePreview": true,$/;"	b	language:JSON
+typescript	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "typescript": ["javascript"]$/;"	a	language:JSON	object:snippets.extends
 z	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^xnoremap z :m'>+<CR>gv=gv$/;"	m	language:Vim

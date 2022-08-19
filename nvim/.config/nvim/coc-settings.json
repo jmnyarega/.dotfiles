@@ -30,7 +30,8 @@
     "typescript": ["javascript"]
   },
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "blade": "html"
   },
   "java.configuration.runtimes": [
     {

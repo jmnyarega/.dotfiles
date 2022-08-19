@@ -91,12 +91,65 @@ Plug 'yasuhiroki/circleci.vim'
 Plug 'https://github.com/xolox/vim-easytags.git'
 Plug 'https://github.com/xolox/vim-misc.git'
 let g:easytags_dynamic_files = 1
-let g:easytags_cmd = '/bin/ctags'
+let g:easytags_cmd = 'ctags'
 let g:easytags_file = '~/.vim/tags'
 let g:easytags_events = ['BufWritePost']
+let g:easytags_async = 1
+let g:easytags_syntax_keyword = 'always'
+let g:easytags_by_filetype = 1
+let g:easytags_include_members = 1
+let g:easytags_resolve_links = 1
 
+" Include Phpactor
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+
+" php
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'jwalton512/vim-blade'
+" Define some single Blade directives. This variable is used for highlighting only.
+let g:blade_custom_directives = ['datetime', 'javascript']
+
+" Define pairs of Blade directives. This variable is used for highlighting and indentation.
+let g:blade_custom_directives_pairs = {
+      \   'markdown': 'endmarkdown',
+      \   'cache': 'endcache',
+      \ }
+
+set completeopt=noinsert,menuone,noselect
+
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-tern'
+Plug 'mhartington/nvim-typescript'
+Plug 'ncm2/ncm2-vim'
+Plug 'phpactor/ncm2-phpactor'
+Plug 'ncm2/ncm2-html-subscope'
+Plug 'ncm2/ncm2-markdown-subscope'
+
+Plug 'StanAngeloff/php.vim'
+Plug 'dense-analysis/ale'
+Plug 'shawncplus/phpcomplete.vim'
+
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
 let g:indentLine_leadingSpaceEnabled='1'
+let g:ale_php_phpcs_executable='phpcs'
+let g:ale_php_php_cs_fixer_executable='phpcbf'
+let g:ale_fixers = {'php': ['phpcbf'], 'javascript': ['eslint', 'tslint']}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'php': ['phpcbf'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:airline#extensions#ale#enabled = 1
+
 
 ""{{{
   let g:sass_compile_auto = 1
@@ -106,8 +159,8 @@ let g:indentLine_leadingSpaceEnabled='1'
   let g:sass_compile_beforecmd = ''
   let g:sass_compile_aftercmd = ''
 
-  autocmd FileType less,sass  setlocal sw=2 sts=2 ts=2 et
-  au! BufWritePost *.scss SassCompile
+  " autocmd FileType less,sass  setlocal sw=2 sts=2 ts=2 et
+  " au! BufWritePost *.scss SassCompile
 "}}}
 
 call plug#end()
@@ -177,3 +230,21 @@ nnoremap gt : <space>
 
 hi CursorLine term=underline cterm=underline guibg=230 ctermbg=230 ctermfg=red
 nnoremap <Leader>1 :set cursorline!<CR>
+
+" Put this function at the very end of your vimrc file.
+
+function! PhpSyntaxOverride()
+  " Put snippet overrides in this function.
+  hi! link phpDocTags phpDefine
+  hi! link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
+syn match phpParentOnly "[()]" contained containedin=phpParent
+hi phpParentOnly guifg=#f08080 guibg=NONE gui=NONE
+au BufRead,BufNewFile *.blade.php set filetype=blade
+au BufRead,BufNewFile *.scss set filetype=css
