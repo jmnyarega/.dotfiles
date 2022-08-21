@@ -24,7 +24,6 @@ alias \
 	extract="tar -xvf" \
     dwatch="dotnet watch"\
 	ffmpeg="ffmpeg -hide_banner" \
-    php="php7" \
     phpcbf="~/.config/composer/vendor/bin/phpcbf" \
     phpcs="~/.config/composer/vendor/bin/phpcs" \
     laravel="~/.config/composer/vendor/bin/laravel" \

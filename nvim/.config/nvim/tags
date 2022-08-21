@@ -9,9 +9,9 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
-+	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> + :resize +1 <CR>$/;"	m	language:Vim
--	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> - :resize -1 <CR>$/;"	m	language:Vim
--	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> - :split % <CR>$/;"	m	language:Vim
++	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <silent> + :resize +1 <CR>$/;"	m	language:Vim
+-	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <silent> - :resize -1 <CR>$/;"	m	language:Vim
+-	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <silent> - :split % <CR>$/;"	m	language:Vim
 0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "cpp": ["c"],$/;"	s	language:JSON	array:snippets.extends.cpp
 0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascriptreact": ["javascript"],$/;"	s	language:JSON	array:snippets.extends.javascriptreact
 0	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "typescript",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
@@ -27,130 +27,82 @@
 7	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "html",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
 8	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "css",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
 9	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "json",$/;"	s	language:JSON	array:coc.preferences.formatOnSaveFiletypes
-<C-_>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^vnoremap <C-_> :Commentary<CR>$/;"	m	language:Vim
+<C-_>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^vnoremap <C-_> :Commentary<CR>$/;"	m	language:Vim
 <C-b>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0)\\/;"	m	language:Vim
 <C-b>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\\<C-b/;"	m	language:Vim
 <C-b>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\\<C-b/;"	m	language:Vim
-<C-c>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^inoremap <C-c> <esc>$/;"	m	language:Vim
-<C-e>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <C-e> :bdelete <CR>$/;"	m	language:Vim
+<C-c>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^inoremap <C-c> <esc>$/;"	m	language:Vim
+<C-e>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <C-e> :bdelete <CR>$/;"	m	language:Vim
 <C-f>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(1)\\/;"	m	language:Vim
 <C-f>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\\<C-f/;"	m	language:Vim
 <C-f>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\\<C-f/;"	m	language:Vim
-<C-h>	plugin/navigation.vim	/^nnoremap <C-h> :cnext<CR>zz$/;"	m
-<C-j>	plugin/navigation.vim	/^nnoremap <C-j> :cprev<CR>zz$/;"	m
-<C-p>	plugin/telescope.vim	/^nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>$/;"	m
-<C-q>	plugin/navigation.vim	/^nnoremap <C-q> :call ToggleQFList(1)<CR>$/;"	m
-<C-space>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <C-space> :300sleep <CR>$/;"	m	language:Vim
-<F1>	plugin/telescope.vim	/^nnoremap <F1> :lua require('telescope.builtin').help_tags()<CR>$/;"	m
-<F5>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <F5> :source ~\/.config\/nvim\/init.vim <CR>$/;"	m	language:Vim
-<Leader>1	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <Leader>1 :set cursorline!<CR>$/;"	m	language:Vim
-<S-TAB>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m	language:Vim
-<S-TAB>	plugin/coc.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
-<TAB>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^inoremap <silent><expr> <TAB>$/;"	m	language:Vim
-<TAB>	plugin/coc.vim	/^inoremap <silent><expr> <TAB>$/;"	m
+<C-h>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <C-h> :cnext<CR>zz$/;"	m	language:Vim
+<C-j>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <C-j> :cprev<CR>zz$/;"	m	language:Vim
+<C-q>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <C-q> :call ToggleQFList(1)<CR>$/;"	m	language:Vim
+<C-s>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/sass.vim	/^nnoremap <C-s> :!node-sass % <CR>$/;"	m	language:Vim
+<C-w>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <C-w> :q!<CR>$/;"	m	language:Vim
+<F10>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <F10> :bnext <CR>$/;"	m	language:Vim
+<F5>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <F5> :source ~\/.config\/nvim\/init.vim <CR>$/;"	m	language:Vim
+<F9>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <F9> :bprev <CR>$/;"	m	language:Vim
+<Leader>1	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <Leader>1 CR>$/;"	m	language:Vim
 <c-@>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^  inoremap <silent><expr> <c-@> coc#refresh()$/;"	m	language:Vim
-<c-_>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^noremap <c-_>  :Commentary<CR>$/;"	m	language:Vim
-<c-h>	plugin/search.vim	/^nnoremap <c-h> :cnext <CR>zz$/;"	m
-<c-j>	plugin/search.vim	/^nnoremap <c-j> :cprevious <CR>zz$/;"	m
-<c-l>	plugin/navigation.vim	/^nnoremap <c-l> :clist <CR>zz$/;"	m
-<c-l>	plugin/search.vim	/^nnoremap <c-l> :clist <CR>$/;"	m
-<down>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^ino <down> <Nop>$/;"	m	language:Vim
-<down>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^no <down> :m .+1 <CR> ==$/;"	m	language:Vim
-<leader>I	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <leader>I :set mouse=<CR>$/;"	m	language:Vim
-<leader>Y	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <leader>Y gg"+yG$/;"	m	language:Vim
-<leader>a	plugin/coc.vim	/^nnoremap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
-<leader>a	plugin/coc.vim	/^xnoremap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
-<leader>ac	plugin/coc.vim	/^nnoremap <leader>ac  <Plug>(coc-codeaction)$/;"	m
-<leader>b	plugin/telescope.vim	/^nnoremap <leader>b :lua require('telescope.builtin').buffers()<CR>$/;"	m
-<leader>c	plugin/colors.vim	/^nnoremap <leader>c :call ColorMyPencils()<CR>$/;"	m
-<leader>d	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <leader>d "_d$/;"	m	language:Vim
-<leader>dd	plugin/netrw.vim	/^nnoremap <leader>dd :call DELETEFOLDER() <CR>$/;"	m
-<leader>df	plugin/netrw.vim	/^nnoremap <leader>df :call DELETEFILE() <CR>$/;"	m
-<leader>f	plugin/coc.vim	/^nnoremap <leader>f  <Plug>(coc-format-selected)$/;"	m
-<leader>f	plugin/coc.vim	/^xnoremap <leader>f  <Plug>(coc-format-selected)$/;"	m
-<leader>f	plugin/telescope.vim	/^nnoremap <leader>f :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep F/;"	m
-<leader>ff	plugin/telescope.vim	/^nnoremap <leader>ff :lua require('telescope.builtin').find_files()<CR>$/;"	m
-<leader>ga	plugin/git.vim	/^nnoremap <leader>ga :Git fetch --all<CR>$/;"	m
-<leader>gh	plugin/git.vim	/^nmap <leader>gh :diffget \/\/3<CR>$/;"	m
-<leader>grom	plugin/git.vim	/^nnoremap <leader>grom :Git rebase origin\/master<CR>$/;"	m
-<leader>grum	plugin/git.vim	/^nnoremap <leader>grum :Git rebase upstream\/master<CR>$/;"	m
-<leader>gs	plugin/git.vim	/^nmap <leader>gs :G<CR>$/;"	m
-<leader>gu	plugin/git.vim	/^nmap <leader>gu :diffget \/\/2<CR>$/;"	m
-<leader>h	plugin/navigation.vim	/^noremap <leader>h :wincmd h <CR>$/;"	m
-<leader>i	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <leader>i :set mouse=a<CR>$/;"	m	language:Vim
-<leader>j	plugin/navigation.vim	/^noremap <leader>j :wincmd j <CR>$/;"	m
-<leader>k	plugin/navigation.vim	/^noremap <leader>k :wincmd k <CR>$/;"	m
-<leader>l	plugin/navigation.vim	/^noremap <leader>l :wincmd l <CR>$/;"	m
-<leader>lj	plugin/navigation.vim	/^nnoremap <leader>lj :lprev<CR>zz$/;"	m
-<leader>lk	plugin/navigation.vim	/^nnoremap <leader>lk :lnext<CR>zz$/;"	m
-<leader>lu	plugin/telescope.vim	/^nnoremap <leader>lu :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cwo/;"	m
-<leader>m	plugin/vimspector.vim	/^nnoremap <leader>m :MaximizerToggle!<CR>$/;"	m
-<leader>md	plugin/netrw.vim	/^nnoremap <leader>md :call MOVEFOLDER() <CR>$/;"	m
-<leader>mf	plugin/netrw.vim	/^nnoremap <leader>mf :call MOVEFILE() <CR>$/;"	m
-<leader>n	plugin/netrw.vim	/^nnoremap <leader>n :Lex <CR>$/;"	m
-<leader>nd	plugin/netrw.vim	/^nnoremap <leader>nd :call CREATEDIR() <CR>$/;"	m
-<leader>nf	plugin/netrw.vim	/^nnoremap <leader>nf :call CREATEFILE() <CR>$/;"	m
-<leader>p	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^xnoremap <leader>p "_dP$/;"	m	language:Vim
-<leader>pg	plugin/guess_game.vim	/^nnoremap <leader>pg :luado require('guess') <CR>$/;"	m
-<leader>q	plugin/navigation.vim	/^nnoremap <leader>q :call ToggleQFList(0)<CR>$/;"	m
-<leader>qf	plugin/coc.vim	/^nnoremap <leader>qf  <Plug>(coc-fix-current)$/;"	m
-<leader>s	plugin/search.vim	/^nnoremap <leader>s :call SEARCH()<CR>$/;"	m
-<leader>tt	plugin/plenary.vim	/^nmap <leader>tt <Plug>PlenaryTestFile$/;"	m
-<leader>vca	plugin/lsp.vim	/^nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>$/;"	m
-<leader>vd	plugin/lsp.vim	/^nnoremap <leader>vd :lua vim.lsp.buf.definition()<CR>$/;"	m
-<leader>vh	plugin/lsp.vim	/^nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>$/;"	m
-<leader>vi	plugin/lsp.vim	/^nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>$/;"	m
-<leader>vll	plugin/lsp.vim	/^nnoremap <leader>vll :call LspLocationList()<CR>$/;"	m
-<leader>vn	plugin/lsp.vim	/^nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>$/;"	m
-<leader>vrn	plugin/lsp.vim	/^nnoremap <leader>vrn :lua vim.lsp.buf.rename()<CR>$/;"	m
-<leader>vrr	plugin/lsp.vim	/^nnoremap <leader>vrr :lua vim.lsp.buf.references()<CR>$/;"	m
-<leader>vsd	plugin/lsp.vim	/^nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.util.show_line_dia/;"	m
-<leader>vsh	plugin/lsp.vim	/^nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>$/;"	m
-<leader>y	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <leader>y "+y$/;"	m	language:Vim
-<leader>y	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^vnoremap <leader>y "+y$/;"	m	language:Vim
-<left>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^ino <left> <Nop>$/;"	m	language:Vim
-<left>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <left> :vertical resize +10 <CR>$/;"	m	language:Vim
-<right>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^ino <right> <Nop>$/;"	m	language:Vim
-<right>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <right> :vertical resize -10 <CR>$/;"	m	language:Vim
-<up>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^ino <up> <Nop>$/;"	m	language:Vim
-<up>	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^no <up> :m .-2 <CR> ==$/;"	m	language:Vim
-CREATEDIR	plugin/netrw.vim	/^fun! CREATEDIR()$/;"	f
-CREATEFILE	plugin/netrw.vim	/^fun! CREATEFILE()$/;"	f
-ColorMyPencils	plugin/colors.vim	/^fun! ColorMyPencils()$/;"	f
-DELETEFILE	plugin/netrw.vim	/^fun! DELETEFILE()$/;"	f
-DELETEFOLDER	plugin/netrw.vim	/^fun! DELETEFOLDER()$/;"	f
-GotoWindow	plugin/vimspector.vim	/^fun! GotoWindow(id)$/;"	f
-J	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap J mzJ`z$/;"	m	language:Vim
-J	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m	language:Vim
-K	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^vnoremap K :m '<-2<CR>gv=gv$/;"	m	language:Vim
-LspLocationList	plugin/lsp.vim	/^fun! LspLocationList()$/;"	f
-M.dev	lua/theprimeagen/telescope.lua	/^M.dev = function(opts)$/;"	f
-M.execute	lua/theprimeagen/git-worktree.lua	/^function M.execute(path, just_build)$/;"	f
-M.git_branches	lua/theprimeagen/telescope.lua	/^M.git_branches = function()$/;"	f
-M.refactors	lua/theprimeagen/telescope.lua	/^M.refactors = function()$/;"	f
-M.search_dotfiles	lua/theprimeagen/telescope.lua	/^M.search_dotfiles = function()$/;"	f
-MOVEFILE	plugin/netrw.vim	/^fun! MOVEFILE()$/;"	f
-MOVEFOLDER	plugin/netrw.vim	/^fun! MOVEFOLDER()$/;"	f
-N	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap N Nzzzv$/;"	m	language:Vim
-P	lua/theprimeagen/init.lua	/^P = function(v)$/;"	f
-PhpSyntaxOverride	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^function! PhpSyntaxOverride()$/;"	f	language:Vim
-Q	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap Q :q<CR>$/;"	m	language:Vim
+<c-_>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^noremap  <c-_>  :Commentary<CR>$/;"	m	language:Vim
+<c-l>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <c-l> :clist <CR>zz$/;"	m	language:Vim
+<down>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^ino <down> <Nop>$/;"	m	language:Vim
+<down>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^no <down> :m .+1 <CR> ==$/;"	m	language:Vim
+<leader>I	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <leader>I :set mouse=<CR>$/;"	m	language:Vim
+<leader>Y	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <leader>Y gg"+yG$/;"	m	language:Vim
+<leader>c0	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c0 :call ColorMyPencils()<CR>$/;"	m	language:Vim
+<leader>c1	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c1 :colorscheme molokai <CR>$/;"	m	language:Vim
+<leader>c2	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c2 :colorscheme solarized8 <CR>$/;"	m	language:Vim
+<leader>c3	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c3 :colorscheme onedark <CR>$/;"	m	language:Vim
+<leader>c4	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c4 :colorscheme nord <CR>$/;"	m	language:Vim
+<leader>c5	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c5 :colorscheme zenburn <CR>$/;"	m	language:Vim
+<leader>c6	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c6 :colorscheme badwolf <CR>$/;"	m	language:Vim
+<leader>c7	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c7 :colorscheme tender <CR>$/;"	m	language:Vim
+<leader>c8	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c8 :colorscheme snazzy <CR>$/;"	m	language:Vim
+<leader>c9	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c9 :colorscheme palenight <CR>$/;"	m	language:Vim
+<leader>d	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <leader>d "_d$/;"	m	language:Vim
+<leader>fu	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^nnoremap <silent><leader>fu :call PhpCsFixerFixFile()<CR>$/;"	m	language:Vim
+<leader>ga	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nnoremap <leader>ga :Git fetch --all<CR>$/;"	m	language:Vim
+<leader>gh	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nmap <leader>gh :diffget \/\/3<CR>$/;"	m	language:Vim
+<leader>grom	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nnoremap <leader>grom :Git rebase origin\/master<CR>$/;"	m	language:Vim
+<leader>grum	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nnoremap <leader>grum :Git rebase upstream\/master<CR>$/;"	m	language:Vim
+<leader>gs	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nmap <leader>gs :G<CR>$/;"	m	language:Vim
+<leader>gu	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nmap <leader>gu :diffget \/\/2<CR>$/;"	m	language:Vim
+<leader>h	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^noremap <leader>h :wincmd h <CR>$/;"	m	language:Vim
+<leader>i	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <leader>i :set mouse=a<CR>$/;"	m	language:Vim
+<leader>j	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^noremap <leader>j :wincmd j <CR>$/;"	m	language:Vim
+<leader>k	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^noremap <leader>k :wincmd k <CR>$/;"	m	language:Vim
+<leader>l	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^noremap <leader>l :wincmd l <CR>$/;"	m	language:Vim
+<leader>lj	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <leader>lj :lprev<CR>zz$/;"	m	language:Vim
+<leader>lk	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <leader>lk :lnext<CR>zz$/;"	m	language:Vim
+<leader>p	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^xnoremap <leader>p "_dP$/;"	m	language:Vim
+<leader>q	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <leader>q :call ToggleQFList(0)<CR>$/;"	m	language:Vim
+<leader>y	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <leader>y "+y$/;"	m	language:Vim
+<leader>y	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^vnoremap <leader>y "+y$/;"	m	language:Vim
+<left>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^ino <left> <Nop>$/;"	m	language:Vim
+<left>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <left> :vertical resize +10 <CR>$/;"	m	language:Vim
+<right>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^ino <right> <Nop>$/;"	m	language:Vim
+<right>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <right> :vertical resize -10 <CR>$/;"	m	language:Vim
+<up>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^ino <up> <Nop>$/;"	m	language:Vim
+<up>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^no <up> :m .-2 <CR> ==$/;"	m	language:Vim
+ColorMyPencils	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^fun! ColorMyPencils()$/;"	f	language:Vim
+J	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap J mzJ`z$/;"	m	language:Vim
+J	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m	language:Vim
+K	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^vnoremap K :m '<-2<CR>gv=gv$/;"	m	language:Vim
+N	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap N Nzzzv$/;"	m	language:Vim
+PhpSyntaxOverride	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^function! PhpSyntaxOverride()$/;"	f	language:Vim
 Q	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^  inoremap <silent><expr> Q coc#refresh()$/;"	m	language:Vim
-R	lua/theprimeagen/init.lua	/^  R = function(name)$/;"	f
-SEARCH	plugin/search.vim	/^fun! SEARCH()$/;"	f
-THE_PRIMEAGEN_LSP	plugin/lsp.vim	/^augroup THE_PRIMEAGEN_LSP$/;"	a
-ToggleQFList	plugin/navigation.vim	/^fun! ToggleQFList(global)$/;"	f
-Y	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap Y yg\$$/;"	m	language:Vim
-\\|	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap <silent> \\| :vsplit % <CR>$/;"	m	language:Vim
-attach_mappings	lua/theprimeagen/telescope.lua	/^            attach_mappings = function(prompt_bufnr, map)$/;"	f
-attach_mappings	lua/theprimeagen/telescope.lua	/^        attach_mappings = function(_, map)$/;"	f
+ToggleQFList	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^fun! ToggleQFList(global)$/;"	f	language:Vim
+Y	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap Y yg\$$/;"	m	language:Vim
+\\|	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <silent> \\| :vsplit % <CR>$/;"	m	language:Vim
 blade	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "blade": "html"$/;"	s	language:JSON	object:emmet.includeLanguages
 clangd.path	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "clangd.path": "~\/.config\/coc\/extensions\/coc-clangd-data\/install\/13.0.0\/clangd_13.0.0\//;"	s	language:JSON
 coc.preferences.extensionUpdateCheck	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "coc.preferences.extensionUpdateCheck": "daily",$/;"	s	language:JSON
 coc.preferences.formatOnSaveFiletypes	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "coc.preferences.formatOnSaveFiletypes": [$/;"	a	language:JSON
 coc_commands	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^augroup coc_commands$/;"	a	language:Vim
 codeLens.enable	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "codeLens.enable": true,$/;"	b	language:JSON
-config	lua/theprimeagen/lsp.lua	/^local function config(_config)$/;"	f
 cpp	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "cpp": ["c"],$/;"	a	language:JSON	object:snippets.extends
 default	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^      "default": true$/;"	b	language:JSON	object:java.configuration.runtimes.0
 diagnostic.checkCurrentLine	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.checkCurrentLine": true,$/;"	b	language:JSON
@@ -159,96 +111,55 @@ diagnostic.hintSign	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/
 diagnostic.infoSign	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.infoSign": "●",$/;"	s	language:JSON
 diagnostic.warningSign	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "diagnostic.warningSign": "⚠",$/;"	s	language:JSON
 emmet.includeLanguages	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "emmet.includeLanguages": {$/;"	o	language:JSON
-entry_maker	lua/theprimeagen/telescope.lua	/^            entry_maker = function(entry)$/;"	f
-expand	lua/theprimeagen/lsp.lua	/^		expand = function(args)$/;"	f
-f	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^xnoremap f :m-2<CR>gv=gv$/;"	m	language:Vim
-format	lua/theprimeagen/lsp.lua	/^        format = function(entry, vim_item)$/;"	f
+f	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^xnoremap f :m-2<CR>gv=gv$/;"	m	language:Vim
+fun	/home/josiah/.dotfiles/nvim/.config/nvim/test.ts	/^function fun(params) {$/;"	f	language:TypeScript
 g:EditorConfig_exclude_patterns	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^let g:EditorConfig_exclude_patterns = ['fugitive:\/\/.*']$/;"	v	language:Vim
-g:EditorConfig_exclude_patterns	plugin/coc.vim	/^let g:EditorConfig_exclude_patterns = ['fugitive:\/\/.*']$/;"	v
-g:airline#extensions#ale#enabled	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:airline#extensions#ale#enabled = 1$/;"	v	language:Vim
-g:ale_completion_autoimport	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_completion_autoimport = 1$/;"	v	language:Vim
-g:ale_completion_enabled	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_completion_enabled = 1$/;"	v	language:Vim
-g:ale_fix_on_save	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_fix_on_save = 1$/;"	v	language:Vim
-g:ale_fixers	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_fixers = {$/;"	v	language:Vim
-g:ale_fixers	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_fixers = {'php': ['phpcbf'], 'javascript': ['eslint', 'tslint']}$/;"	v	language:Vim
-g:ale_php_php_cs_fixer_executable	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_php_php_cs_fixer_executable='phpcbf'$/;"	v	language:Vim
-g:ale_php_phpcs_executable	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_php_phpcs_executable='phpcs'$/;"	v	language:Vim
-g:ale_sign_column_always	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_sign_column_always = 1$/;"	v	language:Vim
-g:ale_sign_error	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_sign_error = '>>'$/;"	v	language:Vim
-g:ale_sign_warning	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:ale_sign_warning = '--'$/;"	v	language:Vim
-g:blade_custom_directives	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:blade_custom_directives = ['datetime', 'javascript']$/;"	v	language:Vim
-g:blade_custom_directives_pairs	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:blade_custom_directives_pairs = {$/;"	v	language:Vim
+g:ale_fixers	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:ale_fixers = {$/;"	v	language:Vim
+g:ale_fixers	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:ale_fixers = {'php': ['php-cs-fixer'], 'javascript': ['eslint', 'tslint']}$/;"	v	language:Vim
+g:ale_php_php_cs_fixer_executable	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:ale_php_php_cs_fixer_executable='php_cs_fixer'$/;"	v	language:Vim
+g:ale_php_phpcs_executable	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:ale_php_phpcs_executable='phpcs'$/;"	v	language:Vim
+g:blade_custom_directives	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:blade_custom_directives = ['datetime', 'javascript']$/;"	v	language:Vim
+g:blade_custom_directives_pairs	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:blade_custom_directives_pairs = {$/;"	v	language:Vim
 g:coc_global_extensions	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^let g:coc_global_extensions = [$/;"	v	language:Vim
-g:coc_global_extensions	plugin/coc.vim	/^let g:coc_global_extensions = [$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe = {}$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.autocomplete = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.debug = v:false$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.documentation = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.enabled = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.incomplete_delay = 400$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.max_abbr_width = 100$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.max_kind_width = 100$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.max_menu_width = 100$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.min_length = 1$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.preselect = 'enable'$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source = {}$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.buffer = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.calc = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.luasnip = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.nvim_lsp = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.nvim_lua = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.path = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.ultisnips = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source.vsnip = v:true$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.source_timeout = 200$/;"	v
-g:compe	plugin/lsp.vim	/^let g:compe.throttle_time = 80$/;"	v
-g:completion_matching_strategy_list	plugin/lsp.vim	/^let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']$/;"	v
-g:easytags_async	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_async = 1$/;"	v	language:Vim
-g:easytags_by_filetype	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_by_filetype = 1$/;"	v	language:Vim
-g:easytags_cmd	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_cmd = 'ctags'$/;"	v	language:Vim
-g:easytags_dynamic_files	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_dynamic_files = 1$/;"	v	language:Vim
-g:easytags_events	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_events = ['BufWritePost']$/;"	v	language:Vim
-g:easytags_file	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_file = '~\/.vim\/tags'$/;"	v	language:Vim
-g:easytags_include_members	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_include_members = 1$/;"	v	language:Vim
-g:easytags_resolve_links	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_resolve_links = 1$/;"	v	language:Vim
-g:easytags_syntax_keyword	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:easytags_syntax_keyword = 'always'$/;"	v	language:Vim
-g:f_g	plugin/navigation.vim	/^            let g:f_g = 0$/;"	v
-g:f_g	plugin/navigation.vim	/^            let g:f_g = 1$/;"	v
-g:f_g	plugin/navigation.vim	/^let g:f_g = 0$/;"	v
-g:f_l	plugin/navigation.vim	/^            let g:f_l = 0$/;"	v
-g:f_l	plugin/navigation.vim	/^            let g:f_l = 1$/;"	v
-g:f_l	plugin/navigation.vim	/^let g:f_l = 0$/;"	v
-g:indentLine_leadingSpaceEnabled	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:indentLine_leadingSpaceEnabled='1'$/;"	v	language:Vim
-g:netrw_banner	plugin/netrw.vim	/^let g:netrw_banner = 0$/;"	v
-g:netrw_browse_split	plugin/netrw.vim	/^let g:netrw_browse_split = 0$/;"	v
-g:netrw_liststyle	plugin/netrw.vim	/^let g:netrw_liststyle = 3$/;"	v
-g:netrw_winsize	plugin/netrw.vim	/^let g:netrw_winsize = 25$/;"	v
-g:pretty_colorscheme	plugin/colors.vim	/^let g:pretty_colorscheme = "gruvbox"$/;"	v
-g:pretty_contrast_dark	plugin/colors.vim	/^    let g:pretty_contrast_dark = 'hard'$/;"	v
-g:pretty_invert_selection	plugin/colors.vim	/^    let g:pretty_invert_selection='0'$/;"	v
-g:rg_derive_root	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^    let g:rg_derive_root='true'$/;"	v	language:Vim
-g:sass_compile_aftercmd	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^  let g:sass_compile_aftercmd = ''$/;"	v	language:Vim
-g:sass_compile_auto	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^  let g:sass_compile_auto = 1$/;"	v	language:Vim
-g:sass_compile_beforecmd	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^  let g:sass_compile_beforecmd = ''$/;"	v	language:Vim
-g:sass_compile_cdloop	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^  let g:sass_compile_cdloop = 5$/;"	v	language:Vim
-g:sass_compile_cssdir	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^  let g:sass_compile_cssdir = ['css', 'stylesheet', '.\/']$/;"	v	language:Vim
-g:sass_compile_file	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^  let g:sass_compile_file = ['scss', 'sass']$/;"	v	language:Vim
-g:vim_jsx_pretty_highlight_close_tag	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:vim_jsx_pretty_highlight_close_tag = 1$/;"	v	language:Vim
-gd	plugin/coc.vim	/^nnoremap <silent>gd  <Plug>(coc-definition)$/;"	m
-ge	plugin/coc.vim	/^vnoremap  <silent>ge  :CocAction<CR>$/;"	m
-gi	plugin/coc.vim	/^nnoremap <silent>gi  <Plug>(coc-implementation)$/;"	m
+g:f_g	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^            let g:f_g = 0$/;"	v	language:Vim
+g:f_g	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^            let g:f_g = 1$/;"	v	language:Vim
+g:f_g	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^let g:f_g = 0$/;"	v	language:Vim
+g:f_l	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^            let g:f_l = 0$/;"	v	language:Vim
+g:f_l	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^            let g:f_l = 1$/;"	v	language:Vim
+g:f_l	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^let g:f_l = 0$/;"	v	language:Vim
+g:indentLine_leadingSpaceEnabled	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:indentLine_leadingSpaceEnabled='1'$/;"	v	language:Vim
+g:loaded_perl_provider	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:loaded_perl_provider = 0$/;"	v	language:Vim
+g:loaded_ruby_provider	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:loaded_ruby_provider = 0$/;"	v	language:Vim
+g:php_cs_fixer_allow_risky	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_allow_risky = "yes"      " options: --allow-risky$/;"	v	language:Vim
+g:php_cs_fixer_config	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_config = "default"                  " options: --config$/;"	v	language:Vim
+g:php_cs_fixer_config_file	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_config_file = '.php_cs'            " options: --config-file$/;"	v	language:Vim
+g:php_cs_fixer_dry_run	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option$/;"	v	language:Vim
+g:php_cs_fixer_enable_default_mapping	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_enable_default_mapping = 0     " Enable the mapping by default (<leader>pcd)$/;"	v	language:Vim
+g:php_cs_fixer_fixers_list	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_fixers_list = "linefeed,short_tag" " options: --fixers$/;"	v	language:Vim
+g:php_cs_fixer_level	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_level = "symfony"                   " options: --level (default:symfony)$/;"	v	language:Vim
+g:php_cs_fixer_path	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_path = "~\/.config\/composer\/vendor\/bin\/php-cs-fixer" " define the path to/;"	v	language:Vim
+g:php_cs_fixer_php_path	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_php_path = "php"               " Path to PHP$/;"	v	language:Vim
+g:php_cs_fixer_rules	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)$/;"	v	language:Vim
+g:php_cs_fixer_verbose	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_verbose = 1                    " Return the output of command if 1, else an i/;"	v	language:Vim
+g:pretty_colorscheme	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^let g:pretty_colorscheme = "gruvbox"$/;"	v	language:Vim
+g:pretty_contrast_dark	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^    let g:pretty_contrast_dark = 'hard'$/;"	v	language:Vim
+g:pretty_invert_selection	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^    let g:pretty_invert_selection='0'$/;"	v	language:Vim
+g:rg_derive_root	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^    let g:rg_derive_root='true'$/;"	v	language:Vim
+g:sass_compile_aftercmd	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/sass.vim	/^let g:sass_compile_aftercmd = ''$/;"	v	language:Vim
+g:sass_compile_auto	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/sass.vim	/^let g:sass_compile_auto = 1$/;"	v	language:Vim
+g:sass_compile_beforecmd	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/sass.vim	/^let g:sass_compile_beforecmd = ''$/;"	v	language:Vim
+g:sass_compile_cdloop	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/sass.vim	/^let g:sass_compile_cdloop = 5$/;"	v	language:Vim
+g:sass_compile_cssdir	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/sass.vim	/^let g:sass_compile_cssdir = ['css', 'stylesheet', '.\/']$/;"	v	language:Vim
+g:sass_compile_file	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/sass.vim	/^let g:sass_compile_file = ['scss', 'sass']$/;"	v	language:Vim
+g:syntastic_cs_checkers	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/c-sharp.vim	/^let g:syntastic_cs_checkers = ['code_checker']$/;"	v	language:Vim
+g:syntastic_cs_checkers	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/c-sharp.vim	/^let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']$/;"	v	language:Vim
+g:vim_jsx_pretty_highlight_close_tag	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^let g:vim_jsx_pretty_highlight_close_tag = 1$/;"	v	language:Vim
 git.addGBlameToBufferVar	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.addGBlameToBufferVar": true,$/;"	b	language:JSON
 git.addedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.addedSign.text": "┃",$/;"	s	language:JSON
 git.changeRemovedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.changeRemovedSign.text": "┃",$/;"	s	language:JSON
 git.changedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.changedSign.text": "┃",$/;"	s	language:JSON
 git.removedSign.text	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "git.removedSign.text": "┃",$/;"	s	language:JSON
-go	plugin/coc.vim	/^nnoremap  <silent>go  :CocOutline<CR>$/;"	m
-gr	plugin/coc.vim	/^nnoremap <silent>gr  <Plug>(coc-references)$/;"	m
-gt	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap gt : <space>$/;"	m	language:Vim
-gy	plugin/coc.vim	/^nnoremap <silent>gy  <Plug>(coc-type-definition)$/;"	m
-image_selector	lua/theprimeagen/telescope.lua	/^local function image_selector(prompt, cwd)$/;"	f
-is_nrdp	lua/theprimeagen/git-worktree.lua	/^local function is_nrdp(path)$/;"	f
-is_tvui	lua/theprimeagen/git-worktree.lua	/^local function is_tvui(path)$/;"	f
+gt	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap gt : <space>$/;"	m	language:Vim
 java.autobuild.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.autobuild.enabled": true,$/;"	b	language:JSON
 java.codeGeneration.generateComments	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.codeGeneration.generateComments": true,$/;"	b	language:JSON
 java.completion.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "java.completion.enabled": true,$/;"	b	language:JSON
@@ -268,25 +179,17 @@ java.referencesCodeLens.enabled	/home/josiah/.dotfiles/nvim/.config/nvim/coc-set
 javascript	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascript": "javascriptreact",$/;"	s	language:JSON	object:emmet.includeLanguages
 javascriptreact	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "javascriptreact": ["javascript"],$/;"	a	language:JSON	object:snippets.extends
 loaded_matchparen	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let loaded_matchparen = 1$/;"	v	language:Vim
-mapleader	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let mapleader = " "$/;"	v	language:Vim
+mapleader	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^let mapleader = " "$/;"	v	language:Vim
 mygroup	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^augroup mygroup$/;"	a	language:Vim
-mygroup	plugin/coc.vim	/^augroup mygroup$/;"	a
-n	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap n nzzzv$/;"	m	language:Vim
+n	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap n nzzzv$/;"	m	language:Vim
 name	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^      "name": "JavaSE-17",$/;"	s	language:JSON	object:java.configuration.runtimes.0
+omnisharp_commands	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/c-sharp.vim	/^augroup omnisharp_commands$/;"	a	language:Vim
 path	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^      "path": "\/usr\/lib\/jvm\/java-17-jdk",$/;"	s	language:JSON	object:java.configuration.runtimes.0
-phpSyntaxOverride	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^augroup phpSyntaxOverride$/;"	a	language:Vim
-refactor	lua/theprimeagen/telescope.lua	/^local function refactor(prompt_bufnr)$/;"	f
-root_dir	lua/theprimeagen/lsp.lua	/^    root_dir = function()$/;"	f
-s	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^nnoremap s :w<CR>$/;"	m	language:Vim
+phpSyntaxOverride	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^augroup phpSyntaxOverride$/;"	a	language:Vim
+s	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap s :w<CR>$/;"	m	language:Vim
 s:check_back_space	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^function! s:check_back_space() abort$/;"	f	language:Vim
-s:check_back_space	plugin/coc.vim	/^function! s:check_back_space() abort$/;"	f
-s:exclude_folders	plugin/search.vim	/^let s:exclude_folders="node_modules\/"$/;"	v
 s:show_documentation	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^function! s:show_documentation()$/;"	f	language:Vim
-select_background	lua/theprimeagen/telescope.lua	/^local function select_background(prompt_bufnr, map)$/;"	f
-set_background	lua/theprimeagen/telescope.lua	/^local function set_background(content)$/;"	f
-set_the_background	lua/theprimeagen/telescope.lua	/^    local function set_the_background(close)$/;"	f
 snippets.extends	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "snippets.extends": {$/;"	o	language:JSON
-snippets_paths	lua/theprimeagen/lsp.lua	/^local snippets_paths = function()$/;"	f
 suggest.enablePreview	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^  "suggest.enablePreview": true,$/;"	b	language:JSON
 typescript	/home/josiah/.dotfiles/nvim/.config/nvim/coc-settings.json	/^    "typescript": ["javascript"]$/;"	a	language:JSON	object:snippets.extends
-z	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^xnoremap z :m'>+<CR>gv=gv$/;"	m	language:Vim
+z	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^xnoremap z :m'>+<CR>gv=gv$/;"	m	language:Vim

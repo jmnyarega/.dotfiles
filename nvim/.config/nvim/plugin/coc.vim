@@ -1,4 +1,5 @@
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:vim_jsx_pretty_highlight_close_tag = 1
 let g:coc_global_extensions = [
             \'coc-yank',
             \'coc-pairs',
@@ -14,11 +15,11 @@ let g:coc_global_extensions = [
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -27,8 +28,7 @@ endfunction
 
 augroup coc_commands
     autocmd!
-    autocmd CursorHold * silent call CocActionAsync('highlight')
-
+    " autocmd CursorHold * silent call CocActionAsync('highlight')
     autocmd FileType javascript,typescript nmap <silent>gi <Plug>(coc-implementation)
     autocmd FileType javascript,typescript nmap <silent>gd <Plug>(coc-definition)
     autocmd FileType javascript,typescript nmap <silent>gy <Plug>(coc-type-definition)

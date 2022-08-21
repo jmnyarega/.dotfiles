@@ -3,6 +3,10 @@ let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 " If you are using the omnisharp-roslyn backend, use the following
 let g:syntastic_cs_checkers = ['code_checker']
 
+autocmd FileType cs noremap b<F5> :!mcs % <CR>
+autocmd FileType cs noremap r<F5> :%:r.exe <CR>
+autocmd FileType cs noremap d<F5> :!rm %:r.exe <CR>
+
 augroup omnisharp_commands
     autocmd!
     "Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)

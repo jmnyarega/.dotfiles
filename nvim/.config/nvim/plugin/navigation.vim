@@ -36,3 +36,7 @@ fun! ToggleQFList(global)
         end
     endif
 endfun
+
+if executable('rg')
+    let g:rg_derive_root='true'
+endif

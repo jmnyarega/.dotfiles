@@ -52,7 +52,7 @@ plugins=(
 export ZSH=$HOME/.config/zsh/.oh-my-zsh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
 source $ZSH/oh-my-zsh.sh
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export SHELL_ENV=$HOME/.zshenv
 
 # vi mode
@@ -92,6 +92,7 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+nvm use 16
 
 
 bindkey -s '^z' 'fg\n'
