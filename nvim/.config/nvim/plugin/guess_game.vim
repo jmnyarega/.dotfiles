@@ -1,2 +1,1 @@
-
-nnoremap <leader>pg :luado require('guess') <CR>
+" nnoremap <leader>pg :luado require('guess') <CR>

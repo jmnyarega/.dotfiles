@@ -37,6 +37,8 @@ set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
+colorscheme onedark
+
 if has("termguicolors")
     set termguicolors
 endif

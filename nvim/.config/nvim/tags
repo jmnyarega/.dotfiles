@@ -62,7 +62,10 @@
 <leader>c7	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c7 :colorscheme tender <CR>$/;"	m	language:Vim
 <leader>c8	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c8 :colorscheme snazzy <CR>$/;"	m	language:Vim
 <leader>c9	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^nnoremap <leader>c9 :colorscheme palenight <CR>$/;"	m	language:Vim
+<leader>cp	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>cp :call DUPLICATEFOLDER() <CR>$/;"	m	language:Vim
 <leader>d	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <leader>d "_d$/;"	m	language:Vim
+<leader>dd	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>dd :call DELETEFOLDER() <CR>$/;"	m	language:Vim
+<leader>df	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>df :call DELETEFILE() <CR>$/;"	m	language:Vim
 <leader>fu	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^nnoremap <silent><leader>fu :call PhpCsFixerFixFile()<CR>$/;"	m	language:Vim
 <leader>ga	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nnoremap <leader>ga :Git fetch --all<CR>$/;"	m	language:Vim
 <leader>gh	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/git.vim	/^nmap <leader>gh :diffget \/\/3<CR>$/;"	m	language:Vim
@@ -77,8 +80,23 @@
 <leader>l	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^noremap <leader>l :wincmd l <CR>$/;"	m	language:Vim
 <leader>lj	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <leader>lj :lprev<CR>zz$/;"	m	language:Vim
 <leader>lk	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <leader>lk :lnext<CR>zz$/;"	m	language:Vim
+<leader>md	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>md :call MOVEFOLDER() <CR>$/;"	m	language:Vim
+<leader>mf	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>mf :call MOVEFILE() <CR>$/;"	m	language:Vim
+<leader>n	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>n :Lex <CR>$/;"	m	language:Vim
+<leader>nd	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>nd :call CREATEDIR() <CR>$/;"	m	language:Vim
+<leader>nf	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^nnoremap <leader>nf :call CREATEFILE() <CR>$/;"	m	language:Vim
 <leader>p	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^xnoremap <leader>p "_dP$/;"	m	language:Vim
 <leader>q	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^nnoremap <leader>q :call ToggleQFList(0)<CR>$/;"	m	language:Vim
+<leader>vca	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>$/;"	m	language:Vim
+<leader>vd	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vd :lua vim.lsp.buf.definition()<CR>$/;"	m	language:Vim
+<leader>vh	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>$/;"	m	language:Vim
+<leader>vi	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>$/;"	m	language:Vim
+<leader>vll	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vll :call LspLocationList()<CR>$/;"	m	language:Vim
+<leader>vn	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>$/;"	m	language:Vim
+<leader>vrn	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vrn :lua vim.lsp.buf.rename()<CR>$/;"	m	language:Vim
+<leader>vrr	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vrr :lua vim.lsp.buf.references()<CR>$/;"	m	language:Vim
+<leader>vsd	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.util.show_line_dia/;"	m	language:Vim
+<leader>vsh	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>$/;"	m	language:Vim
 <leader>y	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <leader>y "+y$/;"	m	language:Vim
 <leader>y	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^vnoremap <leader>y "+y$/;"	m	language:Vim
 <left>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^ino <left> <Nop>$/;"	m	language:Vim
@@ -87,10 +105,18 @@
 <right>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap <right> :vertical resize -10 <CR>$/;"	m	language:Vim
 <up>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^ino <up> <Nop>$/;"	m	language:Vim
 <up>	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^no <up> :m .-2 <CR> ==$/;"	m	language:Vim
+CREATEDIR	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^fun! CREATEDIR()$/;"	f	language:Vim
+CREATEFILE	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^fun! CREATEFILE()$/;"	f	language:Vim
 ColorMyPencils	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/colors.vim	/^fun! ColorMyPencils()$/;"	f	language:Vim
+DELETEFILE	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^fun! DELETEFILE()$/;"	f	language:Vim
+DELETEFOLDER	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^fun! DELETEFOLDER()$/;"	f	language:Vim
+DUPLICATEFOLDER	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^fun! DUPLICATEFOLDER()$/;"	f	language:Vim
 J	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap J mzJ`z$/;"	m	language:Vim
 J	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m	language:Vim
 K	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^vnoremap K :m '<-2<CR>gv=gv$/;"	m	language:Vim
+LspLocationList	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^fun! LspLocationList()$/;"	f	language:Vim
+MOVEFILE	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^fun! MOVEFILE()$/;"	f	language:Vim
+MOVEFOLDER	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^fun! MOVEFOLDER()$/;"	f	language:Vim
 N	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/mappings.vim	/^nnoremap N Nzzzv$/;"	m	language:Vim
 PhpSyntaxOverride	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^function! PhpSyntaxOverride()$/;"	f	language:Vim
 Q	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^  inoremap <silent><expr> Q coc#refresh()$/;"	m	language:Vim
@@ -121,6 +147,29 @@ g:ale_php_phpcs_executable	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.v
 g:blade_custom_directives	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:blade_custom_directives = ['datetime', 'javascript']$/;"	v	language:Vim
 g:blade_custom_directives_pairs	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:blade_custom_directives_pairs = {$/;"	v	language:Vim
 g:coc_global_extensions	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/coc.vim	/^let g:coc_global_extensions = [$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe = {}$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.autocomplete = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.debug = v:false$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.documentation = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.enabled = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.incomplete_delay = 400$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.max_abbr_width = 100$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.max_kind_width = 100$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.max_menu_width = 100$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.min_length = 1$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.preselect = 'enable'$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source = {}$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.buffer = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.calc = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.luasnip = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.nvim_lsp = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.nvim_lua = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.path = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.ultisnips = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source.vsnip = v:true$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.source_timeout = 200$/;"	v	language:Vim
+g:compe	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:compe.throttle_time = 80$/;"	v	language:Vim
+g:completion_matching_strategy_list	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/lsp.vim	/^let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']$/;"	v	language:Vim
 g:f_g	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^            let g:f_g = 0$/;"	v	language:Vim
 g:f_g	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^            let g:f_g = 1$/;"	v	language:Vim
 g:f_g	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^let g:f_g = 0$/;"	v	language:Vim
@@ -130,6 +179,12 @@ g:f_l	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/navigation.vim	/^let g:f_l
 g:indentLine_leadingSpaceEnabled	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:indentLine_leadingSpaceEnabled='1'$/;"	v	language:Vim
 g:loaded_perl_provider	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:loaded_perl_provider = 0$/;"	v	language:Vim
 g:loaded_ruby_provider	/home/josiah/.dotfiles/nvim/.config/nvim/init.vim	/^let g:loaded_ruby_provider = 0$/;"	v	language:Vim
+g:netrw_banner	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^let g:netrw_banner = 0$/;"	v	language:Vim
+g:netrw_browse_split	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^let g:netrw_browse_split = 0$/;"	v	language:Vim
+g:netrw_keepdir	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^let g:netrw_keepdir = 0$/;"	v	language:Vim
+g:netrw_list_hide	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^let g:netrw_list_hide= netrw_gitignore#Hide()$/;"	v	language:Vim
+g:netrw_liststyle	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^let g:netrw_liststyle = 3$/;"	v	language:Vim
+g:netrw_winsize	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/netrw.vim	/^let g:netrw_winsize = 25$/;"	v	language:Vim
 g:php_cs_fixer_allow_risky	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_allow_risky = "yes"      " options: --allow-risky$/;"	v	language:Vim
 g:php_cs_fixer_config	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_config = "default"                  " options: --config$/;"	v	language:Vim
 g:php_cs_fixer_config_file	/home/josiah/.dotfiles/nvim/.config/nvim/plugin/php.vim	/^let g:php_cs_fixer_config_file = '.php_cs'            " options: --config-file$/;"	v	language:Vim

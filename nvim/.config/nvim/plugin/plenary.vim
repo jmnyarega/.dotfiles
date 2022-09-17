@@ -1,2 +1,2 @@
-nmap <leader>tt <Plug>PlenaryTestFile
+" nmap <leader>tt <Plug>PlenaryTestFile
 

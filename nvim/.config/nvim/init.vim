@@ -1,12 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
 " Lua
-Plug 'neovim/nvim-lspconfig'
-Plug 'onsails/lspkind-nvim'
-Plug 'nvim-lua/lsp_extensions.nvim'
-Plug 'nvim-lua/popup.nvim'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'onsails/lspkind-nvim'
+" Plug 'nvim-lua/lsp_extensions.nvim'
+" Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'glepnir/lspsaga.nvim'
+" Plug 'glepnir/lspsaga.nvim'
 
 " completion
 Plug 'hrsh7th/nvim-cmp'
@@ -24,7 +24,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'mhartington/nvim-typescript', {'do': 'sh install.sh'}
+" Plug 'mhartington/nvim-typescript', {'do': 'sh install.sh'}
 
 " Snippets
 Plug 'L3MON4D3/LuaSnip'
@@ -99,6 +99,7 @@ Plug 'ncm2/ncm2-markdown-subscope'
 Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'stephpy/vim-php-cs-fixer'
+Plug 'lunaru/vim-twig'
 
 " linters
 Plug 'dense-analysis/ale'
