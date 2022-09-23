@@ -9,8 +9,8 @@ Plug 'nvim-lua/plenary.nvim'
 " Plug 'glepnir/lspsaga.nvim'
 
 " completion
-Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
 
 " types &  type servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -62,7 +62,6 @@ Plug 'lifepillar/vim-solarized8'
 
 " notes & metrics
 Plug 'https://github.com/jceb/vim-orgmode.git'
-Plug 'wakatime/vim-wakatime'
 Plug 'vim-utils/vim-man'
 Plug 'https://github.com/vimwiki/vimwiki.git'
 
@@ -108,9 +107,19 @@ Plug 'scrooloose/syntastic'
 " msc
 Plug 'tpope/vim-dispatch'
 
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 " general settings
 let loaded_matchparen = 1
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
+
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+" Disable tmux navigator when zooming the Vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
