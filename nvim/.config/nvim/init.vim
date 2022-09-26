@@ -6,48 +6,48 @@ call plug#begin('~/.vim/plugged')
 " Plug 'nvim-lua/lsp_extensions.nvim'
 " Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-" Plug 'glepnir/lspsaga.nvim'
-
-" completion
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/nvim-cmp'
-
-" types &  type servers
+"" Plug 'glepnir/lspsaga.nvim'
+"
+"" completion
+"Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/nvim-cmp'
+"
+"" types &  type servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
-
-" typescriprt & javascript
+"Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/playground'
+"
+"" typescriprt & javascript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
-Plug 'moll/vim-node', { 'for': 'javascript' }
+"Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'MaxMEllon/vim-jsx-pretty'
-" Plug 'mhartington/nvim-typescript', {'do': 'sh install.sh'}
-
-" Snippets
-Plug 'L3MON4D3/LuaSnip'
-Plug 'rafamadriz/friendly-snippets'
-
-" git
+"" Plug 'mhartington/nvim-typescript', {'do': 'sh install.sh'}
+"
+"" Snippets
+"Plug 'L3MON4D3/LuaSnip'
+"Plug 'rafamadriz/friendly-snippets'
+"
+"" git
 Plug 'tpope/vim-fugitive'
 Plug 'ThePrimeagen/git-worktree.nvim'
 Plug 'junegunn/gv.vim'
-
-" navigation
-Plug 'tpope/vim-projectionist'
-Plug 'mbbill/undotree'
+"
+"" navigation
+"Plug 'tpope/vim-projectionist'
+"Plug 'mbbill/undotree'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://tpope.io/vim/surround.git'
-Plug 'mfussenegger/nvim-dap'
-Plug 'Pocco81/DAPInstall.nvim'
+"Plug 'mfussenegger/nvim-dap'
+"Plug 'Pocco81/DAPInstall.nvim'
 Plug 'szw/vim-maximizer'
-Plug 'simrat39/symbols-outline.nvim'
+"Plug 'simrat39/symbols-outline.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-
-" Themes
+"
+"" Themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'tomasr/molokai'
 Plug 'arcticicestudio/nord-vim'
@@ -59,30 +59,25 @@ Plug 'joshdick/onedark.vim'
 Plug 'jnurmine/Zenburn'
 Plug 'connorholyday/vim-snazzy'
 Plug 'lifepillar/vim-solarized8'
-
-" notes & metrics
-Plug 'https://github.com/jceb/vim-orgmode.git'
-Plug 'vim-utils/vim-man'
+"
+"" notes & metrics
+"Plug 'https://github.com/jceb/vim-orgmode.git'
+"Plug 'vim-utils/vim-man'
 Plug 'https://github.com/vimwiki/vimwiki.git'
-
-" sass
+"
+"" sass
 Plug 'AtsushiM/search-parent.vim'
 Plug 'AtsushiM/sass-compile.vim'
-
-" c#
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'nickspoons/vim-sharpenup'
-Plug 'https://github.com/jlcrochet/vim-razor'
-
-" devops
-Plug 'hashivim/vim-terraform'
-Plug 'Yggdroot/indentLine' " yaml
-Plug 'yasuhiroki/circleci.vim'
-
-" ctags
+"
+"" c#
+"Plug 'OmniSharp/omnisharp-vim'
+"Plug 'nickspoons/vim-sharpenup'
+"Plug 'https://github.com/jlcrochet/vim-razor'
+"
+"" ctags
 Plug 'https://github.com/xolox/vim-easytags.git'
 Plug 'https://github.com/xolox/vim-misc.git'
-
+"
 " php - un-optimised
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
@@ -99,11 +94,11 @@ Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'lunaru/vim-twig'
-
-" linters
+"
+"" linters
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/syntastic'
-
+"
 " msc
 Plug 'tpope/vim-dispatch'
 
