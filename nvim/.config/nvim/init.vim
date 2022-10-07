@@ -94,6 +94,7 @@ Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'lunaru/vim-twig'
+Plug 'qbbr/vim-symfony'
 "
 "" linters
 Plug 'dense-analysis/ale'
@@ -103,6 +104,9 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-dispatch'
 
 Plug 'christoomey/vim-tmux-navigator'
+
+"jinja template
+Plug 'mitsuhiko/vim-jinja'
 
 call plug#end()
 
@@ -118,3 +122,4 @@ nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
+au BufRead,BufNewFile *.twig set filetype=htmljinja
