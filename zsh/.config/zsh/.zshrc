@@ -30,18 +30,15 @@ _comp_options+=(globdots)		# Include hidden files.
 
 plugins=(
   git
-  dotenv
   node
   aliases
   archlinux
   fzf
-  pass
   history
   yarn
   z
   vi-mode
   themes
-  zsh-autosuggestions
 )
 
 # Load aliases and shortcuts if existent.

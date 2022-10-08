@@ -158,30 +158,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <Leader>s :Rg<CR>
 
-"
-" {{ php - un-optimised
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'jwalton512/vim-blade'
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-tern'
-Plug 'ncm2/ncm2-vim'
-Plug 'phpactor/ncm2-phpactor'
-Plug 'ncm2/ncm2-html-subscope'
-Plug 'ncm2/ncm2-markdown-subscope'
-Plug 'StanAngeloff/php.vim'
-Plug 'shawncplus/phpcomplete.vim'
-Plug 'stephpy/vim-php-cs-fixer'
-" Plug 'lunaru/vim-twig'
-" Plug 'qbbr/vim-symfony'
-
-Plug 'tpope/vim-dispatch'             "| Optional
-Plug 'tpope/vim-projectionist'        "|
-Plug 'noahfrederick/vim-composer'     "|
+" php - un-optimised
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
+Plug 'noahfrederick/vim-composer'
 Plug 'noahfrederick/vim-laravel'
-
 "
 "" linters
 Plug 'dense-analysis/ale'
