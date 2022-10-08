@@ -1,16 +1,16 @@
 call plug#begin('~/.vim/plugged')
 
 " Lua
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'onsails/lspkind-nvim'
-" Plug 'nvim-lua/lsp_extensions.nvim'
-" Plug 'nvim-lua/popup.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-lua/lsp_extensions.nvim'
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 "" Plug 'glepnir/lspsaga.nvim'
 "
 "" completion
-"Plug 'hrsh7th/cmp-buffer'
-"Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
 "
 "" types &  type servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -40,7 +40,7 @@ Plug 'junegunn/gv.vim'
 "Plug 'mbbill/undotree'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'https://tpope.io/vim/surround.git'
-"Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap'
 "Plug 'Pocco81/DAPInstall.nvim'
 Plug 'szw/vim-maximizer'
 "Plug 'simrat39/symbols-outline.nvim'
@@ -62,7 +62,7 @@ Plug 'lifepillar/vim-solarized8'
 "
 "" notes & metrics
 "Plug 'https://github.com/jceb/vim-orgmode.git'
-"Plug 'vim-utils/vim-man'
+Plug 'vim-utils/vim-man'
 Plug 'https://github.com/vimwiki/vimwiki.git'
 "
 "" sass
@@ -123,3 +123,15 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
 au BufRead,BufNewFile *.twig set filetype=htmljinja
+
+source ~/.dotfiles/nvim/.config/nvim/plugin/coc.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/colors.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/git.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/lsp.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/mappings.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/navigation.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/netrw.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/php.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/sets.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/tags.vim
+source ~/.dotfiles/nvim/.config/nvim/plugin/telescope.vim
