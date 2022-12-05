@@ -14,11 +14,13 @@ Plug 'hrsh7th/nvim-cmp'
 "
 "" types &  type servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 "Plug 'hrsh7th/cmp-nvim-lsp'
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'nvim-treesitter/playground'
 "
+Plug 'neoclide/keep.nvim', { 'do': 'npm install'}
+
 "" typescriprt & javascript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
 "Plug 'moll/vim-node', { 'for': 'javascript' }
@@ -77,8 +79,15 @@ Plug 'AtsushiM/sass-compile.vim'
 "" ctags
 Plug 'https://github.com/xolox/vim-easytags.git'
 Plug 'https://github.com/xolox/vim-misc.git'
+
+" fzf
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>s :Rg<CR>
+
 "
-" php - un-optimised
+" {{ php - un-optimised
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'jwalton512/vim-blade'
@@ -93,8 +102,14 @@ Plug 'ncm2/ncm2-markdown-subscope'
 Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'stephpy/vim-php-cs-fixer'
-Plug 'lunaru/vim-twig'
-Plug 'qbbr/vim-symfony'
+" Plug 'lunaru/vim-twig'
+" Plug 'qbbr/vim-symfony'
+
+Plug 'tpope/vim-dispatch'             "| Optional
+Plug 'tpope/vim-projectionist'        "|
+Plug 'noahfrederick/vim-composer'     "|
+Plug 'noahfrederick/vim-laravel'
+
 "
 "" linters
 Plug 'dense-analysis/ale'
@@ -131,7 +146,7 @@ source ~/.dotfiles/nvim/.config/nvim/plugin/lsp.vim
 source ~/.dotfiles/nvim/.config/nvim/plugin/mappings.vim
 source ~/.dotfiles/nvim/.config/nvim/plugin/navigation.vim
 source ~/.dotfiles/nvim/.config/nvim/plugin/netrw.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/php.vim
+" source ~/.dotfiles/nvim/.config/nvim/plugin/php.vim
 source ~/.dotfiles/nvim/.config/nvim/plugin/sets.vim
 source ~/.dotfiles/nvim/.config/nvim/plugin/tags.vim
 source ~/.dotfiles/nvim/.config/nvim/plugin/telescope.vim

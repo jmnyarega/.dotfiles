@@ -47,6 +47,9 @@
      autocmd FileType javascript,typescript nmap <leader>cl  <Plug>(coc-codelens-action)
  augroup end
 
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
  if has('nvim')
    inoremap <silent><expr> Q coc#refresh()

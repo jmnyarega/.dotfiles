@@ -11,19 +11,7 @@
   "diagnostic.infoSign": "●",
   "diagnostic.hintSign": "○",
   "git.addGBlameToBufferVar": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "typescript",
-    "c++",
-    "javascript",
-    "typescript.tsx",
-    "javascript.jsx",
-    "typescriptreact",
-    "svg",
-    "html",
-    "css",
-    "json",
-    "java"
-  ],
+
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],

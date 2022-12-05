@@ -52,7 +52,7 @@ plugins=(
 export ZSH=$HOME/.config/zsh/.oh-my-zsh
 export JAVA_HOME=/opt/jre
 source $ZSH/oh-my-zsh.sh
-export TERM="screen-256color"
+# export TERM="screen-256color"
 export SHELL_ENV=$HOME/.zshenv
 
 # vi mode
