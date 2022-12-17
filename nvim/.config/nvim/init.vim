@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
 " Lua
 Plug 'neovim/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
@@ -33,8 +32,81 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 "Plug 'rafamadriz/friendly-snippets'
 "
 "" git
-Plug 'tpope/vim-fugitive'
 Plug 'ThePrimeagen/git-worktree.nvim'
+
+Plug 'tpope/vim-fugitive'
+" let g:Powerline_symbols = 'fancy'
+
+Plug 'itchyny/lightline.vim'
+set laststatus=3
+set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \   'left':  [[ 'mode', 'tabnum', 'winnr', 'LightlineFilename', 'readonly',
+      \   'filename', 'filetype', 'modified']],
+      \   'right': [[ 'gitbranch','absolute_path', 'sp', 'percent', 'close' ]],
+      \ },
+      \ 'component': {
+      \   'sp': '%3l:%-2v%<',
+      \   'absolute_path': '%F',
+      \   'percent': '%3p%%',
+      \   'close': '%999X X ',
+      \   'paste': '%{&paste?"PASTE":""}',
+      \   'winnr': '%{winnr()}',
+      \ },
+      \
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \}
+  \ }
+
+let g:unite_force_overwrite_statusline = 0
+let g:vimfiler_force_overwrite_statusline = 0
+let g:vimshell_force_overwrite_statusline = 0
+
+function! LightlineFilename()
+  return &filetype ==# 'vimfiler' ? vimfiler#get_status_string() :
+        \ &filetype ==# 'unite' ? unite#get_status_string() :
+        \ &filetype ==# 'vimshell' ? vimshell#get_status_string() :
+        \ expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+endfunction
+
+Plug 'junegunn/gv.vim'
+
+"" navigation
+"Plug 'tpope/vim-projectionist'
+"Plug 'mbbill/undotree'
+Plug 'https://tpope.io/vim/commentary.git'
+Plug 'https://tpope.io/vim/surround.git'
+Plug 'mfussenegger/nvim-dap'
+"Plug 'Pocco81/DAPInstall.nvim'
+Plug 'szw/vim-maximizer'
+"Plug 'simrat39/symbols-outline.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+"
+"" Themes
+Plug 'gruvbox-community/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim.git'
+Plug 'dracula/dracula-theme'
+Plug 'sjl/badwolf'
+Plug 'jacoborus/tender'
+Plug 'joshdick/onedark.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'connorholyday/vim-snazzy'
+Plug 'lifepillar/vim-solarized8'
+"
+"" notes & metrics
+"Plug 'https://github.com/jceb/vim-orgmode.git'
+Plug 'vim-utils/vim-man'
+Plug 'https://github.com/vimwiki/vimwiki.git'
+"
+"" sass
+Plug 'AtsushiM/search-pare'
 Plug 'junegunn/gv.vim'
 "
 "" navigation
@@ -138,6 +210,11 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
 au BufRead,BufNewFile *.twig set filetype=htmljinja
+
+let gitBranch=system("git rev-parse --abbrev-ref HEAD")
+set laststatus=2
+set statusline=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+execute "set statusline +=" . gitBranch
 
 source ~/.dotfiles/nvim/.config/nvim/plugin/coc.vim
 source ~/.dotfiles/nvim/.config/nvim/plugin/colors.vim
