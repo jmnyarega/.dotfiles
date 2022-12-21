@@ -100,7 +100,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'connorholyday/vim-snazzy'
 Plug 'lifepillar/vim-solarized8'
 "
-"" notes & metrics
+"" 
 "Plug 'https://github.com/jceb/vim-orgmode.git'
 Plug 'vim-utils/vim-man'
 Plug 'https://github.com/vimwiki/vimwiki.git'
@@ -134,7 +134,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'connorholyday/vim-snazzy'
 Plug 'lifepillar/vim-solarized8'
 "
-"" notes & metrics
+" notes & metrics
 "Plug 'https://github.com/jceb/vim-orgmode.git'
 Plug 'vim-utils/vim-man'
 Plug 'https://github.com/vimwiki/vimwiki.git'
@@ -163,6 +163,12 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-projectionist'
 Plug 'noahfrederick/vim-composer'
 Plug 'noahfrederick/vim-laravel'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
 "
 "" linters
 Plug 'dense-analysis/ale'
@@ -197,14 +203,14 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
 execute "set statusline +=" . gitBranch
 
-source ~/.dotfiles/nvim/.config/nvim/plugin/coc.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/colors.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/git.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/lsp.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/mappings.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/navigation.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/netrw.vim
-" source ~/.dotfiles/nvim/.config/nvim/plugin/php.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/sets.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/tags.vim
-source ~/.dotfiles/nvim/.config/nvim/plugin/telescope.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/coc.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/colors.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/git.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/lsp.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/mappings.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/navigation.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/netrw.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/php.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/sets.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/tags.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/telescope.vim
