@@ -1,216 +1,88 @@
-call plug#begin('~/.vim/plugged')
-" Lua
-Plug 'neovim/nvim-lspconfig'
-Plug 'onsails/lspkind-nvim'
-Plug 'nvim-lua/lsp_extensions.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-"" Plug 'glepnir/lspsaga.nvim'
-"
-"" completion
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/nvim-cmp'
-"
-"" types &  type servers
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-"Plug 'hrsh7th/cmp-nvim-lsp'
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-"Plug 'nvim-treesitter/playground'
-"
-Plug 'neoclide/keep.nvim', { 'do': 'npm install'}
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath=&runtimepath
 
-"" typescriprt & javascript
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
-"Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'MaxMEllon/vim-jsx-pretty'
-"" Plug 'mhartington/nvim-typescript', {'do': 'sh install.sh'}
-"
-"" Snippets
-"Plug 'L3MON4D3/LuaSnip'
-"Plug 'rafamadriz/friendly-snippets'
-"
-"" git
-Plug 'ThePrimeagen/git-worktree.nvim'
+" sets 
+filetype plugin indent on
 
-Plug 'tpope/vim-fugitive'
-" let g:Powerline_symbols = 'fancy'
-
-Plug 'itchyny/lightline.vim'
+set guicursor=n-v-c:block
+set maxmempattern=100000
+set nohlsearch
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set splitbelow
+set splitright
+set nowrap
+set noswapfile
+set nobackup
+set incsearch
+set scrolloff=8
 set laststatus=3
-set noshowmode
+set cursorline
+set signcolumn=yes
+set isfname+=@-@
+set cmdheight=2
+set updatetime=50
+set shortmess+=c
+set colorcolumn=80
+set path+=**
+set wildmode=longest,list,full
+set wildignore+=*.pyc
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/.git/*
 
-let g:lightline = {
-      \ 'colorscheme': 'onedark',
-      \ 'active': {
-      \   'left':  [[ 'mode', 'tabnum', 'winnr', 'LightlineFilename', 'readonly',
-      \   'filename', 'filetype', 'modified']],
-      \   'right': [[ 'gitbranch','absolute_path', 'sp', 'percent', 'close' ]],
-      \ },
-      \ 'component': {
-      \   'sp': '%3l:%-2v%<',
-      \   'absolute_path': '%F',
-      \   'percent': '%3p%%',
-      \   'close': '%999X X ',
-      \   'paste': '%{&paste?"PASTE":""}',
-      \   'winnr': '%{winnr()}',
-      \ },
-      \
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \}
-  \ }
+set hidden
+set background=dark
+set rnu
+colorscheme solarized8
+set undofile
+set undodir=~/.vim/undo
 
-let g:unite_force_overwrite_statusline = 0
-let g:vimfiler_force_overwrite_statusline = 0
-let g:vimshell_force_overwrite_statusline = 0
+if &term =~ '256color'
+	set t_ut=
+endif
 
-function! LightlineFilename()
-  return &filetype ==# 'vimfiler' ? vimfiler#get_status_string() :
-        \ &filetype ==# 'unite' ? unite#get_status_string() :
-        \ &filetype ==# 'vimshell' ? vimshell#get_status_string() :
-        \ expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
-endfunction
+set t_Co=256                         " Enable 256 colors
+set termguicolors                    " Enable GUI colors for the terminal to get truecolor
 
-Plug 'junegunn/gv.vim'
+" maps
+let mapleader = ','
+nnoremap <leader>s :w <CR>
+nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <F5> :make! <CR>
+nnoremap <leader>h :cfirst <CR>
+nnoremap <leader>j :cprev <CR>
+nnoremap <leader>k :cnext <CR>
+nnoremap <leader>l :clast <CR>
+nnoremap <ESC> :cclose <CR>
+nnoremap <SPACE> :copen <CR>
+nnoremap <C-e> :q! <CR>
+nnoremap <C-t> :terminal <CR>
 
-"" navigation
-"Plug 'tpope/vim-projectionist'
-"Plug 'mbbill/undotree'
-Plug 'https://tpope.io/vim/commentary.git'
-Plug 'https://tpope.io/vim/surround.git'
-Plug 'mfussenegger/nvim-dap'
-"Plug 'Pocco81/DAPInstall.nvim'
-Plug 'szw/vim-maximizer'
-"Plug 'simrat39/symbols-outline.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-"
-"" Themes
-Plug 'gruvbox-community/gruvbox'
-Plug 'tomasr/molokai'
-Plug 'arcticicestudio/nord-vim'
-Plug 'https://github.com/drewtempelmeyer/palenight.vim.git'
-Plug 'dracula/dracula-theme'
-Plug 'sjl/badwolf'
-Plug 'jacoborus/tender'
-Plug 'joshdick/onedark.vim'
-Plug 'jnurmine/Zenburn'
-Plug 'connorholyday/vim-snazzy'
-Plug 'lifepillar/vim-solarized8'
-"
-"" 
-"Plug 'https://github.com/jceb/vim-orgmode.git'
-Plug 'vim-utils/vim-man'
-Plug 'https://github.com/vimwiki/vimwiki.git'
-"
-"" sass
-Plug 'AtsushiM/search-pare'
-Plug 'junegunn/gv.vim'
-"
-"" navigation
-"Plug 'tpope/vim-projectionist'
-"Plug 'mbbill/undotree'
-Plug 'https://tpope.io/vim/commentary.git'
-Plug 'https://tpope.io/vim/surround.git'
-Plug 'mfussenegger/nvim-dap'
-"Plug 'Pocco81/DAPInstall.nvim'
-Plug 'szw/vim-maximizer'
-"Plug 'simrat39/symbols-outline.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-"
-"" Themes
-Plug 'gruvbox-community/gruvbox'
-Plug 'tomasr/molokai'
-Plug 'arcticicestudio/nord-vim'
-Plug 'https://github.com/drewtempelmeyer/palenight.vim.git'
-Plug 'dracula/dracula-theme'
-Plug 'sjl/badwolf'
-Plug 'jacoborus/tender'
-Plug 'joshdick/onedark.vim'
-Plug 'jnurmine/Zenburn'
-Plug 'connorholyday/vim-snazzy'
-Plug 'lifepillar/vim-solarized8'
-"
-" notes & metrics
-"Plug 'https://github.com/jceb/vim-orgmode.git'
-Plug 'vim-utils/vim-man'
-Plug 'https://github.com/vimwiki/vimwiki.git'
-"
-"" sass
-Plug 'AtsushiM/search-parent.vim'
-Plug 'AtsushiM/sass-compile.vim'
-"
-"" c#
-"Plug 'OmniSharp/omnisharp-vim'
-"Plug 'nickspoons/vim-sharpenup'
-"Plug 'https://github.com/jlcrochet/vim-razor'
-"
-"" ctags
-Plug 'https://github.com/xolox/vim-easytags.git'
-Plug 'https://github.com/xolox/vim-misc.git'
+" search
+let g:grepper       = {}
+let g:grepper.tools = ['grep', 'git', 'rg']
+set grepprg=rg\ -H\ --no-heading\ --vimgrep
+set grepformat=$f:$l:%c:%m
+nnoremap <leader>* :Grepper -cword -noprompt <CR>
+nmap gs <plug>(GrepperOperator) 
+xmap gs <plug>(GrepperOperator)
 
-" fzf
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <Leader>s :Rg<CR>
+" Plugins
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-dispatch')
+call minpac#add('radenling/vim-dispatch-neovim')
+call minpac#add('junegunn/fzf')
+call minpac#add('neoclide/coc.nvim',  {'type': 'opt'})
+call minpac#add('Shougo/vimproc.vim', {'do': 'silent! !make'})
+call minpac#add('lifepillar/vim-solarized8')
+call minpac#add('mhinz/vim-grepper')
+call minpac#add('tpope/vim-obsession')
+call minpac#add('tpope/vim-projectionist')
 
-" php - un-optimised
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-projectionist'
-Plug 'noahfrederick/vim-composer'
-Plug 'noahfrederick/vim-laravel'
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-"
-"" linters
-Plug 'dense-analysis/ale'
-Plug 'scrooloose/syntastic'
-"
-" msc
-Plug 'tpope/vim-dispatch'
-
-Plug 'christoomey/vim-tmux-navigator'
-
-"jinja template
-Plug 'mitsuhiko/vim-jinja'
-
-call plug#end()
-
-" general settings
-let loaded_matchparen = 1
-let g:loaded_perl_provider = 0
-let g:loaded_ruby_provider = 0
-
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-" Disable tmux navigator when zooming the Vim pane
-let g:tmux_navigator_disable_when_zoomed = 1
-au BufRead,BufNewFile *.twig set filetype=htmljinja
-
-let gitBranch=system("git rev-parse --abbrev-ref HEAD")
-set laststatus=2
-set statusline=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
-execute "set statusline +=" . gitBranch
-
- source ~/.dotfiles/nvim/.config/nvim/plugin/coc.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/colors.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/git.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/lsp.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/mappings.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/navigation.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/netrw.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/php.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/sets.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/tags.vim
- source ~/.dotfiles/nvim/.config/nvim/plugin/telescope.vim
+" custom commands
+command! PackageClean call minpac#clean()
+command! PackageUpdate call minpac#update()

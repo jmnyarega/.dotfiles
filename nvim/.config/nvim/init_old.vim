@@ -1,0 +1,216 @@
+call plug#begin('~/.vim/plugged')
+" Lua
+Plug 'neovim/nvim-lspconfig'
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-lua/lsp_extensions.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+"" Plug 'glepnir/lspsaga.nvim'
+"
+"" completion
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+"
+"" types &  type servers
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/playground'
+"
+Plug 'neoclide/keep.nvim', { 'do': 'npm install'}
+
+"" typescriprt & javascript
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
+"Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'MaxMEllon/vim-jsx-pretty'
+"" Plug 'mhartington/nvim-typescript', {'do': 'sh install.sh'}
+"
+"" Snippets
+"Plug 'L3MON4D3/LuaSnip'
+"Plug 'rafamadriz/friendly-snippets'
+"
+"" git
+Plug 'ThePrimeagen/git-worktree.nvim'
+
+Plug 'tpope/vim-fugitive'
+" let g:Powerline_symbols = 'fancy'
+
+Plug 'itchyny/lightline.vim'
+set laststatus=3
+set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \   'left':  [[ 'mode', 'tabnum', 'winnr', 'LightlineFilename', 'readonly',
+      \   'filename', 'filetype', 'modified']],
+      \   'right': [[ 'gitbranch','absolute_path', 'sp', 'percent', 'close' ]],
+      \ },
+      \ 'component': {
+      \   'sp': '%3l:%-2v%<',
+      \   'absolute_path': '%F',
+      \   'percent': '%3p%%',
+      \   'close': '%999X X ',
+      \   'paste': '%{&paste?"PASTE":""}',
+      \   'winnr': '%{winnr()}',
+      \ },
+      \
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \}
+  \ }
+
+let g:unite_force_overwrite_statusline = 0
+let g:vimfiler_force_overwrite_statusline = 0
+let g:vimshell_force_overwrite_statusline = 0
+
+function! LightlineFilename()
+  return &filetype ==# 'vimfiler' ? vimfiler#get_status_string() :
+        \ &filetype ==# 'unite' ? unite#get_status_string() :
+        \ &filetype ==# 'vimshell' ? vimshell#get_status_string() :
+        \ expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+endfunction
+
+Plug 'junegunn/gv.vim'
+
+"" navigation
+"Plug 'tpope/vim-projectionist'
+"Plug 'mbbill/undotree'
+Plug 'https://tpope.io/vim/commentary.git'
+Plug 'https://tpope.io/vim/surround.git'
+Plug 'mfussenegger/nvim-dap'
+"Plug 'Pocco81/DAPInstall.nvim'
+Plug 'szw/vim-maximizer'
+"Plug 'simrat39/symbols-outline.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+"
+"" Themes
+Plug 'gruvbox-community/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim.git'
+Plug 'dracula/dracula-theme'
+Plug 'sjl/badwolf'
+Plug 'jacoborus/tender'
+Plug 'joshdick/onedark.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'connorholyday/vim-snazzy'
+Plug 'lifepillar/vim-solarized8'
+"
+"" 
+"Plug 'https://github.com/jceb/vim-orgmode.git'
+Plug 'vim-utils/vim-man'
+Plug 'https://github.com/vimwiki/vimwiki.git'
+"
+"" sass
+Plug 'AtsushiM/search-pare'
+Plug 'junegunn/gv.vim'
+"
+"" navigation
+"Plug 'tpope/vim-projectionist'
+"Plug 'mbbill/undotree'
+Plug 'https://tpope.io/vim/commentary.git'
+Plug 'https://tpope.io/vim/surround.git'
+Plug 'mfussenegger/nvim-dap'
+"Plug 'Pocco81/DAPInstall.nvim'
+Plug 'szw/vim-maximizer'
+"Plug 'simrat39/symbols-outline.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+"
+"" Themes
+Plug 'gruvbox-community/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim.git'
+Plug 'dracula/dracula-theme'
+Plug 'sjl/badwolf'
+Plug 'jacoborus/tender'
+Plug 'joshdick/onedark.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'connorholyday/vim-snazzy'
+Plug 'lifepillar/vim-solarized8'
+"
+" notes & metrics
+"Plug 'https://github.com/jceb/vim-orgmode.git'
+Plug 'vim-utils/vim-man'
+Plug 'https://github.com/vimwiki/vimwiki.git'
+"
+"" sass
+Plug 'AtsushiM/search-parent.vim'
+Plug 'AtsushiM/sass-compile.vim'
+"
+"" c#
+"Plug 'OmniSharp/omnisharp-vim'
+"Plug 'nickspoons/vim-sharpenup'
+"Plug 'https://github.com/jlcrochet/vim-razor'
+"
+"" ctags
+Plug 'https://github.com/xolox/vim-easytags.git'
+Plug 'https://github.com/xolox/vim-misc.git'
+
+" fzf
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>s :Rg<CR>
+
+" php - un-optimised
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
+Plug 'noahfrederick/vim-composer'
+Plug 'noahfrederick/vim-laravel'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+"
+"" linters
+Plug 'dense-analysis/ale'
+Plug 'scrooloose/syntastic'
+"
+" msc
+Plug 'tpope/vim-dispatch'
+
+Plug 'christoomey/vim-tmux-navigator'
+
+"jinja template
+Plug 'mitsuhiko/vim-jinja'
+
+call plug#end()
+
+" general settings
+let loaded_matchparen = 1
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
+
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+" Disable tmux navigator when zooming the Vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
+au BufRead,BufNewFile *.twig set filetype=htmljinja
+
+let gitBranch=system("git rev-parse --abbrev-ref HEAD")
+set laststatus=2
+set statusline=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+execute "set statusline +=" . gitBranch
+
+ source ~/.dotfiles/nvim/.config/nvim/plugin/coc.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/colors.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/git.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/lsp.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/mappings.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/navigation.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/netrw.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/php.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/sets.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/tags.vim
+ source ~/.dotfiles/nvim/.config/nvim/plugin/telescope.vim
