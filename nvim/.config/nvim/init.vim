@@ -37,7 +37,7 @@ set wildignore+=**/.git/*
 set hidden
 set background=light
 set rnu
-colorscheme solarized8
+colorscheme monokai
 set undofile
 set undodir=~/.vim/undo
 
@@ -61,7 +61,7 @@ call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('junegunn/fzf')
 call minpac#add('neoclide/coc.nvim',  {'type': 'opt'})
 call minpac#add('Shougo/vimproc.vim', {'do': 'silent! !make'})
-call minpac#add('lifepillar/vim-solarized8')
+call minpac#add('sickill/vim-monokai')
 call minpac#add('mhinz/vim-grepper')
 call minpac#add('tpope/vim-obsession')
 call minpac#add('tpope/vim-projectionist')
