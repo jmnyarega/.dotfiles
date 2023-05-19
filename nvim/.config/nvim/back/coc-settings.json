@@ -1,0 +1,49 @@
+{
+  "suggest.enablePreview": true,
+  "codeLens.enable": true,
+  "git.addedSign.text": "┃",
+  "git.removedSign.text": "┃",
+  "git.changedSign.text": "┃",
+  "git.changeRemovedSign.text": "┃",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.errorSign": "✖",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "●",
+  "diagnostic.hintSign": "○",
+  "git.addGBlameToBufferVar": true,
+
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "blade": "html",
+    "twig": "html"
+  },
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/usr/lib/jvm/java-17-jdk",
+      "default": true
+    }
+  ],
+  "java.referencesCodeLens.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+  "java.autobuild.enabled": true,
+  "java.completion.enabled": true,
+  "java.completion.guessMethodArguments": true,
+  "java.completion.maxResults": 10,
+  "java.format.enabled": true,
+  "java.format.comments.enabled": true,
+  "java.format.onType.fixComment.enabled": true,
+  "java.enabled": true,
+  "java.progressReports.enabled": true,
+  "java.import.gradle.wrapper.enabled": true,
+  "java.codeGeneration.generateComments": true,
+  "java.import.maven.enabled": true,
+  "java.home": "/usr/lib/jvm/java-17-jdk",
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
+}

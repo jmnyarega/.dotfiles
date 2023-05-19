@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-center '/home/josia/Documents/wallpapers/main_image_deep_field_smacs0723-5mb.jpg'

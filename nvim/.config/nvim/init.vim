@@ -35,7 +35,7 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/.git/*
 
 set hidden
-set background=dark
+set background=light
 set rnu
 colorscheme solarized8
 set undofile
@@ -48,28 +48,11 @@ endif
 set t_Co=256                         " Enable 256 colors
 set termguicolors                    " Enable GUI colors for the terminal to get truecolor
 
-" maps
-let mapleader = ','
-nnoremap <leader>s :w <CR>
-nnoremap <C-p> :<C-u>FZF<CR>
-nnoremap <F5> :make! <CR>
-nnoremap <leader>h :cfirst <CR>
-nnoremap <leader>j :cprev <CR>
-nnoremap <leader>k :cnext <CR>
-nnoremap <leader>l :clast <CR>
-nnoremap <ESC> :cclose <CR>
-nnoremap <SPACE> :copen <CR>
-nnoremap <C-e> :q! <CR>
-nnoremap <C-t> :terminal <CR>
-
 " search
 let g:grepper       = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 set grepprg=rg\ -H\ --no-heading\ --vimgrep
 set grepformat=$f:$l:%c:%m
-nnoremap <leader>* :Grepper -cword -noprompt <CR>
-nmap gs <plug>(GrepperOperator) 
-xmap gs <plug>(GrepperOperator)
 
 " Plugins
 call minpac#add('tpope/vim-unimpaired')
@@ -82,6 +65,10 @@ call minpac#add('lifepillar/vim-solarized8')
 call minpac#add('mhinz/vim-grepper')
 call minpac#add('tpope/vim-obsession')
 call minpac#add('tpope/vim-projectionist')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('jmnyarega/vim-mappings')
+call minpac#add('jmnyarega/vim-netrw')
+call minpac#add('jmnyarega/vim-navigation')
 
 " custom commands
 command! PackageClean call minpac#clean()
