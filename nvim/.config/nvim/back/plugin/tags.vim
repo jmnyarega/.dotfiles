@@ -1,9 +1,0 @@
-" let g:easytags_dynamic_files = 1
-" let g:easytags_cmd = 'ctags'
-" let g:easytags_file = '~/.vim/tags'
-" let g:easytags_events = ['BufWritePost']
-" let g:easytags_async = 1
-" let g:easytags_syntax_keyword = 'always'
-" let g:easytags_by_filetype = 1
-" let g:easytags_include_members = 1
-" let g:easytags_resolve_links = 1

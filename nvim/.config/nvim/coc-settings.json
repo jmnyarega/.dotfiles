@@ -1,14 +1,9 @@
 {
   "codeLens.enable": true,
-  "git.addedSign.text": "┃",
-  "git.removedSign.text": "┃",
-  "git.changedSign.text": "┃",
-  "git.changeRemovedSign.text": "┃",
   "diagnostic.checkCurrentLine": true,
-  "diagnostic.errorSign": "✖",
-  "diagnostic.warningSign": "⚠",
-  "diagnostic.infoSign": "●",
-  "diagnostic.hintSign": "○",
   "git.addGBlameToBufferVar": true,
-  "coc.preferences.formatOnSave": true
+  "python.autoComplete.extraPaths": [
+    "${env:SPARK_HOME}/python",
+    "${env:SPARK_HOME}/python/pyspark"
+  ]
 }
