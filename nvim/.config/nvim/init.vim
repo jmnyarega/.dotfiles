@@ -77,6 +77,7 @@ call minpac#add('voldikss/vim-floaterm')
 call minpac#add('nvim-treesitter/nvim-treesitter')
 
 
+<<<<<<< HEAD
 " Set floaterm window's background to black
 hi Floaterm guibg=black
 " Set floating window border line color to cyan, and background to orange
@@ -90,11 +91,34 @@ nnoremap   <silent><Leader>tq   :FloatermKill<CR>
 nnoremap   <silent><Leader>tt   :FloatermToggle!<CR>
 
 tnoremap   <silent><Leader>tq   exit<CR>
+=======
+    " Plugins
+    call minpac#add('tpope/vim-unimpaired')
+    call minpac#add('tpope/vim-dispatch')
+    call minpac#add('radenling/vim-dispatch-neovim')
+    call minpac#add('junegunn/fzf')
+    call minpac#add('neoclide/coc.nvim',  {'type': 'opt'})
+    call minpac#add('Shougo/vimproc.vim', {'do': 'silent! !make'})
+    call minpac#add('sickill/vim-monokai')
+    call minpac#add('mhinz/vim-grepper')
+    call minpac#add('tpope/vim-obsession')
+    call minpac#add('tpope/vim-projectionist')
+    call minpac#add('tpope/vim-commentary')
+    call minpac#add('jmnyarega/vim-netrw')
+    call minpac#add('jmnyarega/vim-navigation')
+    call minpac#add('fatih/vim-go', {'do': ':GoUpdateBinaries' })
+    call minpac#add('dsawardekar/wordpress.vim')
+    call minpac#add('mattn/emmet-vim')
+endif
+>>>>>>> 06b70c0 (update)
+
+let g:user_emmet_leader_key='<C-N>'
 
 " custom commands
 command! PackageClean call minpac#clean()
 command! PackageUpdate call minpac#update()
 
+<<<<<<< HEAD
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
@@ -110,3 +134,47 @@ set updatetime=300
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved
 set signcolumn=yes
+=======
+nnoremap <C-h> :cnext<CR>zz
+nnoremap <C-j> :cprev<CR>zz
+nnoremap <c-l> :clist <CR>zz
+nnoremap <leader>lk :lnext<CR>zz
+nnoremap <leader>lj :lprev<CR>zz
+nnoremap <C-q> :call ToggleQFList(1)<CR>
+nnoremap <leader>q :call ToggleQFList(0)<CR>
+
+nnoremap <F10> :bnext <CR>
+nnoremap <F9> :bprev <CR>
+
+noremap <leader>h :wincmd h <CR>
+noremap <leader>j :wincmd j <CR>
+noremap <leader>k :wincmd k <CR>
+noremap <leader>l :wincmd l <CR>
+
+let g:f_l = 0
+let g:f_g = 0
+
+fun! ToggleQFList(global)
+    if a:global
+        if g:f_g == 1
+            let g:f_g = 0
+            cclose
+        else
+            let g:f_g = 1
+            copen
+        end
+    else
+        if g:f_l == 1
+            let g:f_l = 0
+            lclose
+        else
+            let g:f_l = 1
+            lopen
+        end
+    endif
+endfun
+
+if executable('rg')
+    let g:rg_derive_root='true'
+endif
+>>>>>>> 06b70c0 (update)
