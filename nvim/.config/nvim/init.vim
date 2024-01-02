@@ -8,8 +8,8 @@ set guicursor=n-v-c:block
 set maxmempattern=100000
 set nohlsearch
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set splitbelow
@@ -33,15 +33,25 @@ set wildignore+=*.pyc
 set wildignore+=**/coverage/*
 set wildignore+=**/node_modules/*
 set wildignore+=**/.git/*
+set foldmethod=syntax   
+set nofoldenable
 
 set hidden
-set background=light
-set rnu
-colorscheme habamax
 set undofile
 set undodir=~/.vim/undo
+set cursorline
+set incsearch
+set ignorecase
+set smartcase
 
-set mouse=
+set showmode
+set showmatch
+set hlsearch
+set wildmenu
+set exrc
+set wildmode=list:longest
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
 set mousemodel=extend
 
 if &term =~ '256color'
@@ -50,12 +60,22 @@ endif
 
 set t_Co=256                         " Enable 256 colors
 set termguicolors                    " Enable GUI colors for the terminal to get truecolor
+set t_ZH=^[[3m
+set t_ZR=^[[23m
+colorscheme catppuccin-macchiato
+highlight Folded guibg=dark guifg=gray
+highlight FoldColumn guibg=dark guifg=blue
+highlight Comment cterm=italic gui=italic guifg=#ff8686
 
 " search
 let g:grepper       = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 set grepprg=rg\ -H\ --no-heading\ --vimgrep
 set grepformat=$f:$l:%c:%m
+command! Rg FloatermNew --width=0.8 --height=0.8 rg
+autocmd User FloatermOpen        " triggered after opening a new/existed floaterm
+
+packadd minpac
 
 " Plugins
 call minpac#add('tpope/vim-unimpaired')
@@ -75,26 +95,39 @@ call minpac#add('jmnyarega/vim-netrw')
 call minpac#add('jmnyarega/vim-navigation')
 call minpac#add('voldikss/vim-floaterm')
 call minpac#add('nvim-treesitter/nvim-treesitter')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-surround')
+call minpac#add('catppuccin/nvim')
+call minpac#add('skywind3000/asynctasks.vim')
+call minpac#add('skywind3000/asyncrun.vim')
+call minpac#add('SirVer/ultisnips')
 
+let g:floaterm_position = 'center'
+let g:floaterm_opener = "edit"
+let g:floaterm_titleposition = "center"
+hi Floaterm guibg=#252627
+hi FloatermBorder guibg=#1f603f guifg=#ffffff
 
-" Set floaterm window's background to black
-hi Floaterm guibg=black
-" Set floating window border line color to cyan, and background to orange
-hi FloatermBorder guibg=black guifg=white
-let g:floaterm_position = 'topright'
+noremap    <C-D>  :FloatermNew<CR>
+nnoremap   <C-D>h   :FloatermPrev<CR>
+nnoremap   <C-D>l   :FloatermNext<CR>
+nnoremap   <C-D>q   :FloatermKill<CR>
+nnoremap   <C-D>t   :FloatermToggle!<CR>
 
-noremap    <silent><Leader>t    :FloatermNew<CR>
-nnoremap   <silent><Leader>tp   :FloatermPrev<CR>
-nnoremap   <silent><Leader>tn   :FloatermNext<CR>
-nnoremap   <silent><Leader>tq   :FloatermKill<CR>
-nnoremap   <silent><Leader>tt   :FloatermToggle!<CR>
+" show chunk diff at current position
+"nmap gs <Plug>(coc-git-chunkinfo)
+" show commit contains current position
+"nmap gc <Plug>(coc-git-commit)
+" create text object for git chunks
+"nnoremap <silent> <space>g  :<C-u>CocList --normal gstatus<CR>
+set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
 
-tnoremap   <silent><Leader>tq   exit<CR>
+"Fold lines
+hi Folded ctermbg=Black
 
 " custom commands
 command! PackageClean call minpac#clean()
 command! PackageUpdate call minpac#update()
-
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence

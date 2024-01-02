@@ -5,5 +5,8 @@
   "python.autoComplete.extraPaths": [
     "${env:SPARK_HOME}/python",
     "${env:SPARK_HOME}/python/pyspark"
-  ]
+  ],
+  "tsserver.tsdk": "/Users/josiah/.nvm/versions/node/v16.18.1/lib/node_modules/typescript/lib",
+  "git.enableGutters": false,
+  "snippets.ultisnips.pythonPrompt": false
 }
