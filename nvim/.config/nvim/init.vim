@@ -114,6 +114,7 @@ nnoremap   <C-D>l   :FloatermNext<CR>
 nnoremap   <C-D>q   :FloatermKill<CR>
 nnoremap   <C-D>t   :FloatermToggle!<CR>
 
+
 " show chunk diff at current position
 "nmap gs <Plug>(coc-git-chunkinfo)
 " show commit contains current position
@@ -122,12 +123,12 @@ nnoremap   <C-D>t   :FloatermToggle!<CR>
 "nnoremap <silent> <space>g  :<C-u>CocList --normal gstatus<CR>
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
 
-"Fold lines
-hi Folded ctermbg=Black
+tnoremap   <silent><Leader>tq   exit<CR>
 
 " custom commands
 command! PackageClean call minpac#clean()
 command! PackageUpdate call minpac#update()
+
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence

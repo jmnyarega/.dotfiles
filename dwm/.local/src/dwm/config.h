@@ -14,7 +14,7 @@ static unsigned int gappov    = 30;       /* vert outer gap between windows and 
 static int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
-static int topbar             = 1;        /* 0 means bottom bar */
+static int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh      = 30;       /*  0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height  */
 static const char *fonts[]    = {
                                     "Hack:size=10:antialias=true:autohint=true",
@@ -23,7 +23,7 @@ static const char *fonts[]    = {
 								};
 static float brightnesz = 0.5;
 
-#include "/home/josiah/.local/src/dwm/themes/dracular.h"
+#include "/home/josia/.local/src/dwm/themes/dracular.h"
 
 static char *colors[][4] = {
 	/*                       fg                bg                border                float */
@@ -64,7 +64,7 @@ static Sp scratchpads[] = {
 /* }; */
 
 /* tagging */
-static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "XI" };
+static const char *tags[] = { "AMPCO", "COCOROCO", "AB", "QT", "INTERNAL", "MESSAGING", "CODE PRACTICE", "MUSIC", "XI" };
 static const char *tagsalt[] = { "😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "🥲" };
 static const int momentaryalttags = 0;
 

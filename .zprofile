@@ -9,6 +9,7 @@
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export PATH="$PATH:/opt/node-v14.16.0-linux-x64/bin"
 export PATH="$PATH:/opt/popcorn"
+export PATH="$PATH:/home/josia/.config/composer/vendor/bin"
 
 unsetopt PROMPT_SP
 

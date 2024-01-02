@@ -6,7 +6,8 @@
     "${env:SPARK_HOME}/python",
     "${env:SPARK_HOME}/python/pyspark"
   ],
-  "tsserver.tsdk": "/Users/josiah/.nvm/versions/node/v16.18.1/lib/node_modules/typescript/lib",
-  "git.enableGutters": false,
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.formatOnSave": true,
+  "snippets.ultisnips.pythonPrompt": false,
   "snippets.ultisnips.pythonPrompt": false
 }
