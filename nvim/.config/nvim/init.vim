@@ -75,6 +75,9 @@ set grepformat=$f:$l:%c:%m
 command! Rg FloatermNew --width=0.8 --height=0.8 rg
 autocmd User FloatermOpen        " triggered after opening a new/existed floaterm
 
+let g:python3_host_prog = '/usr/bin/python3' " -- Set python 3 provider
+
+
 packadd minpac
 
 " Plugins
@@ -101,6 +104,7 @@ call minpac#add('catppuccin/nvim')
 call minpac#add('skywind3000/asynctasks.vim')
 call minpac#add('skywind3000/asyncrun.vim')
 call minpac#add('SirVer/ultisnips')
+call minpac#add('chr4/nginx.vim')
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
