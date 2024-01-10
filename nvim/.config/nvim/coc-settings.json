@@ -8,5 +8,6 @@
   ],
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "coc.preferences.formatOnSave": true,
+  "snippets.ultisnips.pythonPrompt": false,
   "snippets.ultisnips.pythonPrompt": false
 }
