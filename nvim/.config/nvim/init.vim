@@ -127,7 +127,7 @@ nnoremap   <C-D>t   :FloatermToggle!<CR>
 "nnoremap <silent> <space>g  :<C-u>CocList --normal gstatus<CR>
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
 
-tnoremap   <silent><Leader>tq   exit<CR>
+" tnoremap   <silent><Leader>tq   exit<CR>
 
 " custom commands
 command! PackageClean call minpac#clean()
