@@ -112,6 +112,8 @@ let g:floaterm_titleposition = "center"
 hi Floaterm guibg=#252627
 hi FloatermBorder guibg=#1f603f guifg=#ffffff
 
+let loaded_netrwPlugin = 1
+
 noremap    <C-D>  :FloatermNew<CR>
 nnoremap   <C-D>h   :FloatermPrev<CR>
 nnoremap   <C-D>l   :FloatermNext<CR>
