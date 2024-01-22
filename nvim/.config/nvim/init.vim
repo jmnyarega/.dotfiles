@@ -43,6 +43,7 @@ set cursorline
 set incsearch
 set ignorecase
 set smartcase
+set nu
 
 set showmode
 set showmatch
