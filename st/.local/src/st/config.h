@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Mononoki Nerd Font Mono:pixelsize=15:antialias=true:autohint=true";
+static char *font = "Mononoki Nerd Font Mono:pixelsize=25:antialias=true:autohint=true";
 static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
 static int borderpx = 2;
 

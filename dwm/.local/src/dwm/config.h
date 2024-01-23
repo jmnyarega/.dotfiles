@@ -17,13 +17,13 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh      = 30;       /*  0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height  */
 static const char *fonts[]    = {
-                                    "Mononoki Nerd Font:size=12:antialias=true:autohint=true",
+                                    "Mononoki Nerd Font:size=16:antialias=true:autohint=true",
 									"JoyPixels:size=10:antialias=true:autohint=true",
 									"FontAwesome:size=10:antialias=true:autohint=true",
 								};
 static float brightnesz = 0.5;
 
-#include "/home/josia/.local/src/dwm/themes/oneish.h"
+#include "/home/josiah/.local/src/dwm/themes/oneish.h"
 
 static char *colors[][4] = {
 	/*                       fg                bg                border                float */
