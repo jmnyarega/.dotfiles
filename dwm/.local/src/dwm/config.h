@@ -17,13 +17,13 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh      = 30;       /*  0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height  */
 static const char *fonts[]    = {
-                                    "Mononoki Nerd Font:size=16:antialias=true:autohint=true",
+                                    "Mononoki Nerd Font:size=13:antialias=true:autohint=true",
 									"JoyPixels:size=10:antialias=true:autohint=true",
 									"FontAwesome:size=10:antialias=true:autohint=true",
 								};
 static float brightnesz = 0.5;
 
-#include "/home/josiah/.local/src/dwm/themes/oneish.h"
+#include "/home/josia/.local/src/dwm/themes/oneish.h"
 
 static char *colors[][4] = {
 	/*                       fg                bg                border                float */
@@ -300,14 +300,14 @@ static Key keys[] = {
 	{ 0, XF86XK_ScreenSaver,	spawn,		SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
 	{ 0, XF86XK_TaskPane,		spawn,		SHCMD(TERMINAL " -e htop") },
 	{ 0, XF86XK_Mail,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks") },
-	{ 0, XF86XK_MyComputer,		spawn,		SHCMD("nautilus") },
+	{ 0, XF86XK_MyComputer,		spawn,		SHCMD("thunar") },
 	/* { 0, XF86XK_Battery,		spawn,		SHCMD("") }, */
 	{ 0, XF86XK_Launch1,		spawn,		SHCMD("xset dpms force off") },
 	{ 0, XF86XK_TouchpadToggle,	spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,	spawn,		SHCMD("synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOn,		spawn,		SHCMD("synclient TouchpadOff=0") },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("export BRIGHTNESS=1.0 && brightness") },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("export BRIGHTNESS=0.1 && brightness") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("xbacklight -inc 10") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -dec 10") },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */

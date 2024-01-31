@@ -3,26 +3,6 @@
 # Prints all batteries, their percentage remaining and an emoji corresponding
 # to charge status (🔌 for plugged up, 🔋 for discharging on battery, etc.).
 
-STEP=1
-brightness_level=$(cat ~/brightness.txt)
-
-function brightness_inc()
-{
-    LEVEL=$((brightness_level+STEP))
-
-    if [[ $brightness_level -lt 10 ]]; then
-        echo $LEVEL > ~/brightness.txt
-    fi
-}
-
-function brightness_dec()
-{
-    LEVEL=$((brightness_level-STEP))
-
-    if [[ $brightness_level -gt 1 ]]; then
-        echo $LEVEL > ~/brightness.txt
-    fi
-}
 
 case $BLOCK_BUTTON in
 	3) notify-send "🔋 Battery module" "🔋: discharging
@@ -32,8 +12,8 @@ case $BLOCK_BUTTON in
 ⚡: charged
 ❗: battery very low!
 - Scroll to change adjust xbacklight." $brightness_level;;
-    4) brightness_inc && brightness $brightness_level ;;
-    5) brightness_dec && brightness $brightness_level ;;
+    4) xbacklight -inc 10 ;;
+    5) xbacklight -dec 10 ;;
     6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
@@ -60,5 +40,5 @@ for battery in /sys/class/power_supply/BAT?*; do
     [ "$capacity" -le 25 ] && [ "$bat_status" == "Discharging" ] && notify-send -t 10000 -u critical "Battery Low!! plug in the charger 🔴 "
     [ "$bat_status" == "Unknown" ] &&  notify-send -u critical "Fully charged!! remove charger ⚠️  "
 
-	printf "%s-%s%s%d%%" "$brightness_level" "$status" "$warn" "$capacity"; unset warn
+	printf "%s%s%d%%" "$status" "$warn" "$capacity"; unset warn
 done && printf "\\n"

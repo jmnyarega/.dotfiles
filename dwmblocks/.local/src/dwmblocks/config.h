@@ -19,14 +19,14 @@ static const Block blocks[] = {
 	/* {"",	"disk",	18000,	17}, */
 	/* {"",	"forecast",	18000,	5}, */
 	/* {"",	"mailbox",	180,	12}, */
-	{"🎵",	"sb-music",	1,	16},
-	{"",	"sb-microphone",	1,	17},
-	{"",	"sb-volume",	0,	11},
-	{"",	"sb-battery",	5,	3},
-	{"",	"sb-internet",	5,	4},
-	{"",	"sb-time",	30,	8},
-	{"",	"sb-clock",	24 * 60 * 60,	30},
-	{"",	"sb-help-icon",	0,	15},
+	{"🎵",	"~/.dotfiles/bin/.local/bin/statusbar/sb-music",	1,	16},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-microphone",	1,	17},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-volume",	0,	11},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-battery",	5,	3},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-internet",	5,	4},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-time",	30,	8},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-clock",	24 * 60 * 60,	30},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-help-icon",	0,	15},
 };
 
 //Sets delimiter between status commands. NULL character ('\0') means no delimiter.
