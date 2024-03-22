@@ -53,6 +53,7 @@ export JAVA_HOME=/opt/jre
 source $ZSH/oh-my-zsh.sh
 # export TERM="screen-256color"
 export SHELL_ENV=$HOME/.zshenv
+export FZF_BASE=/usr/local/fzf
 
 # vi mode
 bindkey -v

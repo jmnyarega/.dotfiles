@@ -1,0 +1,2 @@
+#!/bin/sh
+tmux list-sessions | sort | dmenu |cut -c1  | xargs -r tmux switch -t

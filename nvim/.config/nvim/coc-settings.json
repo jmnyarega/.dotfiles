@@ -6,7 +6,7 @@
     "${env:SPARK_HOME}/python",
     "${env:SPARK_HOME}/python/pyspark"
   ],
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.formatOnSaveFiletypes": ["typescript"],
   "coc.preferences.formatOnSave": true,
   "snippets.ultisnips.pythonPrompt": false,
   "snippets.ultisnips.pythonPrompt": false

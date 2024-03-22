@@ -1,0 +1,4 @@
+{
+    "$schema": "/usr/lib/phpactor/phpactor.schema.json",
+    "symfony.enabled": true
+}

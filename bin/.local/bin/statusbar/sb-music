@@ -1,19 +1,19 @@
 #!/bin/sh
-
-filter() { mpc | sed "/^volume:/d;s/\\&/&amp;/g;s/\\[paused\\].*/⏸/g;/\\[playing\\].*/d;/^ERROR/Q" | paste -sd ' ' -; }
-
 pidof -x sb-mpdup >/dev/null 2>&1 || sb-mpdup >/dev/null 2>&1 &
+
+position=$(spotifycli --statusshort)
+_status=$(spotifycli --playbackstatus)
 
 case $BLOCK_BUTTON in
 	1) notify-send "$(mpc current)";;
-	2) mpc toggle | filter ;;  # right click, pause/unpause
-	3) mpc status | filter ; notify-send "🎵 Music module" "\- Shows mpd song playing.
+	2) spotifycli --playpause ;;  # right click, pause/unpause
+	3) spotifycli --song; notify-send "🎵 Music module" "\- Shows mpd song playing.
 - ⏸ when paused.
 - Left click opens ncmpcpp.
 - Middle click pauses.
 - Scroll changes track.";;  # right click, pause/unpause
-	4) mpc prev   | filter ;;  # scroll up, previous
-	5) mpc next   | filter ;;  # scroll down, next
-	6) mpc status | filter ; "$TERMINAL" -e "$EDITOR" "$0" ;;
-	*) cut -c-20 <<< $(filter) ;;
+	4) spotifycli --prev ;;  # scroll up, previous
+	5) spotifycli --next ;;  # scroll down, next
+	6) spotifycli --status ; "$TERMINAL" -e "$EDITOR" "$0" ;;
+  *) cut -c-20 <<<  "${_status}${position}" ;;
 esac

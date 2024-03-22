@@ -19,7 +19,7 @@ static const Block blocks[] = {
 	/* {"",	"disk",	18000,	17}, */
 	/* {"",	"forecast",	18000,	5}, */
 	/* {"",	"mailbox",	180,	12}, */
-	{"🎵",	"~/.dotfiles/bin/.local/bin/statusbar/sb-music",	1,	16},
+	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-music",	1,	16},
 	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-microphone",	1,	17},
 	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-volume",	0,	11},
 	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-battery",	5,	3},

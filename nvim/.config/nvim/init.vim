@@ -94,9 +94,9 @@ call minpac#add('tpope/vim-obsession')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('tpope/vim-commentary')
-call minpac#add('jmnyarega/vim-mappings')
-call minpac#add('jmnyarega/vim-netrw')
-call minpac#add('jmnyarega/vim-navigation')
+" call minpac#add('jmnyarega/vim-mappings')
+" call minpac#add('jmnyarega/vim-netrw')
+" call minpac#add('jmnyarega/vim-navigation')
 call minpac#add('voldikss/vim-floaterm')
 call minpac#add('nvim-treesitter/nvim-treesitter')
 call minpac#add('tpope/vim-fugitive')
@@ -106,6 +106,11 @@ call minpac#add('skywind3000/asynctasks.vim')
 call minpac#add('skywind3000/asyncrun.vim')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('chr4/nginx.vim')
+call minpac#add('dsawardekar/wordpress.vim', {'do': 'silent! !make'})
+call minpac#add('noahfrederick/vim-composer')
+call minpac#add('noahfrederick/vim-laravel')
+call minpac#add('phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'})
+call minpac#add('nelsyeung/twig.vim')
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
@@ -120,7 +125,9 @@ nnoremap   <C-D>h   :FloatermPrev<CR>
 nnoremap   <C-D>l   :FloatermNext<CR>
 nnoremap   <C-D>q   :FloatermKill<CR>
 nnoremap   <C-D>t   :FloatermToggle!<CR>
+nnoremap  <C-f> :! st -e ranger % <CR>
 
+let g:phpactorPhpBin = "/usr/bin/php"
 
 " show chunk diff at current position
 "nmap gs <Plug>(coc-git-chunkinfo)

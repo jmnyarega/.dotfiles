@@ -1,9 +1,0 @@
-pane	0	0	:FIZZ	1	:*	0	:/mnt/ssd1/projects/services/tic-tac-toe	1	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
-pane	0	0	:FIZZ	1	:*	1	:/mnt/ssd1/projects/services/pom_clock	0	zsh	:
-pane	0	0	:FIZZ	1	:*	2	:/mnt/ssd1/projects/services/tic-tac-toe	0	node	:node /usr/local/bin/yarn start
-pane	0	1	:BUZZ	0	:	0	:/mnt/ssd1/projects/simple-programs	0	zsh	:
-pane	0	1	:BUZZ	0	:	1	:/mnt/ssd1/projects/simple-programs/Javacript/abstract-ds/LinkedList/Single	0	zsh	:
-pane	0	1	:BUZZ	0	:	2	:/home/josiah/Downloads	1	zsh	:
-window	0	0	1	:*	201c,319x61,0,0{235x61,0,0,0,83x61,236,0[83x29,236,0,1,83x31,236,30,2]}
-window	0	1	0	:	3887,227x42,0,0{148x42,0,0,3,78x42,149,0[78x16,149,0,4,78x25,149,17,5]}
-state	0	

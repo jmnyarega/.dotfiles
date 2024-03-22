@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for file in *; do 
+    if file "$file" | grep -E -i 'PNG image|JPG image|JPEG image|SVG Scalable|AVIF image'; then
+        filename=$(basename -- "$file")
+        extension="${filename##*.}"
+
+        echo $extension
+
+        if [ -f "./processed/$filename".webp ]; then
+            echo "SKIP"
+            continue
+        fi
+
+        ffmpeg -i "$filename" -c:v libwebp "./processed/$filename".webp
+    fi
+done

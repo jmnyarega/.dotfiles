@@ -1,8 +1,0 @@
-pane	0	0	:FIZZ	1	:*Z	0	:/mnt/ssd1/projects/frontent-hotjar	1	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
-pane	0	0	:FIZZ	1	:*Z	1	:/mnt/ssd1/projects/frontent-hotjar/demosite	0	node	:node /usr/local/bin/yarn start
-pane	0	0	:FIZZ	1	:*Z	2	:/mnt/ssd1/projects/frontent-hotjar/widget	0	node	:node /usr/local/bin/yarn start
-pane	0	1	:BUZZ	0	:-	0	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah	0	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
-pane	0	1	:BUZZ	0	:-	1	:/mnt/ssd1/projects/TIL/interviews/frontend-task-josaiah	1	zsh	:
-window	0	0	1	:*Z	115f,319x61,0,0{198x61,0,0,0,120x61,199,0[120x31,199,0,1,120x29,199,32,2]}
-window	0	1	0	:-	ffac,227x42,0,0{161x42,0,0,3,65x42,162,0,4}
-state	0	

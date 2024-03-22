@@ -1,8 +1,0 @@
-pane	0	0	:FIZZ	1	:*	0	:/mnt/ssd1/projects/frontend-test	1	nvim	:nvim -u /home/josiah/.config/nvim/init.vim .
-pane	0	0	:FIZZ	1	:*	1	:/mnt/ssd1/projects/frontend-test	0	node	:node /usr/local/bin/yarn dev
-pane	0	0	:FIZZ	1	:*	2	:/mnt/ssd1/projects/services/tic-tac-toe	0	zsh	:
-pane	0	1	:BUZZ	0	:	0	:/mnt/ssd1/projects/simple-programs/Javacript	0	zsh	:
-pane	0	1	:BUZZ	0	:	1	:/home/josiah	1	zsh	:
-window	0	0	1	:*	c104,227x42,0,0{170x42,0,0,0,56x42,171,0[56x21,171,0,1,56x20,171,22,2]}
-window	0	1	0	:	1a7d,227x42,0,0{145x42,0,0,3,81x42,146,0,4}
-state	0	
