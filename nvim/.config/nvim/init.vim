@@ -111,6 +111,7 @@ call minpac#add('noahfrederick/vim-composer')
 call minpac#add('noahfrederick/vim-laravel')
 call minpac#add('phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'})
 call minpac#add('nelsyeung/twig.vim')
+call minpac#add('vimwiki/vimwiki')
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
