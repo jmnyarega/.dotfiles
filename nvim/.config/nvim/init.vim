@@ -55,15 +55,13 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 set mousemodel=extend
 
-if &term =~ '256color'
-	set t_ut=
+if &term == "screen-256color"
+ set background=dark
 endif
 
-set t_Co=256                         " Enable 256 colors
-set termguicolors                    " Enable GUI colors for the terminal to get truecolor
 set t_ZH=^[[3m
 set t_ZR=^[[23m
-colorscheme catppuccin-macchiato
+colorscheme nord
 highlight Folded guibg=dark guifg=gray
 highlight FoldColumn guibg=dark guifg=blue
 highlight Comment cterm=italic gui=italic guifg=#ff8686
@@ -112,12 +110,13 @@ call minpac#add('noahfrederick/vim-laravel')
 call minpac#add('phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'})
 call minpac#add('nelsyeung/twig.vim')
 call minpac#add('vimwiki/vimwiki')
+call minpac#add('arcticicestudio/nord-vim')
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
 let g:floaterm_titleposition = "center"
-hi Floaterm guibg=#252627
-hi FloatermBorder guibg=#1f603f guifg=#ffffff
+" hi Floaterm guibg=#252627
+" hi FloatermBorder guibg=#1f603f guifg=#ffffff
 
 let loaded_netrwPlugin = 1
 
