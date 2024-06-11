@@ -111,6 +111,7 @@ call minpac#add('phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer 
 call minpac#add('nelsyeung/twig.vim')
 call minpac#add('vimwiki/vimwiki')
 call minpac#add('arcticicestudio/nord-vim')
+call minpac#add('editorconfig/editorconfig-vim')
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
@@ -158,3 +159,7 @@ set updatetime=300
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved
 set signcolumn=yes
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+let g:localvimrc_whitelist = '~/Sites/valet/rietveld/.vimrc'

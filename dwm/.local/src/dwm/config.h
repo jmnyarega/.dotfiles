@@ -64,7 +64,7 @@ static Sp scratchpads[] = {
 /* }; */
 
 /* tagging */
-static const char *tags[] = { "AMPCO", "COCOROCO", "AB", "QT", "INTERNAL", "MESSAGING", "CODE PRACTICE", "MUSIC", "XI" };
+static const char *tags[] = {"0","1","2","3","4","5","6","7","8"};
 static const char *tagsalt[] = { "😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "🥲" };
 static const int momentaryalttags = 0;
 
@@ -172,10 +172,10 @@ static Key keys[] = {
 	TAGKEYS(			XK_9,		8)
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
-	{ MODKEY,			XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY|ShiftMask,		XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,			XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY|ShiftMask,		XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_minus,	spawn,		SHCMD("amixer set Master 5%-; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_minus,	spawn,		SHCMD("amixer set Master 5%-; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_equal,	spawn,		SHCMD("amixer set Master 10%+; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_equal,	spawn,		SHCMD("amixer set Master 10%+; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_BackSpace,	spawn,		SHCMD("sysact") },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("sysact") },
 
@@ -186,7 +186,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e sudo nmtui") },
 	{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e tmux") },
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("stop_tmux") },
-	{ MODKEY,			XK_r,		spawn,		SHCMD("nautilus") },
+	{ MODKEY,			XK_r,		spawn,		SHCMD("thunar") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD("spotify") },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD(TERMINAL " -e htop") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
@@ -199,12 +199,12 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /* centeredfloatingmaster */
 	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
-	{ MODKEY,			XK_p,			spawn,		SHCMD("playerctl play-pause") },
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("playerctl play-pause") },
-	{ MODKEY,			XK_bracketleft,		spawn,		SHCMD("playerctl previous") },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("playerctl previous") },
-	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("playerctl next") },
-	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("playerctl next") },
+	{ MODKEY,			XK_p,			spawn,		SHCMD("playerctl play-pause; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("playerctl play-pause; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_bracketleft,		spawn,		SHCMD("playerctl previous; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("playerctl previous; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("playerctl next; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("playerctl next; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_backslash,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_backslash,		spawn,		SHCMD("") }, */
 
@@ -241,12 +241,12 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_n,		spawn,		SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
-	{ MODKEY,			XK_m,		spawn,		SHCMD("amixer set Capture toggle") },
-	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,			XK_comma,	spawn,		SHCMD("playerctl previous") },
-	{ MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("playerctl previous") },
-	{ MODKEY,			XK_period,	spawn,		SHCMD("playerctl next") },
-	{ MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("playerctl previous") },
+	{ MODKEY,			XK_m,		spawn,		SHCMD("amixer set Capture toggle; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pavucontrol") },
+	{ MODKEY,			XK_comma,	spawn,		SHCMD("playerctl previous; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("playerctl previous; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_period,	spawn,		SHCMD("playerctl next; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("playerctl previous; kill -44 $(pidof dwmblocks)") },
 
 	{ MODKEY,			XK_Left,	focusmon,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = -1 } },
@@ -281,16 +281,16 @@ static Key keys[] = {
 	{ MODKEY,			XK_Delete,	spawn,		SHCMD("dmenurecord kill") },
 	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
 
-	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("playerctl previous") },
-	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("playerctl next") },
-	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl play-pause") },
-	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play-pause") },
-	{ 0, XF86XK_AudioStop,		spawn,		SHCMD("playerctl play-pause") },
-	{ 0, XF86XK_AudioRewind,	spawn,		SHCMD("playerctl previous") },
-	{ 0, XF86XK_AudioForward,	spawn,		SHCMD("playerctl next") },
+	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("amixer set Master toggle; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("amixer set Master 5%+; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("amixer set Master 5%+; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("playerctl previous; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("playerctl next; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl play-pause; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play-pause; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioStop,		spawn,		SHCMD("playerctl play-pause; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRewind,	spawn,		SHCMD("playerctl previous; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioForward,	spawn,		SHCMD("playerctl next; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioMedia,		spawn,		SHCMD("spotify") },
 	{ 0, XF86XK_AudioMicMute,	spawn,		SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
 	{ 0, XF86XK_PowerOff,		spawn,		SHCMD("sysact") },
