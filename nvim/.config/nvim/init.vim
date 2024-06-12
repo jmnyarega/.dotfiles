@@ -104,11 +104,6 @@ call minpac#add('skywind3000/asynctasks.vim')
 call minpac#add('skywind3000/asyncrun.vim')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('chr4/nginx.vim')
-call minpac#add('dsawardekar/wordpress.vim', {'do': 'silent! !make'})
-call minpac#add('noahfrederick/vim-composer')
-call minpac#add('noahfrederick/vim-laravel')
-call minpac#add('phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'})
-call minpac#add('nelsyeung/twig.vim')
 call minpac#add('vimwiki/vimwiki')
 call minpac#add('arcticicestudio/nord-vim')
 call minpac#add('editorconfig/editorconfig-vim')
@@ -121,14 +116,12 @@ let g:floaterm_titleposition = "center"
 
 let loaded_netrwPlugin = 1
 
-noremap    <C-D>  :FloatermNew<CR>
-nnoremap   <C-D>h   :FloatermPrev<CR>
-nnoremap   <C-D>l   :FloatermNext<CR>
-nnoremap   <C-D>q   :FloatermKill<CR>
-nnoremap   <C-D>t   :FloatermToggle!<CR>
+noremap   <C-D>   :FloatermNew<CR>
+nnoremap  <C-D>h   :FloatermPrev<CR>
+nnoremap  <C-D>l   :FloatermNext<CR>
+nnoremap  <C-D>q   :FloatermKill<CR>
+nnoremap  <C-D>t   :FloatermToggle!<CR>
 nnoremap  <C-f> :! st -e ranger % <CR>
-
-let g:phpactorPhpBin = "/usr/bin/php"
 
 " show chunk diff at current position
 "nmap gs <Plug>(coc-git-chunkinfo)
@@ -159,6 +152,9 @@ set updatetime=300
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved
 set signcolumn=yes
+
+nmap <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
