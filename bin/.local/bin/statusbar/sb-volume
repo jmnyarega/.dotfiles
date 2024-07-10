@@ -16,11 +16,11 @@ esac
 vol=$(amixer get Master | grep Left | awk '{print $5}'|sed 's/[^0-9]//g' | tr -d '\n')
 muted=$(amixer | awk '/off/ {print $6}')
 
-if [ "$vol" -gt "70" ]; then
+if [[ "$vol" -gt "70" ]]; then
   icon=" 🔊"
-elif [ "$vol" -gt "30" ]; then
+elif [[ "$vol" -gt "30" ]]; then
   icon=" 🔉"
-elif [ "$vol" -gt "-1" ]; then
+elif [[ "$vol" -gt "-1" ]]; then
   icon=" 🔈"
 fi
 

@@ -1,6 +1,10 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+
 " sets 
 filetype plugin indent on
 
@@ -55,15 +59,15 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 set mousemodel=extend
 
-if &term == "screen-256color"
+if &term == 'screen-256color'
  set background=dark
 endif
 
 set t_ZH=^[[3m
 set t_ZR=^[[23m
-colorscheme nord
 highlight Folded guibg=dark guifg=gray
 highlight FoldColumn guibg=dark guifg=blue
+
 highlight Comment cterm=italic gui=italic guifg=#ff8686
 
 " search
@@ -73,8 +77,6 @@ set grepprg=rg\ -H\ --no-heading\ --vimgrep
 set grepformat=$f:$l:%c:%m
 command! Rg FloatermNew --width=0.8 --height=0.8 rg
 autocmd User FloatermOpen        " triggered after opening a new/existed floaterm
-
-let g:python3_host_prog = '/usr/bin/python3' " -- Set python 3 provider
 
 
 packadd minpac
@@ -92,21 +94,16 @@ call minpac#add('tpope/vim-obsession')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('tpope/vim-commentary')
-" call minpac#add('jmnyarega/vim-mappings')
-" call minpac#add('jmnyarega/vim-netrw')
-" call minpac#add('jmnyarega/vim-navigation')
 call minpac#add('voldikss/vim-floaterm')
 call minpac#add('nvim-treesitter/nvim-treesitter')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('tpope/vim-surround')
-call minpac#add('catppuccin/nvim')
 call minpac#add('skywind3000/asynctasks.vim')
 call minpac#add('skywind3000/asyncrun.vim')
-call minpac#add('SirVer/ultisnips')
 call minpac#add('chr4/nginx.vim')
 call minpac#add('vimwiki/vimwiki')
-call minpac#add('arcticicestudio/nord-vim')
 call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
@@ -157,5 +154,15 @@ nmap <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:python3_host_prog = '/usr/bin/python3' " -- Set python 3 provider
+autocmd FileType typescript,javascript source ~/.vim/lang_settings/linit.vim
+autocmd FileType css,scss source ~/.vim/lang_settings/csslinit.vim
+autocmd FileType json source ~/.vim/lang_settings/jsonlinit.vim
+autocmd FileType php source ~/.vim/lang_settings/linitphp.vim
+autocmd FileType python source ~/.vim/lang_settings/linitpython.vim
 
-let g:localvimrc_whitelist = '~/Sites/valet/rietveld/.vimrc'
+
+" let g:localvimrc_whitelist = '/home/josiah/Documents/projects/sigma_frontend/.lvimrc'
+" let g:localvimrc_whitelist = '/home/josiah/Documents/projects/algorithms-c++/.vim/init.vim'
+" let g:localvimrc_whitelist = '/home/josiah/Documents/projects/grokking/.vim/init.vim'
+" let g:localvimrc_whitelist = '/home/josiah/Documents/projects/Rietveld/code/.vimrc'
