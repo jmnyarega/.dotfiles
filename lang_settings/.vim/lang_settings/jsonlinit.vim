@@ -13,5 +13,3 @@ let g:lightline = {
       \ }
 
 let g:coc_global_extensions = ['coc-json']
-
-colorscheme monokai

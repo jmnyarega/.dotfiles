@@ -4,6 +4,9 @@ let &packpath=&runtimepath
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+" if executable('rg') 
+	" set grepprg=rg\ --vimgrep\ --hidden\ —glob ‘!.git’
+" endif
 
 " sets 
 filetype plugin indent on
@@ -39,6 +42,7 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/.git/*
 set foldmethod=syntax   
 set nofoldenable
+set termguicolors
 
 set hidden
 set undofile
@@ -105,6 +109,9 @@ call minpac#add('vimwiki/vimwiki')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
 
+call minpac#add('junegunn/fzf', { 'do': { -> fzf#install() } })
+call minpac#add('junegunn/fzf.vim')
+
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
 let g:floaterm_titleposition = "center"
@@ -161,6 +168,7 @@ autocmd FileType json source ~/.vim/lang_settings/jsonlinit.vim
 autocmd FileType php source ~/.vim/lang_settings/linitphp.vim
 autocmd FileType python source ~/.vim/lang_settings/linitpython.vim
 
+colorscheme catppuccin
 
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/sigma_frontend/.lvimrc'
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/algorithms-c++/.vim/init.vim'

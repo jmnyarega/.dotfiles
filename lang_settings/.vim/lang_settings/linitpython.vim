@@ -1,5 +1,5 @@
 autocmd FileType vim
-set fileformat=unix
+setlocal fileformat=unix
 
 set tabstop=4
 set softtabstop=4
@@ -12,6 +12,7 @@ set encoding=utf-8
 
 " Plugins
 call minpac#add('nvie/vim-flake8')
+call minpac#add('arcticicestudio/nord-vim')
 
 let g:lightline = {
       \ 'colorscheme': 'nord',
@@ -27,5 +28,3 @@ let g:lightline = {
 let g:coc_global_extensions = ['coc-jedi', 'coc-git', 'coc-python', 'coc-pyright']
 
 nnoremap <silent> K :call CocAction('doHover')<CR>
-
-colorscheme nord
