@@ -19,6 +19,3 @@ let g:lightline = {
       \ }
 
 let g:coc_global_extensions = ['coc-git', 'coc-css', 'coc-emmet']
-
-colorscheme catppuccin
-

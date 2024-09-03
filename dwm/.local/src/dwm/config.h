@@ -23,7 +23,7 @@ static const char *fonts[]    = {
 								};
 static float brightnesz = 0.5;
 
-#include "/home/josia/.local/src/dwm/themes/oneish.h"
+#include "/home/josiah/.local/src/dwm/themes/oneish.h"
 
 static char *colors[][4] = {
 	/*                       fg                bg                border                float */
@@ -355,3 +355,4 @@ static Button buttons[] = {
 	{ ClkTagBar,		0,		Button5,	shiftview,	{.i = 1} },
 	{ ClkRootWin,		0,		Button2,	togglebar,	{0} },
 };
+

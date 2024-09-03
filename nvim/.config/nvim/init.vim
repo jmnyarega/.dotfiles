@@ -4,6 +4,9 @@ let &packpath=&runtimepath
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+" if executable('rg') 
+	" set grepprg=rg\ --vimgrep\ --hidden\ —glob ‘!.git’
+" endif
 
 " sets 
 filetype plugin indent on
@@ -39,6 +42,7 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/.git/*
 set foldmethod=syntax   
 set nofoldenable
+set termguicolors
 
 set hidden
 set undofile
@@ -116,6 +120,9 @@ nnoremap <leader>al :AnyJumpLastResults<CR>
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+call minpac#add('junegunn/fzf', { 'do': { -> fzf#install() } })
+call minpac#add('junegunn/fzf.vim')
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"

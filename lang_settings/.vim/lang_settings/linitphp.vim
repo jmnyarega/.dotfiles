@@ -10,6 +10,17 @@ call minpac#add('nelsyeung/twig.vim')
 call minpac#add('sickill/vim-monokai')
 cal minpac#add('tyru/open-browser.vim')
 call minpac#add('mattn/emmet-vim')
+call minpac#add('jwalton512/vim-blade')
+
+" Define some single Blade directives. This variable is used for highlighting only.
+let g:blade_custom_directives = ['datetime', 'javascript']
+
+" Define pairs of Blade directives. This variable is used for highlighting and indentation.
+let g:blade_custom_directives_pairs = {
+      \   'markdown': 'endmarkdown',
+      \   'cache': 'endcache',
+      \ }
+
 
 let g:phpactorPhpBin = "/usr/bin/php"
 
@@ -31,4 +42,3 @@ let g:coc_global_extensions = ['coc-git', 'coc-phpls', 'coc-css', 'coc-emmet']
 nnoremap <silent> K :call CocAction('doHover')<CR>
 nnoremap <leader>co :Wcodexsearch<CR>
 
-colorscheme monokai
