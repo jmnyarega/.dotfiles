@@ -104,6 +104,18 @@ call minpac#add('chr4/nginx.vim')
 call minpac#add('vimwiki/vimwiki')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
+call minpac#add('mileszs/ack.vim')
+call minpac#add('tobyS/pdv')
+call minpac#add('metakirby5/codi.vim')
+call minpac#add('pechorin/any-jump.vim')
+nnoremap <leader>j :AnyJump<CR>
+xnoremap <leader>j :AnyJumpVisual<CR>
+nnoremap <leader>ab :AnyJumpBack<CR>
+nnoremap <leader>al :AnyJumpLastResults<CR>
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 let g:floaterm_position = 'center'
 let g:floaterm_opener = "edit"
@@ -155,12 +167,18 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:python3_host_prog = '/usr/bin/python3' " -- Set python 3 provider
+
 autocmd FileType typescript,javascript source ~/.vim/lang_settings/linit.vim
 autocmd FileType css,scss source ~/.vim/lang_settings/csslinit.vim
 autocmd FileType json source ~/.vim/lang_settings/jsonlinit.vim
 autocmd FileType php source ~/.vim/lang_settings/linitphp.vim
 autocmd FileType python source ~/.vim/lang_settings/linitpython.vim
 
+autocmd FileType go nmap gtj :CocCommand go.tags.add json<cr>
+autocmd FileType go nmap gty :CocCommand go.tags.add yaml<cr>
+autocmd FileType go nmap gtx :CocCommand go.tags.clear<cr>
+
+colorscheme catppuccin
 
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/sigma_frontend/.lvimrc'
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/algorithms-c++/.vim/init.vim'
