@@ -168,6 +168,9 @@ autocmd FileType json source ~/.vim/lang_settings/jsonlinit.vim
 autocmd FileType php source ~/.vim/lang_settings/linitphp.vim
 autocmd FileType python source ~/.vim/lang_settings/linitpython.vim
 
+au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']
+
+
 colorscheme catppuccin
 
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/sigma_frontend/.lvimrc'
