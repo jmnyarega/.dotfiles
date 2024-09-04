@@ -7,6 +7,9 @@
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:${$(find ~/.dotfiles/bin/.local/bin -type d -printf %p:)%%:}"
+export PATH="$PATH:${$(find ~/.config/composer/vendor/psy/psysh/bin -type d -printf %p:)%%:}"
+
+# export PATH="$PATH:/home/josiah/.config/composer/vendor/psy/psysh/bin"
 
 unsetopt PROMPT_SP
 
