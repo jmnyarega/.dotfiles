@@ -104,21 +104,23 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('tpope/vim-surround')
 call minpac#add('skywind3000/asynctasks.vim')
 call minpac#add('skywind3000/asyncrun.vim')
-call minpac#add('chr4/nginx.vim')
+" call minpac#add('chr4/nginx.vim')
 call minpac#add('vimwiki/vimwiki')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
 call minpac#add('mileszs/ack.vim')
-call minpac#add('tobyS/pdv')
-call minpac#add('metakirby5/codi.vim')
-call minpac#add('pechorin/any-jump.vim')
-nnoremap <leader>j :AnyJump<CR>
-xnoremap <leader>j :AnyJumpVisual<CR>
-nnoremap <leader>ab :AnyJumpBack<CR>
-nnoremap <leader>al :AnyJumpLastResults<CR>
+call minpac#add('dsawardekar/wordpress.vim')
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+" call minpac#add('tobyS/pdv')
+" call minpac#add('metakirby5/codi.vim')
+" call minpac#add('pechorin/any-jump.vim')
+" nnoremap <leader>j :AnyJump<CR>
+" xnoremap <leader>j :AnyJumpVisual<CR>
+" nnoremap <leader>ab :AnyJumpBack<CR>
+" nnoremap <leader>al :AnyJumpLastResults<CR>
+
+if executable('Ack')
+  let g:ackprg = 'Ack --vimgrep'
 endif
 
 call minpac#add('junegunn/fzf', { 'do': { -> fzf#install() } })
@@ -129,15 +131,6 @@ let g:floaterm_opener = "edit"
 let g:floaterm_titleposition = "center"
 " hi Floaterm guibg=#252627
 " hi FloatermBorder guibg=#1f603f guifg=#ffffff
-
-let loaded_netrwPlugin = 1
-
-noremap   <C-D>   :FloatermNew<CR>
-nnoremap  <C-D>h   :FloatermPrev<CR>
-nnoremap  <C-D>l   :FloatermNext<CR>
-nnoremap  <C-D>q   :FloatermKill<CR>
-nnoremap  <C-D>t   :FloatermToggle!<CR>
-nnoremap  <C-f> :! st -e ranger % <CR>
 
 " show chunk diff at current position
 "nmap gs <Plug>(coc-git-chunkinfo)
@@ -152,7 +145,8 @@ set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{ge
 " custom commands
 command! PackageClean call minpac#clean()
 command! PackageUpdate call minpac#update()
-
+nnoremap ? :CocDiagnostics <CR>
+noremap <Tab> :CocRestart <CR>
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
@@ -175,7 +169,7 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:python3_host_prog = '/usr/bin/python3' " -- Set python 3 provider
 
-autocmd FileType typescript,javascript source ~/.vim/lang_settings/linit.vim
+"autocmd FileType typescript,javascript source ~/.vim/lang_settings/linit.vim
 autocmd FileType css,scss source ~/.vim/lang_settings/csslinit.vim
 autocmd FileType json source ~/.vim/lang_settings/jsonlinit.vim
 autocmd FileType php source ~/.vim/lang_settings/linitphp.vim

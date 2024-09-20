@@ -2,6 +2,10 @@
   "codeLens.enable": true,
   "diagnostic.checkCurrentLine": true,
   "git.addGBlameToBufferVar": true,
+  "tailwindCSS.htmlLanguages": ["php"],
+  "tailwindCSS.emmetCompletions": true,
+  "diagnostic.enableMessage": "jump",
+  "tailwindCSS.headwind.runOnSave": true,
   "python.autoComplete.extraPaths": [
     "${env:SPARK_HOME}/python",
     "${env:SPARK_HOME}/python/pyspark"
