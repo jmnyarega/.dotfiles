@@ -13,21 +13,28 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +12 ~/projects/Nobeach-staging-1/wp/wp-settings.php
-badd +1 ~/projects/Nobeach-staging-1/wp/wp-mail.php
-badd +9 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/shortcodes/header_menu/templates/popup-menu.tpl.php
-badd +14 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/shortcodes/footer_menu/templates/footer-links-1.tpl.php
-badd +1 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/css/base.css
-badd +1 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/css/button.css
-badd +49 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/css/header.css
-badd +1 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/css/index.css
-badd +202 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/css/main.css
-badd +19 ~/projects/Nobeach-staging-1/wp/wp-content/themes/Divi_child/css/typography.css
+badd +9 ~/projects/Nobeach-staging-1/wp-theme/shortcodes/footer_menu/templates/footer-links-2.tpl.php
+badd +8 ~/projects/Nobeach-staging-1/wp-theme/shortcodes/footer_menu/templates/footer-links-3.tpl.php
+badd +19 ~/projects/Nobeach-staging-1/wp-theme/shortcodes/footer_menu/templates/footer-links-1.tpl.php
+badd +17 ~/projects/Nobeach-staging-1/wp-theme/shortcodes/footer_menu/templates/footer-contact.tpl.php
+badd +200 ~/projects/Nobeach-staging-1/wp-theme/css/main.css
+badd +1 ~/projects/Nobeach-staging-1/wp-theme/css/index.css
+badd +1 ~/projects/Nobeach-staging-1/wp-theme/css/base.css
+badd +87 ~/projects/Nobeach-staging-1/wp-theme/css/button.css
+badd +170 ~/projects/Nobeach-staging-1/wp-theme/css/header.css
+badd +45 ~/projects/Nobeach-staging-1/wp-theme/js/sliders/index.js
+badd +82 ~/projects/Nobeach-staging-1/wp-theme/js/app.js
+badd +1 ~/projects/Nobeach-staging-1/wp-theme/js/load-more.js
+badd +104 ~/projects/Nobeach-staging-1/wp-theme/includes/builder/modules/Team/templates/cta-popup.tpl.php
+badd +25 ~/projects/Nobeach-staging-1/wp-theme/shortcodes/footer_menu/index.php
+badd +59 ~/projects/Nobeach-staging-1/wp-theme/shortcodes/header_menu/templates/popup-menu.tpl.php
+badd +1 ~/projects/Nobeach-staging-1/wp-theme/includes/builder/modules/Team/templates/contact-popup-card.tpl.php
 argglobal
 %argdel
 argglobal
 enew
 file \[coc-explorer]-1
+balt ~/projects/Nobeach-staging-1/wp-theme/css/main.css
 setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}

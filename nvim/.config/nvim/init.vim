@@ -104,12 +104,15 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('tpope/vim-surround')
 call minpac#add('skywind3000/asynctasks.vim')
 call minpac#add('skywind3000/asyncrun.vim')
-" call minpac#add('chr4/nginx.vim')
+call minpac#add('brookhong/DBGPavim')
 call minpac#add('vimwiki/vimwiki')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
 call minpac#add('mileszs/ack.vim')
 call minpac#add('dsawardekar/wordpress.vim')
+call minpac#add('StanAngeloff/php.vim')
+call minpac#add('tyru/open-browser.vim')
+call minpac#add('dkprice/vim-easygrep')
 
 " call minpac#add('tobyS/pdv')
 " call minpac#add('metakirby5/codi.vim')
@@ -186,3 +189,8 @@ colorscheme catppuccin
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/algorithms-c++/.vim/init.vim'
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/grokking/.vim/init.vim'
 " let g:localvimrc_whitelist = '/home/josiah/Documents/projects/Rietveld/code/.vimrc'
+
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l

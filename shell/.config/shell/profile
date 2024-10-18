@@ -18,6 +18,7 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="brave"
 export TMUX_WORKSPACE="0"
+export PROJECT_ROOT_DIRECTORY="/usr/bin/ulauncher"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
