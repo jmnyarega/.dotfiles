@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # PAGE_SPEED_URL=https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=
-# KEY=AIzaSyA4GUkN9KAH7lFc6ngiLMFE5XzYDvBmkfg
 # TEST_URL=$1
 # psi "${PAGE_SPEED_URL}${TEST_URL}&key=${KEY}&prettyprint=true&strategy=mobile&category=PERFORMANCE" | jq
 # psi "${TEST_URL} --key=${KEY} --prettyprint=true --strategy=mobile"
