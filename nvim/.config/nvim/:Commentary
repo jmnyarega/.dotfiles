@@ -1,0 +1,2 @@
+vim.keymap.set("n", "|", "<cmd>vsplit %<cr>")
+vim.keymap.set("n", "-", "<cmd>split %<cr>")

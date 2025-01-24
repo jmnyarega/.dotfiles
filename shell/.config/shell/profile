@@ -6,19 +6,20 @@
 # to clean up.
 
 # Adds `~/.local/bin` to $PATH
-export PATH="$PATH:${$(find ~/.dotfiles/bin/.local/bin -type d -printf %p:)%%:}"
-export PATH="$PATH:${$(find ~/.config/composer/vendor/psy/psysh/bin -type d -printf %p:)%%:}"
+# export PATH="$PATH:${$(find ~/.dotfiles/bin/.local/bin -type d -printf %p:)%%:}"
+# export PATH="$PATH:${$(find ~/.config/composer/vendor/psy/psysh/bin -type d -printf %p:)%%:}"
 
-# export PATH="$PATH:/home/josiah/.config/composer/vendor/psy/psysh/bin"
+export PATH="$PATH:/home/josiah/.local/bin/"
 
-unsetopt PROMPT_SP
+# unsetopt PROMPT_SP
 
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="brave"
 export TMUX_WORKSPACE="0"
-export PROJECT_ROOT_DIRECTORY="/usr/bin/ulauncher"
+# export PROJECT_ROOT_DIRECTORY="/usr/bin/ulauncher"
+export TZ='Africa/Nairobi'
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"

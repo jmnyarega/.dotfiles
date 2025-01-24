@@ -1,20 +1,21 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Prints the current volume or 🔇 if muted.
 case $BLOCK_BUTTON in
-
-	1) setsid -f "$TERMINAL" -e pulsemixer ;;
-  2) amixer set Master toggle ;;
+    1) setsid -f "$TERMINAL" -e pulsemixer ;;
+    2) amixer set Master toggle ;;
 	3) notify-send "📢 Volume module" "\- Shows volume 🔊, 🔇 if muted.
-- Middle click to mute.
-- Scroll to change." ;;
-  4) amixer set Master 5%+ ;;
-  5) amixer set Master 5%- ;;
-	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+            - Middle click to mute.
+            - Scroll to change." ;;
+    4) amixer set Master 5%+ ;;
+    5) amixer set Master 5%- ;;
+   6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
+# vol=$(amixer | grep Left | awk '{print $5}'|sed 's/[^0-9]//g' | tr -d '\n')
 vol=$(amixer get Master | grep Left | awk '{print $5}'|sed 's/[^0-9]//g' | tr -d '\n')
 muted=$(amixer | awk '/off/ {print $6}')
+
 
 if [[ "$vol" -gt "70" ]]; then
   icon=" 🔊"

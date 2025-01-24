@@ -20,8 +20,6 @@
  *
  * To understand everything else, start reading main().
  */
-
-
 #include <errno.h>
 #include <locale.h>
 #include <signal.h>
@@ -1817,8 +1815,8 @@ setup(void)
 	sh = DisplayHeight(dpy, screen);
 	root = RootWindow(dpy, screen);
 	drw = drw_create(dpy, screen, root, sw, sh);
-// if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
-//	die("no fonts could be loaded.");
+	/* if (!drw_fontset_create(drw, fonts, LENGTH(fonts))) */
+		/* die("no fonts could be loaded."); */
 	lrpad = drw->fonts->h;
     bh = user_bh ? user_bh : drw->fonts->h + 2;
 	updategeom();
@@ -2656,4 +2654,3 @@ main(int argc, char *argv[])
 	XCloseDisplay(dpy);
 	return EXIT_SUCCESS;
 }
-

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 off=$(amixer | awk '/on/ {print $6}')
 on=$(amixer | awk '/off/ {print $6}')

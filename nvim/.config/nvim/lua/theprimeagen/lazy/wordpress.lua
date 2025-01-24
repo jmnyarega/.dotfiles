@@ -1,0 +1,5 @@
+return {
+    {
+        "dsawardekar/wordpress.vim",
+    },
+}

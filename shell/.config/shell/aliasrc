@@ -28,6 +28,7 @@ alias \
     phpcs="~/.config/composer/vendor/bin/phpcs" \
     laravel="~/.config/composer/vendor/bin/laravel" \
     carbon="~/.config/composer/vendor/bin/carbon" \
+    pagespeed="psi" \
     art="php7 ./artisan" \
 # Colorize commands when possible.
 alias \
@@ -40,6 +41,7 @@ alias \
 alias \
 	ka="killall" \
 	g="git" \
+	z="jump" \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
 	sdn="shutdown -h now" \

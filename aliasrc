@@ -12,7 +12,7 @@ alias \
 	mkd="mkdir -pv" \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
-	# ls="ls -r --time=ctime" \
+	ls="ls -r --time=ctime" \
 	ffmpeg="ffmpeg -hide_banner" \
 	plan="vim /mnt/ssd1/projects/planner"\
 	j="z" \

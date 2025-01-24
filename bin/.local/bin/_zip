@@ -1,0 +1,4 @@
+#!/bin/bash
+
+FILE=$1
+zip "$FILE.zip" $FILE

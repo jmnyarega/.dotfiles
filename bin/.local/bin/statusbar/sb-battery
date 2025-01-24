@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Prints all batteries, their percentage remaining and an emoji corresponding
 # to charge status (🔌 for plugged up, 🔋 for discharging on battery, etc.).
@@ -23,22 +23,26 @@ for battery in /sys/class/power_supply/BAT?*; do
 	[ -n "${capacity+x}" ] && printf " "
 	# Sets up the status and capacity
 	case "$(cat "$battery/status" 2>&1)" in
-		"Full") status="⚡" ;;
-		"Discharging") status="🔋 " ;;
-		"Charging") status="🔌" ;;
-		"Not charging") status="🛑 " ;;
-		"Unknown") status="💱 " ;;
+		"Full") ztatus="⚡" ;;
+		"Discharging") ztatus="🔋 " ;;
+		"Charging") ztatus="🔌" ;;
+		"Not charging") ztatus="🛑 " ;;
+		"Unknown") ztatus="💱 " ;;
 		*) exit 1 ;;
 	esac
 	capacity="$(cat "$battery/capacity" 2>&1)"
 	# Will make a warn variable if discharging and low
-	[ "$status" = "🔋" ] && [ "$capacity" -le 25 ] && warn="❗"
+	[ "$ztatus" = "🔋" ] && [ "$capacity" -le 25 ] && warn="❗"
 	# Prints the info
 
 	bat_status="$(cat "$battery/status" 2>&1)"
 
-    [ "$capacity" -le 25 ] && [ "$bat_status" == "Discharging" ] && notify-send -t 10000 -u critical "Battery Low!! plug in the charger 🔴 "
-    [ "$bat_status" == "Unknown" ] &&  notify-send -u critical "Fully charged!! remove charger ⚠️  "
+    if [[ "$bat_status" == "Discharging" && "$capacity" -le 25 ]]; then
+        notify-send "Battery Low!! plug in the charger 🔴 "
+    elif [[ "$bat_status" == "Unknown" ]]; then
+         notify-send "Fully charged!! remove charger ⚠️  "
+    fi
 
-	printf "%s%s%d%%" "$status" "$warn" "$capacity"; unset warn
+	printf "%s%s%d%%" "$ztatus" "$warn" "$capacity";
+
 done && printf "\\n"

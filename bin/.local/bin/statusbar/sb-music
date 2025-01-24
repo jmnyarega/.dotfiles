@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 # pidof -x sb-mpdup >/dev/null 2>&1 || sb-mpdup >/dev/null 2>&1 &
 
 _status=$(playerctl status -a)
@@ -13,9 +13,9 @@ else
 fi
 
 case $BLOCK_BUTTON in
-	1) notify-send "$(mpc current)";;
-	2) playerctl play-pause ;;  # right click, pause/unpause
-  3) playerctl metadata xesam:title; notify-send "$(playerctl -l)";;
+	1) playerctl --all-players play-pause ;;
+	2) playerctl --all-players stop ;;  # right click, pause/unpause
+    3) playerctl metadata xesam:title; notify-send "$(playerctl -l)";;
 	4) playerctl previous ;;  # scroll up, previous
 	5) playerctl next ;;  # scroll down, next
 	6) playerctl status ; "$TERMINAL" -e "$EDITOR" "$0" ;;

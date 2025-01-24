@@ -26,6 +26,7 @@ static const Block blocks[] = {
 	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-internet",	5,	4},
 	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-time",	1,	8},
 	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-clock",	24 * 60 * 60,	30},
+    {"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-moonphase",24*60*60,	24},
 	{"",	"~/.dotfiles/bin/.local/bin/statusbar/sb-help-icon",	0,	15},
 };
 

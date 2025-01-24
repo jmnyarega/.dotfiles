@@ -1,0 +1,3 @@
+00:00:00        first_image.jpg
+00:00:03        otherdirectory/next_image.jpg
+00:00:09        this_image_starts_at_9_seconds.jpg

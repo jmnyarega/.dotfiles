@@ -1,0 +1,4 @@
+vim.keymap.set("n", "-", "<cmd>split %<cr>")
+vim.keymap.set("n", "<C-e>", "<cmd>q!<cr>")
+vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
+
